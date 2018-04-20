@@ -17,7 +17,7 @@
 body {
     /*@include backgroundImage(('bg_pf_2018.jpg'), repeat-x, top left);//nouvelle mixin 2018*/
     /*@include backgroundImage(('BG/bg_site_pf_2018_v2.jpg'), repeat-x, top left);//nouvelle mixin 2018*/
-    @include backgroundImage(('BG/bg_site_pf_2018_v3.jpg'), repeat-x, top left);//nouvelle mixin 2018
+    @include backgroundImage(('BG/bg_site_pf_2018_v3.jpg'),$gris-clair, repeat-x, top left);//nouvelle mixin 2018
     .conteneur{
 
   

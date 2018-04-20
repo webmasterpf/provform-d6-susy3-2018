@@ -56,8 +56,8 @@
 
 $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 
-@mixin backgroundImage($filename,$position:0 0,$repeat: no-repeat) {
-    background: transparent url('#{$imagedir}#{$filename}') $position $repeat;
+@mixin backgroundImage($filename,$couleur:transparent,$position:0 0,$repeat: no-repeat) {
+    background: $couleur url('#{$imagedir}#{$filename}') $position $repeat;
 }
 @mixin maskImage($filename,$position:0 0,$repeat: no-repeat, $taille: 50%) {
     mask: url('#{$imagedir}#{$filename}') $repeat $position;
