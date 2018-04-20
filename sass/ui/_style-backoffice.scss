@@ -1,0 +1,74 @@
+/*------------------------------------------------------*
+*-- CSS Drupal pour le backoffice --------------*
+*------------------------------------------------------*/
+
+/*------------------------------------------------*
+ *---  Provence Formation 2018--*
+ *------------------------------------------------*/
+
+/*######-------- ||| LAYOUT  PAGES BO ||| --------######*/
+body.not-front.logged-in{
+    section.conteneur{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+         width: span(10 of $desktopcol);
+        margin-left: span(1 wide);//push
+        @include clearfix;
+          .middle-content  img{
+        width: auto;
+        display: initial;
+    }
+        }
+    }
+}
+
+/*----Navigation backoffice------*/
+
+#block-user-1 {
+  background: url("../images/bg_nav_backoffice.gif") repeat scroll left top;
+  padding: 0;
+  margin: 0;
+  a {
+    color: $orange-fonce;
+    text-decoration: none;
+    background: white;
+    padding: 0 em(2px);
+    &:hover {
+      background: $orange-fonce;
+      color: white;
+    }
+  }
+}
+
+.item-list ul {
+  li {
+    margin: 0 0 0.25em 1.5em;
+    padding: 0;
+  }
+  margin: 0;
+  padding: 0;
+}
+
+/*----page login------*/
+
+#user-login {
+  margin: auto;
+  width: em(450px);
+  padding: em(10px) 0;
+}
+
+/*Workspace*/
+
+.sticky-table {
+  color: #606071;
+  a {
+    color: red;
+  }
+}
+
+/*-- EDIT MODE --*/
+ul.primary{
+    a{
+        color: $violet;
+        font-size: small;
+    }
+}

@@ -1,0 +1,518 @@
+// Regroupe le style pour le contenu des node.tpl custom
+// créer des fichiers _node-TYPE.scss et les importer dans application.scss
+
+/*-------------------------------------|
+|       CONTENU CUSTOM NODE.TPL        |
+|       FRONTPAGE INSTITUTIONNEL       |
+|--------------------------------------*/
+
+//@include breakpoint ($mobile){}
+//@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
+//@include breakpoint ($tablet){}
+//@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
+
+/*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
+.annonce_2{
+
+    ul.badnews{
+
+        li{
+            width: 95%;
+            margin: 0 auto;
+            float: none;
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+
+
+                float: none;
+            }
+
+
+
+        }
+    }
+}
+.logo_partenaires{
+    .acces-partenaires{
+        ul{
+            display: initial;//conserve ordre des lignes : grid,inutile ici
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            li{
+                list-style: none;
+                margin: span(1) 0;
+                text-align:center;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    width: span(1 of 5);
+                    margin: span(0.0001);
+                }
+                img,object{
+                    @include adaptable-img;
+                    max-height: 15vw;
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                        max-height: 8vw;
+                    }
+                }
+                a{
+                    display: block;
+                }
+                object{
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+ul.rubriques-administratives{
+    list-style: none;
+    column-count: inherit;
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        column-count: 5;
+        display: flex;
+    }
+    li{
+        margin: 0 0 em(5px) 0;
+       
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            max-width: 20%;
+            @include txt-colonnes;
+            display: block;
+            margin: 0;
+            cursor: pointer;
+        }
+    }}
+/*######-------- ||| STYLE ||| --------######*/
+
+//Code imbriqué à 100%
+body .conteneur {
+
+    .annonce_1{
+
+    }
+    .annonce_alaUne{
+        h3{//ajout picto en place du titre h3
+           display: none;
+           @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+               display: initial;
+               @include backgroundImage (('bg-merci.gif'));
+               text-indent: -9000px;
+               float: left;
+               height: em(80px);
+               margin-left: span(0.1);
+           }
+        }
+        ul.actu-brulante{
+            list-style: none;
+
+            li{
+                @include breakpoint ($mobile){
+                    width: 95%;
+                    margin: 0 0 span(0.2) span(0.2);
+                    float: none;
+                }
+                list-style: none;
+                margin: span(0.1) 0 span(0.1) span(0.2);
+                float: left;
+            }
+            .breaking-news-element{
+                padding: span(0.005);
+                border: em(3px) $orange-fonce solid;
+                font-family: $FontRaleway;
+                font-size: medium;
+
+                text-transform: uppercase;
+            }
+            a{
+                color: $gris-anthracite;
+                text-decoration:none;
+
+                &:hover{
+                    color: $gris-clair-moyen;
+                }
+            }
+        }
+    }
+    .annonce_2{
+        aside.AnnonceDeuil{
+            padding: span(0.1);
+        }
+        ul.badnews{
+            list-style: none;
+            li{
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+
+                }
+                list-style: none;
+
+
+            }
+            .breaking-news{
+                padding: span(0.005);
+                border: em(3px) $noir solid;
+                font-family: $FontRaleway;
+                font-size: medium;
+                @include backgroundImage(('deuil.png'), no-repeat, top right);//nouvelle mixin 2018
+
+                text-transform: uppercase;
+            }
+            a{
+                color: $gris-clair-moyen;
+                text-decoration:none;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    color: $noir;
+                }
+                &:hover{
+                    color: $gris-clair-moyen;
+                }
+            }
+        }
+    }
+    .HPDiapo{
+        a{
+            color: white;
+            font-family: $FontRaleway;
+            font-size: xx-large;
+            text-decoration: none;
+        }
+        img{
+            zoom: 1.7;
+            transform: scale (1.7);
+            transform: translate(0,-25%);
+        }
+        .bxslider-hp{
+            a{
+                padding: 0 0 0 span(0.1);
+                display: block;
+            }
+        }
+    }
+    .acces_rubriques{
+
+        ul.rubriques-administratives{
+            list-style: none;
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                
+            }
+            li{
+                margin: 0 0 em(5px) 0;
+                background: $gris-anthracite;
+                color: whitesmoke;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                
+                }
+                &:hover{
+                    background: $orange-fonce;
+                }
+                img{
+                    object-fit: cover;//permet que l'image occupe tout l'espace mais il faut définir une taille
+                    width: 100%;
+                    &:hover{
+                        filter: grayscale(100%);
+                    }
+                }
+                a{
+                    @include clearfixsusy3;
+                    display: inherit;
+                }
+                .overlay {
+                    position: absolute;
+                    bottom: 100%;
+                    left: 0;
+                    right: 0;
+                    background-color: $bleu-turquoise;
+                    overflow: hidden;
+                    width: 100%;
+                    height:0;
+                    transition: .5s ease;
+
+                }
+
+                .rub-admin-image {
+                    img:hover{
+                        opacity: 1;
+                    }
+                    .overlay:hover{
+                        bottom: 0;
+                        height: 100%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                }
+
+                .rub-admin-image:hover .overlay {
+                    opacity: 1;
+                }
+
+                span.titre-admin{
+                    display: block;
+                    text-align:center;
+                    a{
+                        color: whitesmoke;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+                }
+                span.accroche-admin{
+                    font-size: small;
+                    padding: em(6px);
+                    display: block;
+                    word-break: break-word;
+                }
+            }
+        }
+        aside.contenus-speciaux{
+
+
+            ul{
+                //pas besoin de fixer un display en mobile, vertical automatique
+                max-width: span(11);
+                margin:0 auto;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    display:flex;
+                }
+                li{
+                    list-style: none;
+                    width: 95%;
+                    margin: 0 0 span(0.2) span(0.2);
+                    float: none;
+
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                        margin: span(0.1);
+                        float: left;
+                        min-width: span(1);
+                    }
+                    a{
+                        background: $orange-fonce;
+                        color: whitesmoke;
+                        display: block;
+                        padding: span(0.1);
+                        text-decoration: none;
+                        text-align: center;
+                        font-size: x-large;
+                        transition-duration: 0.4s;
+                        @include txt-cesure(break-word);
+                        &:hover{
+                            background: $gris-clair-moyen;
+                            color: $orange-fonce;
+                        }
+                    }
+                }
+            }
+        }
+        aside.acces-contact{
+            ul{
+                //pas besoin de fixer un display en mobile, vertical automatique
+                max-width: span(11);
+                margin: 0 span(2);
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    display:flex;
+                    /*max-width: span(11);*/
+                    margin:0 span(2);
+                }
+                li{
+                    list-style: none;
+                    width: 95%;
+                    margin: 0 0 span(0.2) span(0.2);
+                    float: none;
+                    display: inline-block;
+
+
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                        margin: span(0.25);
+                        float: left;
+                        /*min-width: span(3);*/
+                        width: inherit;
+                        @include hack-Edge;
+                    }
+
+                    a{
+                        display: block;
+                        padding: span(4.6) 0;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        color: whitesmoke;
+
+                        @include backgroundImage("SVG/bg_acces_contact.svg");
+                        background-size: cover;
+                        background-clip: padding-box;
+                        min-width: inherit;
+                        min-height:  inherit; 
+                        transition-duration: 0.0s;//Permet de jouer sur un effet de slide
+                        text-align: center;
+                        @include txt-cesure(break-word);
+                        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+                        clip-path: circle(50% at 50% 50%);
+
+                        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                            padding: span(5) span(1) 0;
+                            min-height: 11vw;          
+                            min-width: 11vw;
+                            word-spacing: em(3px);
+                        }
+                        &:hover{
+
+
+                            /*        @include backgroundImage("SVG/bg_acces_contact.svg", -29em top);*/
+                            background-size: cover;
+
+                            text-indent: em(-9000px);
+                        }
+                    }
+
+                }
+
+                .views-row-1{
+                    a:hover{
+                        @include backgroundImage("SVG/bg_acces_contact.svg", 25.5% top);
+                        background-size: cover;
+                    }
+                }
+                .views-row-2{
+                    a:hover{
+                        @include backgroundImage("SVG/bg_acces_contact.svg", 51% top);
+                        background-size: cover;
+                    }
+                }
+                .views-row-3{
+                    a:hover{
+                        @include backgroundImage("SVG/bg_acces_contact.svg", 76% top);
+                        background-size: cover;
+                    }
+                }
+                .views-row-4{
+                    a:hover{
+                        @include backgroundImage("SVG/bg_acces_contact.svg", 100%  top);
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        aside.AccesLycees{
+
+            ul.acces-lycees{
+                display: grid;//conserve ordre des lignes
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+                li{
+                    list-style: none;
+                    margin: 0;
+                    text-align:center;
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                        width: span(1 of 4);
+                        margin: span(0.0001);
+                    }
+                }
+                li.views-row-1{
+                    order:9;
+                    background: $orange-fonce;
+                }
+                li.views-row-2{
+                    order:1;
+                    background: $bleu-turquoise;
+                }
+                li.views-row-3{
+                    order:2;
+                    background: $gris-clair-moyen;
+                }
+                li.views-row-4{
+                    order:3;
+                    background: $vert;
+                }
+                li.views-row-5{
+                    order:4;
+                    background: $orange;
+                }
+                li.views-row-6{
+                    order:6;
+                    background: $rouge;
+                }
+                li.views-row-7{
+                    order:7;
+                    background: $violet;
+                    object{
+                        display: none !important;//Exclu la video du rocher de l'affichage
+                    }
+                }
+                li.views-row-8{
+                    order:8;
+                    background: $rose-fushia;
+                }
+                li.views-row-9{
+                    order:5;
+                    background: transparent;
+                    iframe{
+                        margin: em(18px) 0 !important;
+                    }
+                    a{
+                        display: none;
+                    }
+
+                }
+            }
+
+
+
+            .container {
+                position: relative;
+            }
+
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+
+            img { 
+                @include adaptable-img();
+                contain:content;
+                
+                opacity: 0;
+                transition-duration: 0.4s;
+                &:hover{
+
+                }
+            }
+            a{
+                text-decoration: none;
+                color: whitesmoke;
+                text-transform: uppercase;
+                font-size: medium;
+                transition-duration: 0.4s;
+                &:hover{}
+            }
+            img:hover,a:hover{
+                cursor: pointer;
+                opacity: 0.8;
+
+            }
+        }
+    }
+
+
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){/*    //Dimensions pour les pc
+        //Taille du conteneur du groupe    
+        .annonce_1{}
+        .annonce_2{}
+        .HPDiapo{}
+        .acces_rubriques{}
+        .logo_partenaires{}
+
+    }
+
+    @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
+        .annonce_1{}
+        .annonce_2{}
+        .HPDiapo{}
+        .acces_rubriques{}
+        .logo_partenaires{}
+    }
+}    

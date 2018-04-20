@@ -1,0 +1,260 @@
+// Regroupe le style pour le contenu des node.tpl custom
+// créer des fichiers _CONTENT-TYPE.scss et les importer dans application.scss
+
+/*-------------------------------------|
+|       CONTENU CUSTOM               |
+|               NODE.TPL                      |
+|               FICHE BTS                     |
+|--------------------------------------*/
+
+//@include breakpoint ($mobile){}
+//@include breakpoint ($desktop){}
+//@include breakpoint ($tablet){}
+//@include breakpoint(($desktop,$tablet)){}
+//@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
+
+/*######-------- ||| ORDRE FLEXBOX ||| --------######*/
+body .conteneur .conteneur-flex{
+    #zone-1.fiche-bts{order:1;}
+    #zone-2.fiche-bts{order:2;}
+    #zone-3.fiche-bts{order:3;}
+    #zone-4.fiche-bts{}
+    #zone-5.fiche-bts{}
+    @include breakpoint ($desktop){}
+}
+
+/*######-------- ||| BORDURES ||| --------######*/
+body .conteneur .conteneur-flex,
+body .conteneur{
+    @include breakpoint(($desktop,$tablet)){
+    }
+
+}
+
+/*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
+#zone-illustration.fiche-bts{
+    min-height: 35vw;
+    max-height: 90vw;
+    overflow: hidden;
+
+    img{
+        transform: translate(0%,0%);
+
+    }
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        min-height: 25vw;
+        max-height: 30vw;
+        img{
+            transform: translate(0%,-15%);
+        }
+    }
+}
+#zone-1.fiche-bts{
+    .complement-bts{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            width: span(4);
+            margin: span(0.02) auto;   
+        }
+
+    }
+}
+#zone-2.fiche-bts{
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        padding: span(0.1) 0;
+    }
+    aside.galerie{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            margin: 0 0 0 span(1.5);
+            display: flex;
+        }
+    }
+    a.asymetrique-gd{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            width: span(6);
+            float: left;
+        }
+    }
+    div.asymetrique-petit{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            width: span(6);
+            float: right;
+        }
+    }
+}
+#zone-3.fiche-bts{
+    .content{
+        column-count: inherit;
+        @include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
+            column-count: 2;
+            column-fill: balance;
+            column-rule: em(2px) dashed $gris-anthracite;
+        }
+    }
+    table#infos-pratiques-bts,div#info-plus-fiche-bts{
+
+        margin: span(0.02) auto;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            width: span(7);
+
+
+        }
+    }
+}
+
+
+/*######-------- ||| STYLE ||| --------######*/
+
+/*¤¤¤ STYLES COMMUNS ¤¤¤*/
+#zone-1.fiche-bts,
+#zone-2.fiche-bts,
+#zone-3.fiche-bts,
+#zone-4.fiche-bts,
+#zone-5.fiche-bts
+{
+    p,ul,li{
+        @include font-size(m);//utilisation de typey
+        padding: em(5px);
+        line-height: 1.5em;
+    }
+    u{
+        font-weight: bold;
+        color: $bleu-turquoise;
+    }
+    h2{
+        @include font-size(l);//utilisation de typey
+        color: $orange-fonce;
+    }
+    h3{
+        @include font-size(m);//utilisation de typey
+        color: $orange-fonce;
+    }
+    a{
+        text-decoration: none;
+        color: $orange-fonce;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    strong{
+        color: $orange-fonce;
+    }
+
+}
+
+/*------------------------------------
+        ¤¤¤ STYLES PROPRES ¤¤¤
+______________________________*/
+
+#zone-1.fiche-bts{
+    #abreviation-bts{
+        color: $violet;
+        float: right;
+        padding: 0 em(5px);
+        font-style: italic;
+        text-align: right;display: block;margin: em(5px);
+    }
+    .complement-bts{
+        span{
+            background: $gris-anthracite;
+            color: $jaune;
+            font-weight: bold;
+            padding: span(0.02);
+            margin: span(0.01) 0;
+        }
+    }
+}
+#zone-2.fiche-bts{
+    .galerie{
+        //Voir  "../galeries/_baguettebox-vignette-zoom.scss";
+    }
+}
+#zone-3.fiche-bts{
+
+    h3{
+        transform: rotate(-1deg);
+        color: $jaune;
+        background: $gris-anthracite;
+        padding: em(3px);
+        margin: em(5px) em(20px);
+        max-width: fit-content;
+    }
+    table#infos-pratiques-bts{
+        border-top: em(1px) solid  $vert;
+        border-bottom: em(2px) solid $gris-anthracite;
+        @include font-size(s);//utilisation de typey
+        tbody{}
+        tr{}
+        td{
+            padding: em(2px);background: $gris-clair;vertical-align: top;}
+        a{
+
+            &:hover{}
+        }
+
+        td h4{
+            text-align: center;
+            color: $violet;
+            /*text-shadow: 0px 0px em(5px) $gris-anthracite;*/
+            /*filter: dropshadow(color=$gris-anthracite, offx=0, offy=0);*/
+
+            behavior: url(/sites/all/libraries/PIE/PIE.htc);
+            @include font-size(l);//utilisation de typey
+
+        }
+        ul{
+            padding: 0;
+            margin:0;
+            li{
+                list-style: square;
+            }
+        }
+        td.col1{
+            background: none ;
+            width: 33%;
+        }
+        td.col2{
+            background: $gris-clair;
+        }
+        td.col3{
+            background: none ;
+        }
+        td.col1 :hover{
+
+        }
+    }
+
+
+    #info-plus-fiche-bts{
+        background-color: $gris-clair;
+
+
+        margin: 0 auto;
+        padding: 0.5em;
+
+        border-radius: 1em;
+
+        a{
+            color: $bleu-turquoise;
+            text-decoration: none;
+        }
+        &a:hover{
+            text-decoration: underline;
+        }
+        h3{
+            color: $orange-fonce;
+            text-align: center;
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                margin: 0 0 0 span(5.5);
+            }
+        }
+        ul{
+            li{
+                list-style: square;
+                list-style-position: inside;
+                @include font-size(s);//utilisation de typey
+            }
+        }
+    }
+}
+#zone-4.fiche-bts{}
+#zone-5.fiche-bts{}

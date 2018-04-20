@@ -1,0 +1,464 @@
+// Regroupe le style pour le contenu des node.tpl custom
+// créer des fichiers _node-TYPE.scss et les importer dans application.scss
+
+/*-------------------------------------|
+|       CONTENU CUSTOM NODE.TPL        |
+|       PAGE LYCEE                     |
+|--------------------------------------*/
+
+//@include breakpoint ($mobile){}
+//@include breakpoint ($desktop){}
+//@include breakpoint ($tablet){}
+
+/*######-------- ||| ORDRE FLEXBOX ||| --------######*/
+body .conteneur .conteneur-flex{
+    #zone-1.page-lycee {order:1;}
+    #zone-1.page-lycee span{display: none;}
+    #zone-2.page-lycee {order:1;}
+    #zone-3.page-lycee {order:2;}
+    @include breakpoint ($desktop){
+        #zone-1.page-lycee {order:1;}
+        #zone-1.page-lycee span{display: initial;}
+        #zone-2.page-lycee {order:2;}
+        #zone-3.page-lycee {order:3;}
+    }
+}
+/*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
+.logos_lycee{
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        width: span(3 of $desktopcol);
+        margin-left: span(1 wide);//push
+        display: inline-block;
+    }
+}
+aside.logo-lycee,aside.logo-lycee-metiers{
+    margin: span(0.01) 0;
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        float: left;
+        
+    }
+}
+
+.lycee-coordlogo{
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        float: right;
+        width: span(7 of $desktopcol);
+        padding: span(0.01);
+    }
+}
+/*######-------- ||| BORDURES ||| --------######*/
+body .conteneur{
+    @include breakpoint ($desktop){
+        #zone-2.page-lycee{}
+    }
+
+}
+/*######-------- ||| BREAKPOINTS ||| --------######*/
+@include breakpoint ($mobile){
+    aside.deco-lycee{
+        display: none;
+    }
+}
+
+/*######-------- ||| STYLE ||| --------######*/
+h1.titre-lycee,h1.title-classes{
+    font-size: em(24px);
+    color: $violet;
+    line-height: 1.0em
+}
+h1.titre_overlay{
+    @include titre_overlay();
+}
+h1.titre_page{
+    @include titre-page;
+    color: $blanc-casse;
+    @include rgba-background($orange-fonce, 0.8);
+
+}
+/*¤¤¤ STYLES COMMUNS ¤¤¤*/
+#zone-1.page-lycee,
+#zone-2.page-lycee,
+#zone-3.page-lycee,
+#zone-4.page-lycee
+{
+    p{
+        padding: em(5px);
+    }
+    span{
+        font-size: small;
+        padding: em(5px);
+    }
+    strong,b{
+        color: $rose-fushia;
+    }
+    a{
+        color: $violet;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+
+    }
+
+}
+
+/*------------------------------------
+        ¤¤¤ STYLES PROPRES ¤¤¤
+______________________________*/
+#zone-illustration.page-lycee{
+    #illustration-pleinepage {
+        position: relative;
+        /*display: inline-block;*/
+        overflow: hidden;
+        /*min-height: 15vw;*/
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            /*min-height: 20vw;*/
+        }
+        img{
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                margin: 0 12vw;
+                max-height: 30vw;
+                transform: scale(1.4);
+            }
+        }
+    }
+}
+#zone-1.page-lycee{
+    h2{}
+    h3{}
+    h4{}
+    p{}
+    ul{
+        width: auto;
+    }
+    img{
+        //@include ombrage(0.3em,0,0,0.1em);
+        display: block;
+        margin: 0 auto;
+        @include adaptable-img;
+        width: auto;
+        float: none;
+        border: em(2px) solid $violet;
+        padding: em(2px);
+    }
+    .lycee-coordlogo {
+        background: $gris-anthracite;
+        display:block;
+        color:$blanc-casse;
+        font-size: medium;
+/*        img[src*="logo"]{
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                float: left;
+                margin: 0 span(0.5);
+            }   
+        }
+        img[src*="label"]{
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                padding: 0;
+                transform: translate(em(-550px), em(-40px));
+    
+            }
+        }*/
+h2#logo_lpp{
+    color: $blanc-casse;
+    font-size: large;
+}
+a{
+    color:$blanc-casse;
+    font-weight:bold;
+    &:hover{
+    color:$orange-fonce;
+        
+    }
+}
+    }
+    div.illus-lycee{
+        img{
+
+            transform: scale(0.8);
+        }
+    }
+    a{
+        &:hover{}
+    }
+
+    h2 a{}
+    h2 a:hover{}
+    h3 a{}
+    h3 a:hover{}
+    h4 a{}
+    h4 a:hover{}
+    aside.diapo_lycee{
+        display: block;
+        margin: 0 auto;
+        width: em(175px) !important;
+        width: em(174px);/*IE*/
+        * {//cible le contenu
+           position:relative;
+           /*position:relative !important;*/
+           min-height: 100%;
+        }
+        .views_slideshow_cycle_main{
+            /*position:relative !important;*/
+
+
+        }
+        .views_slideshow_cycle_slide{
+            overflow: auto;
+        }
+        img{
+            border: em(2px) solid $violet;
+            margin: em(10px) 0 0;
+        }
+    }
+
+} 
+/*######-------- ZONE 2 --------######*/
+#zone-2.page-lycee{
+    h2,h3,h4,p,ul,ol,img{
+        margin: 0;
+    }
+    h2{
+        color: $vert;
+        padding: em(5px);
+    }
+    h3{
+        color: $violet;
+        padding: em(5px);
+    }
+    h4{
+        padding: em(5px);
+        color: $violet;
+    }
+    p,li{
+        @include font-size(m);//utilisation de typey
+        padding: em(5px);
+        line-height: 1.5em;
+    }
+    ul{
+        padding: em(5px);
+    }
+    img{
+
+    }
+    a{
+        color: $violet;
+        text-decoration: none;
+        padding: em(2px);
+        &:hover{
+            color: white;
+            background: $violet;
+        }
+    }
+    form{margin: 0 6em;}
+    table{
+        margin: 0 auto;
+        //display:table;//casse le système de stacktable js
+        tbody{
+            max-width: 100%;
+
+            tr{
+                border:0;
+            }
+            tr.even{
+                background: $gris-clair;
+            }
+            tr.odd{
+                background: $gris-clair-moyen;
+            }
+            td{}
+        }
+    }
+    div.content{
+        .entrefilet{
+            @include backgroundImage('bg-merci.gif');
+            display: block;
+            color: $orange-fonce;
+            @include font-size(l);//utilisation de typey
+            text-transform: capitalize;
+            font-weight: bold;
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.2);
+            transform: translate(1%,2%);
+            float: right;
+                margin: span(0.1);
+                min-width: span(3);
+                max-width: span(5);
+            }
+        }
+        //style pour le dernier élément § de content
+        p.external-content{
+            width: 95%;
+            margin: em(15px) auto;
+            @include breakpoint ($desktop){
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: em(85px);
+                height: 0;
+                overflow: initial;
+            }
+        }
+        //style particulier pour le 1er § qui ne contient pas la iframe 
+        p,p:first-child {
+            margin: 0 em(15px);
+            padding: 0;
+        }
+        iframe,object{
+            border: em(2px) solid $violet;
+            padding: em(1px);
+            @include img-centered;
+            max-width: 95%;
+
+            @include breakpoint ($desktop){
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+    }
+
+    #video_lycee{
+        width: 95%;
+        margin: em(15px) auto;
+        @include breakpoint ($desktop){
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: em(35px);
+            height: 0;
+            overflow: initial;
+        }
+        iframe,object{
+            border: em(2px) solid $violet;
+            padding: em(1px);
+            @include img-centered;
+            max-width: 95%;
+
+            @include breakpoint ($desktop){
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+    }
+
+}
+
+#zone-2.page-classes{
+    padding: 0.5em;
+}
+
+
+/*######-------- ZONE 3 --------######*/
+#zone-3.page-lycee{
+    span#lycee-formation{
+        background: $orange-fonce;
+        display: grid;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.5) span(1);
+
+        }
+        h3{
+            color: $blanc-casse;
+            text-transform: uppercase;
+            font-size: large;
+        }
+        ul.liste-formations-lycee{
+
+            li{
+                list-style:none;
+                margin:span(0.01);          
+                a{
+                    font-size: medium;
+                    color: $blanc-casse;
+                    text-decoration: none;
+                    padding: span(0.02);
+                    @include txt-cesure;
+                    &:hover{
+                        background: $gris-anthracite;
+                    }
+                }
+            }
+        }
+    }
+    #docs_lycee{
+
+        h3{
+            font-family:$AristaFont;
+            text-align: center;
+            color: $violet;
+            padding: 5px 0;
+            font-size: medium;
+            margin: 0 0 5px 0;
+        }
+
+        table{
+
+            margin: 0 auto;
+            width: 95%;
+
+            border: em(3px) solid $gris-clair-moyen;
+            background: #EFEFEF;
+            box-shadow:0px 0px 7px 1px $prune;
+            -moz-box-shadow: 3px $prune;
+            -webkit-box-shadow: 3px $prune;
+            behavior: url(/sites/all/libraries/PIE/PIE.htc);
+            position: relative;
+        }
+        tbody{
+            border: 0;
+            padding: em(10px) em(15px);
+
+        }
+        tr{
+            border: 0;
+            background: 0;
+
+        }
+        td{
+            text-align: center;
+
+            a{
+                display: block;
+                color: $prune;
+                text-decoration: none;
+
+                font-size: small;
+                &:hover{
+                    background: $rose-fushia;
+                    @include arrondis(em(10px));
+                    @include PIE;
+                    position: relative;
+                }
+            }
+        }
+        
+        .filefield-icon{
+            display: none;
+        }
+    }
+
+}
+/*######-------- ZONE 4 --------######*/
+#zone-4.page-lycee{
+    span#gmap-lycee{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.4);
+            display: grid;
+        }
+    }
+    iframe[src*="maps"],
+    iframe[src*="umap"]
+    {
+        min-height: 100vw;
+        min-width: 35vw;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            min-height: 20vw;    
+        }
+    }
+}

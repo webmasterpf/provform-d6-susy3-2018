@@ -1,0 +1,141 @@
+/*
+https://www.jqueryscript.net/menu/Responsive-Fullscreen-Navigation-Menu-with-jQuery-CSS3.html
+Menu plein page en surimpression - Modernise la navigation pour la Version 2018
+*/
+
+//@include breakpoint ($mobile){}
+  //@include breakpoint ($desktop){}
+  //@include breakpoint ($tablet){}
+  //@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
+body .conteneur{
+
+    .menui {
+        background: #fff;
+        transition: 0.6s ease;
+        transition-timing-function: cubic-bezier(.75, 0, .29, 1.01);
+        margin-top: span(0.2);
+        position: absolute;
+    }
+
+    .icon {
+        z-index: 999;
+        position: relative;
+        display: block;
+        float: right;
+        margin: 0 0 10% 0;
+        top: 0;
+        left: -10%;
+        bottom: 0;
+        text-decoration: none;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: em(9px);
+        height: em(32px);
+        width: em(32px);
+        margin: 1%;
+        top: em(0px);
+        left: em(0px);
+        }
+        
+        div.hamburger{
+            &::before{
+                //Ajout d'une indication sur présence du menu
+                content: "Menu ->";
+                color:$orange-fonce;
+                @include font-size(s);//utilisation de typey
+                font-family: $FontRaleway;
+                    left: -4em;
+                    top:0.9em;
+    position: relative;
+    text-decoration: none;
+    min-width: 4em;
+    display: block;
+     transition:0.5s all;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    top:0.35em;
+                }
+                
+            }
+        }
+    }
+
+    .mobilenav {
+        font-family: inherit;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $orange-fonce;
+        opacity: 0.9;
+        ul{
+            list-style: none;
+            width: span(7 of $desktopcol);
+            margin: 0 auto;
+        /*margin-left: span(2  wide);//push*/
+        font-family: $FontRaleway;
+        }
+        li {
+            list-style-type: none;
+            text-align: center;
+            padding: span(0.1);
+            a {
+                display: block;
+                font-size: smaller;
+                color: $blanc-casse;
+                text-decoration: none;
+                font-weight: lighter;
+                width: 100%;
+                    text-transform: uppercase;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    font-size: xx-large;
+                }
+                &:hover{
+                    color: $gris-anthracite;
+                    background: white;
+                }
+            }
+        }
+        li:first-child { margin-top: span(0.5); }
+        li.leaf {
+    list-style-type: none;
+    list-style-image: none;
+        }
+    }
+
+
+    .top-animate {
+        background: #fff !important;
+        top: 13px !important;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .mid-animate { opacity: 0; }
+
+    .bottom-animate {
+        background: #fff !important;
+        top: 13px !important;
+        -webkit-transform: rotate(-225deg);
+        transform: rotate(-225deg);
+    }
+    .top-menu,.mid-menu,.bottom-menu{
+             width: em(25px);
+        height: em(2px);
+        border-radius: em(10px);
+        background-color: $orange-fonce;
+    }
+    .top-menu {
+        top: em(5px);
+       }
+
+    .mid-menu {
+        top: em(13px);
+         }
+
+    .bottom-menu {
+        top: em(21px);
+   
+    }
+}

@@ -1,0 +1,458 @@
+/*
+Pour le dev, code visuel sur les blocs selon le breakpoint
+à commenter ou supprimer pour la production
+*/
+//Layout de la page d'accueil - Version 2018 Susy 3
+body .conteneur {
+    //Approche mobile-first,réglage pour mobile
+
+    #header{background-color: #F29400;}
+    .annonce_1{background-color: chocolate;}      
+
+    .annonce_2{background-color:deeppink;}
+    .HPDiapo{background-color: violet;}
+    .acces_rubriques{background-color: steelblue;}
+    .logo_partenaires{background-color: salmon;}
+
+    #footer{background-color: firebrick;
+            aside{
+                background-color: teal;     
+            }     
+    }
+    @include breakpoint($tablet) {//Dimensions pour les tablettes
+
+                                  #header{
+                                      background-color: sienna;
+                                  }
+                                  .annonce_1{background-color: mistyrose;}
+                                  .annonce_2{background-color: #C8D215;}
+                                  .HPDiapo{}
+                                  .acces_rubriques{}
+                                  .logo_partenaires{}
+
+                                  #footer{background-color: peachpuff;
+                                          aside{
+                                              background:sandybrown;
+                                          }  
+                                  }        
+    }   
+
+
+
+    @include breakpoint($desktop) {//Dimensions pour les pc
+
+                                   #header{
+                                       background: seashell;}
+                                   .annonce_1{
+                                       background-color: palevioletred;     
+                                   }
+                                   .annonce_2{background-color:yellow;}
+                                   .HPDiapo{background-color: blanchedalmond;     }
+                                   .acces_rubriques{background-color: sandybrown;}
+                                   .logo_partenaires{background: tomato;}
+
+    }
+    @include breakpoint($tabletlandscape) {//Dimensions pour les tablettes
+
+                                           #header{
+
+                                               background: palevioletred;}
+                                           .annonce_1{
+                                               background-color: yellow;     
+                                           }
+                                           .annonce_2{background-color: sandybrown;}
+                                           .HPDiapo{background-color: yellowgreen;}
+                                           .acces_rubriques{background: tomato;}
+                                           .logo_partenaires{background: violet;}
+
+                                           #footer{background-color: palegreen;
+                                           }
+
+    }
+}
+/*//////////////////////\\\\\\\\\\\\\\\\\\\\\\
+********** COULEUR LAYOUT NODE.TPL OVERRIDE **********
+\\\\\\\\\\\\\\\\\\\\\\\//////////////////////*/
+
+
+body .conteneur{
+    .zone_layout_max{
+        background: #f5bdac;
+        @include breakpoint ($mobile){
+            
+        }
+        @include breakpoint ($desktop){
+         background: peachpuff;
+        }
+    }
+    .zone_layout_max_centre{
+        
+        background: peachpuff;
+        @include breakpoint ($mobile){
+            
+        }
+        @include breakpoint ($desktop){
+            background: violet;
+         
+        }
+          @include breakpoint ($tabletlandscape){
+       background: #f5bdac;
+         
+        }
+    }
+
+}
+
+/*//////////////// 3 COLONNES \\\\\\\\\\\\\\\\*/
+body .conteneur{
+    .zone1_layout_3_6_3{
+       
+        @include breakpoint ($tablet){
+       
+            background: #00CC99;
+        }
+        @include breakpoint ($desktop){
+       
+            background: #cccccc;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+       
+            background: violet;
+        }
+    }
+    .zone2_layout_3_6_3{
+       
+        
+        background: khaki;
+       
+        @include breakpoint ($tablet){
+       
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+       
+          background: hotpink;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+       
+            background: royalblue;
+        }
+
+    }
+    .zone3_layout_3_6_3{
+        background: #00c9fe;
+       
+        @include breakpoint ($tablet){
+       
+            background: purple;
+        }
+        @include breakpoint ($desktop){
+       
+           background: teal;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+       
+            background: violet;
+        }
+
+    }
+}
+
+body .conteneur{
+    .zone1_layout_2_7_3{
+     
+        @include breakpoint ($tablet){
+            background: #00CC99;
+        }
+        @include breakpoint ($desktop){
+                 background: blanchedalmond;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+                 background: violet;
+        }
+    }
+    .zone2_layout_2_7_3{
+        background: khaki;
+        @include breakpoint ($tablet){
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+          background: hotpink;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+            background: royalblue;
+        }
+   }
+    .zone3_layout_2_7_3{
+         background: #00c9fe;
+        @include breakpoint ($tablet){
+            background: purple;
+        }
+        @include breakpoint ($desktop){
+           background: teal;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+ 
+            background: violet;
+        }
+
+    }
+}
+body .conteneur{
+    .zone1_layout_2_6_4{
+       
+       
+       @include breakpoint ($tablet){
+       
+            background: #00CC99;
+        }
+       
+       @include breakpoint ($desktop){
+       
+            background: #cccccc;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+       
+            background: violet;
+        }
+    }
+    .zone2_layout_2_6_4{
+       
+        
+        background: khaki;
+       
+        @include breakpoint ($tablet){
+       
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+       
+          background: hotpink;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+       
+            background: royalblue;
+        }
+
+    }
+    .zone3_layout_2_6_4{//pas de of pour le span car le contexte est définit par le breakpoint
+       
+       
+        background: #00c9fe;
+       
+        @include breakpoint ($tablet){
+       
+            background: purple;
+        }
+        @include breakpoint ($desktop){
+       
+           background: teal;
+        }
+        //Pour orientation paysage
+         @include breakpoint ($tabletlandscape){
+       
+            background: violet;
+        }
+
+    }
+}
+//Pour un 3 colonnes egales : page pole
+body .conteneur{
+    .layout_3col_all4{
+            background: indianred;
+        @include breakpoint ($tablet){
+                background: tomato;
+        }
+        @include breakpoint ($desktop){
+                
+                background: khaki;
+        }
+    }
+    .layout_3col_all4last{
+            background: khaki;
+        @include breakpoint ($tablet){
+       
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+       
+            background: indianred;
+        }
+    }
+}
+/*//////////////// 2 COLONNES ASYMETRIQUES \\\\\\\\\\\\\\\\*/
+body .conteneur{
+    .zone1_layout_4_8{
+        @include breakpoint ($tablet){
+       
+            background: #00CC99;
+        }
+        @include breakpoint ($desktop){
+       
+            background: #cccccc;
+        }
+    }
+    .zone2_layout_4_8{
+        
+        
+        background: khaki;
+        @include breakpoint ($tablet){
+              background: tomato;
+        }
+        @include breakpoint ($desktop){
+                   background: thistle;
+        }
+
+    }
+  
+    
+    .zone1_layout_3_9{
+        @include breakpoint ($tablet){
+            background: #00CC99;
+        }
+        @include breakpoint ($desktop){
+            background: #cccccc;
+        }
+    }
+    .zone2_layout_3_9{
+        background: khaki;
+        @include breakpoint ($tablet){
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+            background: thistle;
+        }
+    }
+  
+  .zone1_layout_2_10{}
+  .zone2_layout_2_10{}
+  
+  .zone1_layout_5_7{}
+  .zone2_layout_5_7{}
+  
+  .zone1_layout_6_6,.zone1_layoutflex_6_6{
+      @include breakpoint ($tablet){
+          background: tomato;
+      }
+      @include breakpoint ($desktop){
+          background: thistle;
+      }
+  }
+  .zone2_layout_6_6,.zone2_layoutflex_6_6{
+      @include breakpoint ($tablet){
+          background: #00CC99;
+      }
+      @include breakpoint ($desktop){
+          background: #cccccc;
+      }
+  }
+  
+  .zone1_layout_7_5{
+      
+      background: orangered;
+      @include breakpoint ($tablet){
+              background: thistle;
+          
+      }
+      @include breakpoint ($desktop){
+      background: royalblue;
+      }
+  }
+  .zone2_layout_7_5{
+      background: orange;
+      @include breakpoint ($tablet){
+          background: #00CC99;
+      }
+      @include breakpoint ($desktop){
+          background: aquamarine;
+      }
+  }
+  
+  .zone1_layout_8_4{
+      @include breakpoint ($tablet){
+          background: tomato;
+      }
+      @include breakpoint ($desktop){
+          background: thistle;
+      }
+  }
+  .zone2_layout_8_4{
+      @include breakpoint ($tablet){
+          background: #00CC99;
+      }
+      @include breakpoint ($desktop){
+          background: #cccccc;
+      }
+  }
+  
+  .zone1_layout_9_3{
+          background: #764479;
+        @include breakpoint ($tablet){
+          background: #00CC99;
+      }
+      @include breakpoint ($desktop){
+          background: #cccccc;
+      }
+  }
+  .zone2_layout_9_3{
+      background: tan;
+          @include breakpoint ($tablet){
+          background: tomato;
+      }
+      @include breakpoint ($desktop){
+          background: thistle;
+      }
+  }
+  
+  .zone1_layout_10_2{}
+  .zone2_layout_10_2{}
+}
+
+/*//////////////// 4 COLONNES \\\\\\\\\\\\\\\\*/
+body .conteneur{
+    .layout_4col_all3{
+       
+        
+        background: khaki;
+        @include breakpoint ($tablet){
+       
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+       
+            background: indianred;
+        }
+    }
+    .layout_4col_all3last{
+       
+        
+        background: khaki;
+        @include breakpoint ($tablet){
+           
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+           
+            background: indianred;
+        }
+    }
+    #zone-illustration{
+                background: khaki;
+        @include breakpoint ($tablet){
+           
+            background: tomato;
+        }
+        @include breakpoint ($desktop){
+           
+            background: indianred;
+        }
+    }
+}
