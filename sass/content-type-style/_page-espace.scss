@@ -330,7 +330,7 @@ ______________________________*/
                         a{
                             &:before{
 
-                                @include image-overlay('motif_img_overlay.png', 0 0, repeat);
+                                @include image-overlay('PNG/motif_img_overlay.png', 0 0, repeat);
                                 
                             }
 
@@ -384,7 +384,7 @@ ______________________________*/
                     a {
                         &:before{
 
-                            @include image-overlay('motif_img_overlay.png', 0 0, repeat);
+                            @include image-overlay('PNG/motif_img_overlay.png', 0 0, repeat);
                             @include adaptable-img;
                         }
                         &:hover{

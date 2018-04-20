@@ -2,7 +2,7 @@
 ;Ajouter les regions utiles dans la liste ci apres, idem pour les CSS.
 ;Changer le screenshot du site pour interface admin
 ;
-name =  Template for PF - SUSY 3 - Redesign 2018
+name =  Provence Formation RWD Theme  - SUSY 3 - Redesign 2018
 description = Thème SCSS /HTML5 pour Drupal 6. Thème RWD utilisant Susy 3, GULP, Sans Compass
 version = VERSION
 core = 6.x

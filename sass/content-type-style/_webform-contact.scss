@@ -66,7 +66,7 @@ body .conteneur{
             width: 95%;
             margin: 0 auto;
             @include arrondis(1.5em);
-        @include backgroundImage("motif_img_overlay.png",0 0, repeat);
+        @include backgroundImage("PNG/motif_img_overlay.png",0 0, repeat);
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: 75%;
         margin: span(0.1) auto; 
