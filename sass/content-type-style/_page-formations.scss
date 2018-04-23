@@ -102,6 +102,7 @@ body .conteneur{
 
                 }
                 a{
+                    //pour que motif utilise la taille du a
                     display: block;
                 }
             }
@@ -229,6 +230,7 @@ ______________________________*/
                    &:before{
 
                        @include image-overlay('PNG/motif_img_overlay.png', 0 0, repeat);
+                          bottom: 7px;//override des valeurs de la mixin
                    }
                 }
                 &.tid-98{
