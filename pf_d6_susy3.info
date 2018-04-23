@@ -67,7 +67,7 @@ stylesheets[all][] = css/navigation/superfish/white.css
 ;CSS Slideshow Contenu Star
 stylesheets[all][] = css/css_galeries/slideshow-content-star.css
 ; CSS pour utiliser NavJS (responsive menu)
-stylesheets[all][] = css/navigation/responsive-nav.css
+;stylesheets[all][] = css/navigation/responsive-nav.css
 
 regions[header] = Header
 regions[menuDyn] = Menu Header - Menu dynamique JS

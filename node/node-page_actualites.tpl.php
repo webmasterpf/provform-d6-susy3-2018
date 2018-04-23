@@ -45,7 +45,7 @@
                
 
                         <?php if ($node->field_vue_content_vr[0]['view']):
-     print '<aside class="contenu-rubrique">'.$node->field_vue_content_vr[0]['view'].'</aside>';
+     print '<aside class="liste-actu-presse">'.$node->field_vue_content_vr[0]['view'].'</aside>';
  endif;
                             ?>
       

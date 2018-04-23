@@ -54,7 +54,7 @@ body .conteneur{
         #right-content{}
         #footer{
 
-            @include background-size(40% auto);
+            @include background-size(35% auto);
             &:before{
                 content: " ";
                 display: block;

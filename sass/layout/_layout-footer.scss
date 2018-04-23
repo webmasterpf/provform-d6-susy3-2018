@@ -10,13 +10,13 @@
 body .conteneur #footer{
     padding:0;
     color: $gris-clair-moyen;//Changer couleur selon besoin
-    background: transparent url("../images/bg_footer.jpg") no-repeat bottom left;
+       @include backgroundImage(('BG/bg_footer@4x.png'), right bottom, no-repeat);//nouvelle mixin 2018
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         width: span(10 of $desktopcol);
         margin-left: span(1 wide);//push
         /*background: transparent url("../images/bg_footer.jpg") no-repeat scroll right bottom;*/
         /*@include backgroundImage(('bg_footer.jpg'), no-repeat, right bottom);//nouvelle mixin 2018*/
-        @include backgroundImage(('BG/bg_footer@4x.png'), no-repeat, right bottom);//nouvelle mixin 2018
+        
     }
     aside{
 
@@ -42,7 +42,7 @@ body .conteneur #footer{
         }
     }
     @include breakpoint ($desktop){
-        @include background-size();;
+        @include background-size();
 
 
     }

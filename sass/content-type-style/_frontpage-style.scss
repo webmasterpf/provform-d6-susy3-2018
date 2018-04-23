@@ -309,6 +309,7 @@ body .conteneur {
                 margin: 0 span(2);
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     display:flex;
+                    
                     /*max-width: span(11);*/
                     margin:0 span(2);
                 }
@@ -336,7 +337,7 @@ body .conteneur {
                         font-weight: bold;
                         color: whitesmoke;
 
-                        @include backgroundImage("SVG/bg_acces_contact.svg");
+                        /*@include backgroundImage("SVG/bg_acces_contact.svg");*/
                         background-size: cover;
                         background-clip: padding-box;
                         min-width: inherit;
@@ -344,9 +345,11 @@ body .conteneur {
                         transition-duration: 0.0s;//Permet de jouer sur un effet de slide
                         text-align: center;
                         @include txt-cesure(break-word);
-                        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-                        clip-path: circle(50% at 50% 50%);
-
+/*                        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+                        clip-path: circle(50% at 50% 50%);*/
+                        @include arrondis(5em);  
+                        background-color: $gris-anthracite;
+                        
                         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                             padding: span(5) span(1) 0;
                             min-height: 11vw;          
@@ -355,10 +358,9 @@ body .conteneur {
                         }
                         &:hover{
 
-
                             /*        @include backgroundImage("SVG/bg_acces_contact.svg", -29em top);*/
                             background-size: cover;
-
+                            background-color: $orange-fonce;
                             text-indent: em(-9000px);
                         }
                     }
@@ -367,25 +369,25 @@ body .conteneur {
 
                 .views-row-1{
                     a:hover{
-                        @include backgroundImage("SVG/bg_acces_contact.svg", 25.5% top);
+                        @include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);
                         background-size: cover;
                     }
                 }
                 .views-row-2{
                     a:hover{
-                        @include backgroundImage("SVG/bg_acces_contact.svg", 51% top);
+                        @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51% top);
                         background-size: cover;
                     }
                 }
                 .views-row-3{
                     a:hover{
-                        @include backgroundImage("SVG/bg_acces_contact.svg", 76% top);
+                        @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  76% top);
                         background-size: cover;
                     }
                 }
                 .views-row-4{
                     a:hover{
-                        @include backgroundImage("SVG/bg_acces_contact.svg", 100%  top);
+                        @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100%  top);
                         background-size: cover;
                     }
                 }

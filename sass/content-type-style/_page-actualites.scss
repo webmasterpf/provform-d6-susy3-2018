@@ -16,9 +16,9 @@ body .conteneur .conteneur-flex{
     #zone-2.page-actualites{order:1;}
     #zone-3.page-actualites{order:3;}
     @include breakpoint ($desktop){
-        #zone-1.page-actualites{order:1;}
+/*        #zone-1.page-actualites{order:1;}
         #zone-2.page-actualites{order:2;}
-        #zone-3.page-actualites{order:3;}
+        #zone-3.page-actualites{order:3;}*/
     }
 }
 
@@ -48,7 +48,7 @@ body .conteneur {
     }
 }
 #zone-1.page-actualites{
-    >.content{
+    >.content,.block-aggregator ul{
         column-count: 0;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             column-count: 2;
@@ -99,11 +99,13 @@ body .conteneur {
                         margin: 0 span(0.1) span(0.1) 0;
                             display: inline-block;
                         width: span(1.8);
-
-                        :not(img):not(a):not(.complement){
+                        .field-content{//pas possible de l'enlever de la vue
+                            :not(img):not(a):not(.image_actu){
                             padding: span(0.1);
 
                         }
+                        }
+                        
 
                     }
                     a{
@@ -172,7 +174,7 @@ ______________________________*/
                 label{
                     cursor: pointer;
                     &:after{
-                        content: "PôLE";
+                        content: "Actu";
                         color:$orange-fonce;
                         @include font-size(l);//utilisation de typey
                         font-family: $FontRaleway;
