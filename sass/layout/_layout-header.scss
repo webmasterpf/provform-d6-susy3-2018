@@ -29,7 +29,7 @@ body .conteneur #header {
                 width: 100%;
                 @include breakpoint(($mobile,$mobilelandscape)){           }
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){    
-                    width: 70%;
+                    width: 50%;
                     margin: 0;
                     padding: 0;
                     //display: block;//commenter si logo pas collé à gauche
@@ -56,7 +56,9 @@ body .conteneur #header {
     @include clearfixsusy3;//Dispo sur tous supports
     .site-slogan,.objectif{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            padding: em(5px) 0 0 0 //Ajoute un padding pour positionner boite
+            width: span(9);
+            padding: span(0.1) 0 0 span(0.1); //Ajoute un padding pour positionner boite
+            float: left;
         }
     }
     .headSearch{
@@ -66,6 +68,7 @@ body .conteneur #header {
             padding: em(5px) 0 0 0; //Ajoute un padding pour positionner boite de recherche
             margin: 0 span(0.2);
             float: right;
+            width: span(2);
         }
     }
 

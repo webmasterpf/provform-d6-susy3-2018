@@ -126,7 +126,7 @@ body .conteneur{
 ______________________________*/
 .illustration-fiche{
     h1{
-        &.pole-98{
+        &.pole-98{//ajout de picto selon le pôle
             &::before{
                 @include backgroundImage("PNG/CAP_ATMFC@4x.png");
                     background-size: contain;
@@ -144,7 +144,28 @@ ______________________________*/
         &.pole-98{}
     }
 }
+//Ajout de picto en BG selon ID du node de la fiche
+#node-89{
+    #zone-1.fiche-formation{
+         /*background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../images/PNG/CAP_ATMFC@4x.png") no-repeat;*/
+         /*@include backgroundImageTransparentRGBA("PNG/CAP_ATMFC@4x.png",$gris-anthracite,0.5)*/   
+         position:relative;
+         //Inclusion du BG dans ::before via une mixin
+         @include backgroundImageOpacity(("PNG/Pictos/BAC_STMG@4x.png"),-15%);
+             
+    }
+}
+#node-85{
+    #zone-1.fiche-formation{
+         position:relative;
+         //Inclusion du BG dans ::before via une mixin
+         @include backgroundImageOpacity(("PNG/Pictos/CAP_ATMFC@4x.png"),5%);
+             
+    }
+}
+
 #zone-1.fiche-formation{
+    
     .complement-titre-fiche{
 
 

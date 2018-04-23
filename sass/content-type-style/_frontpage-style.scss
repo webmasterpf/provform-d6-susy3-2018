@@ -347,7 +347,7 @@ body .conteneur {
                         @include txt-cesure(break-word);
 /*                        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
                         clip-path: circle(50% at 50% 50%);*/
-                        @include arrondis(5em);  
+                        @include arrondis(4em);  
                         background-color: $gris-anthracite;
                         
                         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){

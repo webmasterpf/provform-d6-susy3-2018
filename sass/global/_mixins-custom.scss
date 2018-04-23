@@ -69,6 +69,26 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 */
    //En travaux !!!
 }
+@mixin backgroundImageTransparentRGBA($filename,$color, $opacity,$couleur:transparent,$position:top left,$repeat: no-repeat) {
+    /*position: relative;*/
+    background:  linear-gradient(rgba($color, $opacity),rgba($color, $opacity)),$couleur url('#{$imagedir}#{$filename}') $position $repeat;
+    }
+    @mixin backgroundImageOpacity($filename,$left:0)    {
+          &::before{
+             @include backgroundImage($filename);
+             position: absolute;
+             top:0;
+             left: $left;
+             content: "";
+             opacity: 0.05;
+             width: 100%;
+             height: 100%;
+             display: block;
+         }   
+    }
+@mixin rgba-background($color, $opacity){
+    background: rgba($color, $opacity);
+}
 /*---------- PIE pour CSS3 IE --------------*/
 @mixin PIE {
     behavior: url(./../sites/all/libraries/PIE/PIE.htc);
@@ -325,13 +345,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
     -khtml-opacity : $opacite;
 }
 
-@mixin rgba-background($color, $opacity) {
-    /*position: relative;*/
-    background: $color;
-    background: rgba($color, $opacity);
-    -pie-background: rgba($color, $opacity);
-    @include PIE;
-}
+
 
 @mixin arrondis ($angle : 0.5em){
     -moz-border-radius: $angle;
