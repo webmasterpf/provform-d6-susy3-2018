@@ -34,7 +34,7 @@ body .conteneur .conteneur-flex{
     td .inner div.calendar div, td .inner div.calendar div a{
     border: none;
     //(145,18,125,0.1)
-    @include rgba-background($violet,0.1);
+    @include backgroundRGBA($violet,0.1);
     padding: 0 em(2px);
     }
 }

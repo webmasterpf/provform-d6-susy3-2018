@@ -92,12 +92,15 @@ body .conteneur{
         }
     }
     table#infos-pratiques-bts,div#info-plus-fiche-bts{
-
+            
         margin: span(0.02) auto;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(7);
-
-
+        }
+    }
+    div#liens-fiche-bts{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.1);
         }
     }
 }
@@ -183,9 +186,12 @@ ______________________________*/
         /*max-width: 90%;*/
     }
     table#infos-pratiques-bts{
-        border-top: em(1px) solid  $vert;
-        border-bottom: em(2px) solid $gris-anthracite;
+    
+        border: em(2px) solid $gris-clair-moyen;
         @include font-size(s);//utilisation de typey
+        @include arrondis();
+         border-collapse:separate;
+    
         tbody{}
         tr{}
         td{
@@ -210,6 +216,7 @@ ______________________________*/
             margin:0;
             li{
                 list-style: square;
+                    list-style-position: inside;
             }
         }
         td.col1{
@@ -217,7 +224,8 @@ ______________________________*/
             width: 33%;
         }
         td.col2{
-            background: $gris-clair;
+            @include backgroundRGBA($gris-clair,0.5)
+            
         }
         td.col3{
             background: none ;
@@ -236,6 +244,7 @@ ______________________________*/
                         margin:em(3px);
                         transition:0.5s all;
                         display: inline-block;
+                        transform: scale(1.1);
                     }
                 }
                   img.filefield-icon{
@@ -244,6 +253,9 @@ ______________________________*/
                 }
                 h3{
                     background: transparent;
+                }
+                #liens-fiche-bts{
+                    
                 }
     }
 

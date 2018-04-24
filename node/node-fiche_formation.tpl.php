@@ -58,14 +58,14 @@
          
         </div><!--  /zone-1-->
 
-                      <?php if ($node->field_diapo_lycee_type[0]['view']): ?>
+  <?php if ($node->field_diapo_lycee_type[0]['view']): ?>
         <!--______________ ZONE 2 ________________ -->
         <div id="zone-2" class="zone_layout_max fiche-formation">         
         <aside class="galerie">
                     <?php  print $node->field_diapo_lycee_type[0]['view'];?>
             </aside>
     </div> <!-- /zone-2 -->
-            <?php endif;?>
+  <?php endif;?>
                 
 <!--______________ ZONE 3 ________________ -->
     <div id="zone-3" class="zone_layout_max_centre fiche-formation">

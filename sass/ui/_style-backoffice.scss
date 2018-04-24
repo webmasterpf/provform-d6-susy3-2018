@@ -8,7 +8,8 @@
 
 /*######-------- ||| LAYOUT  PAGES BO ||| --------######*/
 body.not-front.logged-in{
-    section.conteneur{
+    &.page-admin{
+        section.conteneur{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
          width: span(10 of $desktopcol);
         margin-left: span(1 wide);//push
@@ -19,6 +20,21 @@ body.not-front.logged-in{
     }
         }
     }
+    }
+    &.page-node{
+        section.conteneur{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+         width: span(12 of $desktopcol);
+        /*margin-left: span(1 wide);//push*/
+        @include clearfix;
+          .middle-content  img{
+        width: auto;
+        display: initial;
+    }
+        }
+    }
+    }
+    
 }
 
 /*----Navigation backoffice------*/

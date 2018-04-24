@@ -87,7 +87,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
              background-size: $bgsize;
          }   
     }
-@mixin rgba-background($color, $opacity){
+@mixin backgroundRGBA($color, $opacity){
     background: rgba($color, $opacity);
 }
 /*---------- PIE pour CSS3 IE --------------*/

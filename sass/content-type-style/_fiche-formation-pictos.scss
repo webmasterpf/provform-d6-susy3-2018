@@ -129,8 +129,10 @@ ______________________________*/
     &.nid-112{//BTS Management des Unités Commerciales (MUC) 
     }
     &.nid-113{//BTS Négociation et Relation Client (NRC) 
+              @include backgroundImageOpacity(("PNG/Pictos/BTS_NDRC@4x.png"));
     }
     &.nid-114{//BTS Assistant de Gestion PME/PMI (AG) 
+              @include backgroundImageOpacity(("PNG/Pictos/BTS_GestPME@4x.png"));
     }
     &.nid-117{//BTS Transport et Prestations Logistiques (TPL)
 
@@ -142,7 +144,7 @@ ______________________________*/
 
     }
     &.nid-786{//BTS Tourisme
-
+              @include backgroundImageOpacity(("PNG/Pictos/BTS_Tourisme@4x.png"));
     }
 }
 #zone-2.fiche-formation{}

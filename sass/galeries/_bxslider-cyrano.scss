@@ -46,7 +46,7 @@ body .conteneur{
             left: span(0.2);
             width: 80%;
             //couleur fond des captions
-            @include rgba-background($orange-fonce, 0.85);
+            @include backgroundRGBA($orange-fonce, 0.85);
             margin: 0 auto;
             span{
                  color: white;

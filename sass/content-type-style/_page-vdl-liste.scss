@@ -166,7 +166,7 @@ h1.titre_page_vdl{
 {
     width: 65%;margin: 0 auto;padding: 5px;
     background:$violet;
-    @include rgba-background($violet,0.35);
+    @include backgroundRGBA($violet,0.35);
     
     label
     {

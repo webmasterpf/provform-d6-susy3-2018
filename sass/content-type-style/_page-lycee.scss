@@ -72,7 +72,7 @@ h1.titre_overlay{
 h1.titre_page{
     @include titre-page;
     color: $blanc-casse;
-    @include rgba-background($orange-fonce, 0.8);
+    @include backgroundRGBA($orange-fonce, 0.8);
 
 }
 /*¤¤¤ STYLES COMMUNS ¤¤¤*/
