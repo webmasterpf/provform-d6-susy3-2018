@@ -73,9 +73,9 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
     /*position: relative;*/
     background:  linear-gradient(rgba($color, $opacity),rgba($color, $opacity)),$couleur url('#{$imagedir}#{$filename}') $position $repeat;
     }
-    @mixin backgroundImageOpacity($filename,$left:0)    {
+    @mixin backgroundImageOpacity($filename,$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain)    {
           &::before{
-             @include backgroundImage($filename);
+             background: $couleur url('#{$imagedir}#{$filename}') $position $repeat;
              position: absolute;
              top:0;
              left: $left;
@@ -84,6 +84,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
              width: 100%;
              height: 100%;
              display: block;
+             background-size: $bgsize;
          }   
     }
 @mixin rgba-background($color, $opacity){

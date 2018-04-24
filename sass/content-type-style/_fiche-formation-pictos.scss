@@ -18,11 +18,11 @@
 
 /*######-------- ||| ORDRE FLEXBOX ||| --------######*/
 body .conteneur .conteneur-flex{
-    #zone-1.CLASS_NAME_CONTENU{order:1;}
-    #zone-2.CLASS_NAME_CONTENU{order:2;}
-    #zone-3.CLASS_NAME_CONTENU{order:3;}
-    #zone-4.CLASS_NAME_CONTENU{}
-    #zone-5.CLASS_NAME_CONTENU{}
+    #zone-1.fiche-formation{order:1;}
+    #zone-2.fiche-formation{order:2;}
+    #zone-3.fiche-formation{order:3;}
+    #zone-4.fiche-formation{}
+    #zone-5.fiche-formation{}
     @include breakpoint ($desktop){}
 }
 
@@ -40,77 +40,86 @@ body .conteneur{
 /*######-------- ||| STYLE ||| --------######*/
 
 /*¤¤¤ STYLES COMMUNS ¤¤¤*/
-#zone-1.CLASS_NAME_CONTENU,
-#zone-2.CLASS_NAME_CONTENU,
-#zone-3.CLASS_NAME_CONTENU,
-#zone-4.CLASS_NAME_CONTENU,
-#zone-5.CLASS_NAME_CONTENU
+#zone-1.fiche-formation,
+#zone-2.fiche-formation,
+#zone-3.fiche-formation,
+#zone-4.fiche-formation,
+#zone-5.fiche-formation
 {}
 
 /*------------------------------------
         ¤¤¤ STYLES PROPRES ¤¤¤
 ______________________________*/
 
-#zone-1.CLASS_NAME_CONTENU{}
-#zone-2.CLASS_NAME_CONTENU{}
+#zone-1.fiche-formation{
+    position:relative;//pour pouvoir afficher le BG en ::before
 
-//Ajout de picto en BG selon ID du node de la fiche
-/*background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../images/PNG/CAP_ATMFC@4x.png") no-repeat;*/
-/*@include backgroundImageTransparentRGBA("PNG/CAP_ATMFC@4x.png",$gris-anthracite,0.5)*/   
+    //Ajout de picto en BG selon ID du node de la fiche
+    /*background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../images/PNG/CAP_ATMFC@4x.png") no-repeat;*/
+    /*@include backgroundImageTransparentRGBA("PNG/CAP_ATMFC@4x.png",$gris-anthracite,0.5)*/   
 
-#node-14{}//	CAP Opérateur/trice Logistique
-#node-21{}//	CAP Agent Polyvalent de Restauration (APR)					
-#node-23{}//	3ème Prépa Pro	Français
-#node-81{}//	CAP Employé de Vente	
-#node-84{}//	CAP Cuisine
-
-#node-85{//CAP Assistant technique en milieu familial et collectif (ATMFC) 
-    #zone-1.fiche-formation{
-         position:relative;
-         //Inclusion du BG dans ::before via une mixin
-         @include backgroundImageOpacity(("PNG/Pictos/CAP_ATMFC@4x.png"),5%);
-             
+    &.nid-14{//	CAP Opérateur/trice Logistique
+             //Inclusion du BG dans ::before via une mixin
+             @include backgroundImageOpacity(("PNG/Pictos/CAP_Logistique@4x.png"));
     }
-}
-#node-86{}//	CAP Accompagnant éducatif petite enfance
-#node-88{}//	Seconde Générale et Technologique
-
-#node-89{//BAC Techno STL Biotechnologie (STLB)
-    #zone-1.fiche-formation{
-          position:relative;
-         //Inclusion du BG dans ::before via une mixin
-         @include backgroundImageOpacity(("PNG/Pictos/BAC_STMG@4x.png"),-15%);
-             
+    &.nid-21{//	CAP Agent Polyvalent de Restauration (APR)
+             @include backgroundImageOpacity(("PNG/Pictos/CAP_APR@4x.png"));
     }
+    &.nid-23{//	3ème Prépa Pro
+             /*@include backgroundImageOpacity(("PNG/Pictos/CAP_Logistique@4x.png"),7%);*/
+    }
+    &.nid-81{//	CAP Employé de Vente
+             @include backgroundImageOpacity(("PNG/Pictos/CAP_Vente@4x.png"));
+    }
+    &.nid-84{//	CAP Cuisine
+             /*@include backgroundImageOpacity(("PNG/Pictos/CAP_Logistique@4x.png"),7%);*/
+    }
+
+    &.nid-85{//CAP Assistant technique en milieu familial et collectif (ATMFC) 
+             //Inclusion du BG dans ::before via une mixin
+             @include backgroundImageOpacity(("PNG/Pictos/CAP_ATMFC@4x.png"));
+    }
+    &.nid-86{//CAP Accompagnant éducatif petite enfance
+             @include backgroundImageOpacity(("PNG/Pictos/CAP_AEPE@4x.png"));
+    }
+    &.nid-88{//Seconde Générale et Technologique
+
+    }
+    &.nid-89{//BAC Techno STL Biotechnologie (STLB)
+             @include backgroundImageOpacity(("PNG/Pictos/BAC_STL_Biotech3@4x.png"));
+    }
+    &.nid-91{//BAC STMG : Mercatique et Ressources Humaines - Communication
+             @include backgroundImageOpacity(("PNG/Pictos/BAC_STMG@4x.png"));
+    }
+    &.nid-93{//BAC Technologique STG Mercatique
+             @include backgroundImageOpacity(("PNG/Pictos/BAC_STMG@4x.png"));
+    }
+    &.nid-94{//BAC Pro Service Proximité et Vie Locale (SPVL) 
+             @include backgroundImageOpacity(("PNG/Pictos/BAC_SPVL@4x.png"));
+    }
+    &.nid-95{//	BAC Pro Artisanat et Métiers d'Art Communication Visuelle (AMACV)
+             @include backgroundImageOpacity(("PNG/Pictos/BAC_AMACV@4x.png"));
+    }
+    &.nid-96{}//	BAC Pro Vente - Section Européenne	
+    &.nid-97{}//	BAC Pro Transport
+    &.nid-98{}//	BAC Pro Accueil Relation Clients et Usagers (ARCU)	
+    &.nid-99{}//	BAC Pro Etude et Définition de Produits Industriels
+    &.nid-101{}//	BAC Pro Commerce	Français	
+    &.nid-102{}//	BAC Pro Logistique
+    &.nid-103{}//	FCIL Prépa Concours Infirmière (IFSI)	
+    &.nid-104{}//	Mention complémentaire Aide à Domicile	Français
+    &.nid-107{}//	Préparation aux concours aide soignant(e) - IFAS	
+    &.nid-229{}//	Préparation aux concours auxiliaire de puériculture - IFAP	
+    &.nid-255{}//	BAC Techno Sciences et Technologies du Design et des Arts Appliqués (ST2A)
+    &.nid-258{}//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Structure 
+    &.nid-259{}//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Domicile	
+    &.nid-271{}//	BAC Pro Esthétique Cosmétique Parfumerie (ECP)
+    &.nid-272{}//	Formation professionnelle pour élèves en situation de handicap - ULIS -					
+    &.nid-309{}//	Mention complémentaire Secrétariat Médical	
+    &.nid-354{}//	BAC Pro Gestion Administration (GA)	
+    &.nid-393{}//	Préparation au concours ATSEM 
+    &.nid-486{}//	BAC Pro Commercialisation et services en restauration - CSR	
+    &.nid-488{}//	BAC Professionnel Cuisine	
+    &.nid-807{}//	CAP Commercialisation et service Hôtel-Café-Restaurant	
 }
-
-
-	
-
-	
-
-#node-91{}//	BAC STMG : Mercatique et Ressources Humaines - Communication	
-#node-93{}//	BAC Technologique STG Mercatique	
-#node-94{}//	BAC Pro Service Proximité et Vie Locale (SPVL) 
-#node-95{}//	BAC Pro Artisanat et Métiers d'Art Communication Visuelle (AMACV)
-#node-96{}//	BAC Pro Vente - Section Européenne	
-#node-97{}//	BAC Pro Transport
-#node-98{}//	BAC Pro Accueil Relation Clients et Usagers (ARCU)	
-#node-99{}//	BAC Pro Etude et Définition de Produits Industriels
-#node-101{}//	BAC Pro Commerce	Français	
-#node-102{}//	BAC Pro Logistique
-#node-103{}//	FCIL Prépa Concours Infirmière (IFSI)	
-#node-104{}//	Mention complémentaire Aide à Domicile	Français
-#node-107{}//	Préparation aux concours aide soignant(e) - IFAS	
-#node-229{}//	Préparation aux concours auxiliaire de puériculture - IFAP	
-#node-255{}//	BAC Techno Sciences et Technologies du Design et des Arts Appliqués (ST2A)
-#node-258{}//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Structure 
-#node-259{}//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Domicile	
-#node-271{}//	BAC Pro Esthétique Cosmétique Parfumerie (ECP)
-#node-272{}//	Formation professionnelle pour élèves en situation de handicap - ULIS -					
-#node-309{}//	Mention complémentaire Secrétariat Médical	
-#node-354{}//	BAC Pro Gestion Administration (GA)	
-#node-393{}//	Préparation au concours ATSEM 
-#node-486{}//	BAC Pro Commercialisation et services en restauration - CSR	
-#node-488{}//	BAC Professionnel Cuisine	
-#node-807{}//	CAP Commercialisation et service Hôtel-Café-Restaurant	
+#zone-2.fiche-formation{}
