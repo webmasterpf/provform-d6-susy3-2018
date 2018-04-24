@@ -27,7 +27,7 @@
         </div><!-- /zone-illustration -->   
 
         <!--______________ ZONE 1 ________________ -->
-        <div id="zone-1" class="zone_layout_max_centre fiche-bts">
+        <div id="zone-1" class="zone_layout_max_centre fiche-bts nid-<?php print $node->nid; ?>">
           <?php print $picture; ?>
 
 <?php if ($submitted): ?>

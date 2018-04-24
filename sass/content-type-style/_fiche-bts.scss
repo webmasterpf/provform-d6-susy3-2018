@@ -65,6 +65,7 @@ body .conteneur{
     aside.galerie{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             margin: 0 0 0 span(1.5);
+            padding: span(0.1);
             display: flex;
         }
     }
@@ -164,7 +165,9 @@ ______________________________*/
     }
 }
 #zone-2.fiche-bts{
+    
     .galerie{
+    background: $orange-fonce;    
         //Voir  "../galeries/_baguettebox-vignette-zoom.scss";
     }
 }
@@ -177,6 +180,7 @@ ______________________________*/
         padding: em(3px);
         margin: em(5px) em(20px);
         max-width: fit-content;
+        /*max-width: 90%;*/
     }
     table#infos-pratiques-bts{
         border-top: em(1px) solid  $vert;
@@ -221,6 +225,26 @@ ______________________________*/
         td.col1 :hover{
 
         }
+               a[type*="pdf"]{
+                &::before{
+                        @include backgroundImage("PNG/Fichiers@3x.png");
+                        background-size: contain;
+                        content: "";
+                        position: relative;
+                        vertical-align: sub;
+                        padding: em(10px);
+                        margin:em(3px);
+                        transition:0.5s all;
+                        display: inline-block;
+                    }
+                }
+                  img.filefield-icon{
+                    
+                    display: none;//initial
+                }
+                h3{
+                    background: transparent;
+                }
     }
 
 
@@ -244,7 +268,8 @@ ______________________________*/
             color: $orange-fonce;
             text-align: center;
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                margin: 0 0 0 span(5.5);
+                margin: span(0.5) auto;
+                max-width: 30%;
             }
         }
         ul{

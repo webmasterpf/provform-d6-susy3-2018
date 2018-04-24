@@ -137,6 +137,7 @@
         console.log('Appel du script BaguetteBox.js');
         baguetteBox.run('.galerieBaguetteBox', {
             // Custom options
+            overlayBackgroundColor:'rgba(233, 79, 45, 0.8)',//Orange foncé
         });
 
         //Pour Responsive Slides

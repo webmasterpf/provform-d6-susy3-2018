@@ -122,4 +122,27 @@ ______________________________*/
     &.nid-488{}//	BAC Professionnel Cuisine	
     &.nid-807{}//	CAP Commercialisation et service Hôtel-Café-Restaurant	
 }
+
+#zone-1.fiche-bts{
+    position:relative;//pour pouvoir afficher le BG en ::before
+
+    &.nid-112{//BTS Management des Unités Commerciales (MUC) 
+    }
+    &.nid-113{//BTS Négociation et Relation Client (NRC) 
+    }
+    &.nid-114{//BTS Assistant de Gestion PME/PMI (AG) 
+    }
+    &.nid-117{//BTS Transport et Prestations Logistiques (TPL)
+
+    }
+    &.nid-120{//BTS Analyses de Biologie Médicale (ABM)
+              @include backgroundImageOpacity(("PNG/Pictos/BAC_STL_Biotech2@4x.png"));
+    }
+    &.nid-532{//BTS Métiers de l’Esthétique, Cosmétique, Parfumerie (MECP)  
+
+    }
+    &.nid-786{//BTS Tourisme
+
+    }
+}
 #zone-2.fiche-formation{}
