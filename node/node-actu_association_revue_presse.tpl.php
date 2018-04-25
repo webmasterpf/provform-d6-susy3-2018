@@ -24,8 +24,7 @@
      
             
             </div><!-- /zone-illustration -->
-        <div id="zone-centrale-node" class="#">
-<!--            Inutile-->
+
             
         <!--______________ZONE 1________________ -->
       
@@ -87,7 +86,7 @@
               ?>
                      
                      </div><!-- /zone-1 -->
-        </div><!-- /zone-centrale -->
+        
         
         
         <!--______________ZONE 2________________ -->
@@ -110,7 +109,7 @@
         
         </div><!-- /zone-2 -->
 
-        </div><!-- /zone-centrale -->
+        
 
     </div> <!-- /node-inner -->
 </div> <!-- /node-->
