@@ -32,6 +32,21 @@ body .conteneur{
         @include clearfix;
         }
     }
+    //Reprise du code du layout HP
+        .acces_rubriques{
+        @include clearfixsusy3;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        width: span(10 of $desktopcol);
+        margin-left: span(1 wide);//push
+        }
+        
+    }
+    .logo_partenaires{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        width: span(10 of $desktopcol);
+        margin-left: span(1 wide);//push
+        }
+    }
 }
 /*////////////// BLOCS IMBRIQUéS DANS BLOC PLEINE LARGEUR \\\\\\\\\*/
 /*---  LAYOUT CONTENU ACTU ---*/
@@ -107,8 +122,11 @@ body .conteneur{
     
     //Partie fixe
     .acces_rubriques{
+        
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             @include clearfix;
+            @include clearfixsusy3;
+            clear:left;
             display: grid;
         }
     }

@@ -14,6 +14,8 @@ body .conteneur #footer{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         width: span(10 of $desktopcol);
         margin-left: span(1 wide);//push
+        @include clearfixsusy3;
+        clear:left;
         /*background: transparent url("../images/bg_footer.jpg") no-repeat scroll right bottom;*/
         /*@include backgroundImage(('bg_footer.jpg'), no-repeat, right bottom);//nouvelle mixin 2018*/
         

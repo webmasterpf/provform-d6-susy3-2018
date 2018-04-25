@@ -7,10 +7,9 @@
 //@include breakpoint ($mobile){}
 //@include breakpoint ($desktop){}
 //@include breakpoint ($tablet){}
-//@include breakpoint(($desktop,$tablet)){}
+//@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
 
 
-/*---DIAPORAMA HOMEPAGE TEXTE DYNAMIQUE  PANORAMIQUE----*/
 
 // #############################
 // Layout avec body.conteneur
@@ -46,14 +45,14 @@ body.front section.conteneur{
     }
     .HPDiapo{
         @include clearfixsusy3;
-
     }
     .acces_rubriques{
+        @include clearfixsusy3;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         width: span(10 of $desktopcol);
         margin-left: span(1 wide);//push
         }
-        @include clearfixsusy3;
+        
     }
     .logo_partenaires{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
