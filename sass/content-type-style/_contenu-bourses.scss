@@ -131,7 +131,7 @@ ______________________________*/
             }
             }
             &.video{
-                @include backgroundImage('zebra-gros-clair.gif',0 ,repeat);
+                @include backgroundImage(('zebra-gros-clair.gif'),transparent,top left,repeat);
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     padding: span(0.01);
                     margin: 0 span(2);

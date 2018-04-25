@@ -66,7 +66,7 @@ h1.titre_overlay{
 #zone-4.page-association,
 #zone-5.page-association
 {
-    p,li{
+    p,li,ul{
         @include font-size(m);//utilisation de typey
     }
     h2{
@@ -99,12 +99,13 @@ ______________________________*/
 
 #zone-1.page-association{
         .entrefilet{
-            @include backgroundImage('bg-merci.gif');
+           
             display: block;
             color: $orange-fonce;
             @include font-size(l);//utilisation de typey
-            text-transform: capitalize;
+            text-transform: uppercase;
             font-weight: bold;
+            quotes: "\201C""\201D""\2018""\2019";
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.2);
             transform: translate(1%,2%);
@@ -112,6 +113,11 @@ ______________________________*/
                 margin: span(0.1);
                 min-width: span(3);
                 max-width: span(5);
+            }
+            &::before{
+                 /*@include backgroundImage('bg-merci.gif');*/
+                 content: open-quote;
+                 @include font-size(l);//utilisation de typey
             }
         }
         aside{
@@ -122,13 +128,30 @@ ______________________________*/
             }
             }
             &.video{
-                @include backgroundImage('zebra-gros-clair.gif',0 ,repeat);
+                @include backgroundImage(('zebra-gros-clair.gif'),transparent,top left,repeat);
+                @include arrondis();
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     padding: span(0.01);
                     margin: 0 span(2);
                 }
             }
         }
+        /*Contenu du QT pour afficher temoignage anciens élèves sur page association*/
+.temoignage-anciens {
+    h2{
+        text-align: left;
+    }
+    h3{
+        
+    }
+    li.active a {
+        color: white;
+    }
+    a{
+        &:hover{}
+    }
+    img{}
+}
 }
 #zone-2.page-association{}
 #zone-3.page-association{}

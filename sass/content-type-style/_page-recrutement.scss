@@ -164,7 +164,7 @@ ______________________________*/
 #zone-1.page-recrutement{
     .docs-enseignant{
         @include arrondis;
-        @include backgroundImage("zebra-gros-clair.gif", 0 0 , repeat);
+        @include backgroundImage(('zebra-gros-clair.gif'),transparent,top left,repeat);
         width: 90%;
         margin:span(0.1) auto;
         padding:span(0.1);

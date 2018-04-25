@@ -32,32 +32,32 @@ body .conteneur{
 
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
 #zone-illustration.actu-presse{
-       min-height: 35vw;
+    min-height: 35vw;
     max-height: 90vw;
     overflow: hidden;
-            /*position: relative;*/
-            /*display: inline-block;*/
-                        
-               img{
+    /*position: relative;*/
+    /*display: inline-block;*/
+    @include backgroundImage('SVG/image_defaut_actu_2500.svg');
+    @include background-size(cover);                  
+    img{
         transform: translate(0%,0%);
     }
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                /*min-height: 20vw;*/
-                min-height: 25vw;
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        /*min-height: 20vw;*/
+        min-height: 25vw;
         max-height: 30vw;
-                     img{
-                    /*margin: 0 12vw;*/
-                    max-height: 30vw;
-                    transform: scale(1.4) translate(0%,-15%);
-                    
-                
-            }
-            }
-       
-        
+        img{
+            /*margin: 0 12vw;*/
+            max-height: 30vw;
+            transform: scale(1.4) translate(0%,-15%);
+
+
+        }
+    }
+
+
 }
- 
-   
+
 #zone-1.actu-presse{
     .content{
         padding: span(0.2);
@@ -160,10 +160,7 @@ body .conteneur {
     h1.titre_page_tpl{
         display: none;//Effacement du titre issue de page.tpl
     }
-    #zone-illustration.actu-presse{
-        @include backgroundImage('SVG/image_defaut_actu_2500.svg');
-        @include background-size(cover);
-    }
+ 
     .actu-presse {
 
         p,ul,li{

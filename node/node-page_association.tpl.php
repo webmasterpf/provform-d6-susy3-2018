@@ -35,10 +35,6 @@
           
                <div class="content">
                    
-                             <?php
-              global $theme_path;
-              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
-              ?>
                    
                              <?php if ($node->field_entrefilet[0]['view']): ?>
                 <blockquote class="entrefilet">
@@ -48,17 +44,14 @@
                    
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
                    
-         <?php if ($centralBloc): ?>
-                <div id="middleGalerie"><?php print $centralBloc; ?></div>
-              <?php endif; ?>
-
-                <?php if ($centre_partenaire): ?>
-         <div id="centre-asso">
-            <?php print $centre_partenaire; ?>
-          </div>
+  
+                             <?php
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
+              ?>
                 
                 
-             <?php endif; ?>
+             
     <?php if ($node->field_video_externe[0]['view']): ?>
                  <aside class="video">
                             <?php print $node->field_video_externe[0]['view'];?>
