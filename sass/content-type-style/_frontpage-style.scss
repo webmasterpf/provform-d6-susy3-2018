@@ -97,7 +97,9 @@ body .conteneur {
            display: none;
            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                display: initial;
-               @include backgroundImage (('bg-merci.gif'));
+               @include backgroundImage (('PNG/breaking-news@4x.png'));
+               @include backgroundImage (('PNG/notification@4x.png'));
+               background-size: contain;
                text-indent: -9000px;
                float: left;
                height: em(80px);
