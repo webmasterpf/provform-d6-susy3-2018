@@ -353,6 +353,21 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
     -webkit-border-radius: $angle;
     border-radius: $angle;
 }
+
+/* ------ ANIMATIONS CSS3 -----*/
+@mixin anim-coulisseX($duree:1s,$iterations:10,$starttranslateX:0,$midtranslateX:1vw,$finaltranslateX:0){
+    animation-name: coulisse;
+    animation-duration: $duree;
+    animation-timing-function: linear;
+    animation-iteration-count: $iterations; 
+
+
+    @keyframes coulisse {  
+        0% { transform: translateX($starttranslateX); }
+        50% { transform: translateX($midtranslateX); }
+        100% { transform: translateX($finaltranslateX);}
+    }
+}
 @mixin clignote($duree:1s,$startopacity:1.0,$midopacity:0.0,$finalopacity:1.0){
     -webkit-animation-name: blinker;
     -webkit-animation-duration: $duree;
