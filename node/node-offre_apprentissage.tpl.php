@@ -16,8 +16,7 @@
                  <?php  print $node->field_illus_administratif[0]['view'] ?>
             </div>
             <?php endif;?>
-     
-            
+                 
             </div><!-- /zone-illustration -->
      
             
