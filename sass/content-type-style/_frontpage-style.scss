@@ -273,7 +273,9 @@ body .conteneur {
                 max-width: span(11);
                 margin:0 auto;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    display:flex;
+                column-count: 6;
+            column-fill: balance;
+            white-space: normal;
                 }
                 li{
                     list-style: none;
@@ -282,9 +284,13 @@ body .conteneur {
                     float: none;
 
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        margin: span(0.1);
+/*                        margin: span(0.1);
                         float: left;
-                        min-width: span(2);
+                        min-width: span(2);*/
+    @include txt-cesure;
+               @include txt-colonnes;
+                @include hack-Edge;
+                @include hack-IE;
                     }
                     a{
                         background: $orange-fonce;
