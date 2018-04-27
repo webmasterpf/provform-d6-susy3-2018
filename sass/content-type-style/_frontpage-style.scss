@@ -284,7 +284,7 @@ body .conteneur {
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                         margin: span(0.1);
                         float: left;
-                        min-width: span(1);
+                        min-width: span(2);
                     }
                     a{
                         background: $orange-fonce;
@@ -308,7 +308,7 @@ body .conteneur {
             ul{
                 //pas besoin de fixer un display en mobile, vertical automatique
                 max-width: span(11);
-                margin: 0 span(2);
+                margin: span(0.5)  span(2);
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     display:inline-block;
                     column-count: 4;
@@ -320,7 +320,7 @@ body .conteneur {
                     width: 95%;
                     margin: 0 0 span(0.2) span(0.2);
                     
-                    display: inline-block;
+                    
 
 
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
@@ -329,7 +329,7 @@ body .conteneur {
                 @include hack-Edge;
                 @include hack-IE;
                 margin: 0;
-                padding: 0;
+                padding: 0 span(0.9);
                     }
                     span.titre-admin{
                         display: block;
@@ -345,7 +345,7 @@ body .conteneur {
                         }
                         a{
                             display: block;
-                            padding: span(4.6) 0;
+                            padding: span(4.6) span(0.1);
                             text-decoration: none;
                             text-transform: uppercase;
                             font-weight: bold;
@@ -374,8 +374,7 @@ body .conteneur {
                             &:hover{
 
                                 /*        @include backgroundImage("SVG/bg_acces_contact.svg", -29em top);*/
-                                background-size: cover;
-                                background-color: $orange-fonce;
+                               
                                 text-indent: em(-9000px);
                             }
                         }
