@@ -75,7 +75,7 @@ ul.rubriques-administratives{
     }
     li{
         margin: 0 0 em(5px) 0;
-       
+
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             max-width: 20%;
             @include txt-colonnes;
@@ -196,14 +196,14 @@ body .conteneur {
         ul.rubriques-administratives{
             list-style: none;
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                
+
             }
             li{
                 margin: 0 0 em(5px) 0;
                 background: $gris-anthracite;
                 color: whitesmoke;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                
+
                 }
                 &:hover{
                     background: $orange-fonce;
@@ -310,89 +310,104 @@ body .conteneur {
                 max-width: span(11);
                 margin: 0 span(2);
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    display:flex;
-                    
-                    /*max-width: span(11);*/
-                    margin:0 span(2);
+                    display:inline-block;
+                    column-count: 4;
+            column-fill: balance;
+            white-space: normal;
                 }
                 li{
                     list-style: none;
                     width: 95%;
                     margin: 0 0 span(0.2) span(0.2);
-                    float: none;
+                    
                     display: inline-block;
 
 
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        margin: span(0.25);
-                        float: left;
-                        /*min-width: span(3);*/
-                        width: inherit;
-                        @include hack-Edge;
+                         @include txt-cesure;
+               @include txt-colonnes;
+                @include hack-Edge;
+                @include hack-IE;
+                margin: 0;
+                padding: 0;
                     }
-
-                    a{
+                    span.titre-admin{
                         display: block;
-                        padding: span(4.6) 0;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-weight: bold;
-                        color: whitesmoke;
-
-                        /*@include backgroundImage("SVG/bg_acces_contact.svg");*/
-                        background-size: cover;
-                        background-clip: padding-box;
-                        min-width: inherit;
-                        min-height:  inherit; 
-                        transition-duration: 0.0s;//Permet de jouer sur un effet de slide
-                        text-align: center;
-                        @include txt-cesure(break-word);
-/*                        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-                        clip-path: circle(50% at 50% 50%);*/
-                        @include arrondis(4em);  
-                        background-color: $gris-anthracite;
-                        
+                        text-align:center;
                         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                            padding: span(5) span(1) 0;
+
                             min-height: 11vw;          
                             min-width: 11vw;
-                            word-spacing: em(3px);
-                        }
-                        &:hover{
+                            max-width: 11vw;
+                            max-height: 11vw;
 
-                            /*        @include backgroundImage("SVG/bg_acces_contact.svg", -29em top);*/
+                            vertical-align: middle;
+                        }
+                        a{
+                            display: block;
+                            padding: span(4.6) 0;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            color: whitesmoke;
+
+                            /*@include backgroundImage("SVG/bg_acces_contact.svg");*/
                             background-size: cover;
-                            background-color: $orange-fonce;
-                            text-indent: em(-9000px);
+                            background-clip: padding-box;
+                            min-width: inherit;
+                            min-height:  inherit; 
+                            transition-duration: 0.0s;//Permet de jouer sur un effet de slide
+                            text-align: center;
+                            @include txt-cesure(break-word);
+                            /*                        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+                                                    clip-path: circle(50% at 50% 50%);*/
+                            @include arrondis(4em);  
+                            background-color: $gris-anthracite;
+
+                            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                                 max-width: 11vw;
+                            max-height: 11vw;
+
+                                word-spacing: em(3px);
+
+                            }
+                            &:hover{
+
+                                /*        @include backgroundImage("SVG/bg_acces_contact.svg", -29em top);*/
+                                background-size: cover;
+                                background-color: $orange-fonce;
+                                text-indent: em(-9000px);
+                            }
                         }
                     }
+                    &.views-row-1.nid-63{//contact
+                                        a:hover{
+                                            @include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);
+                                            background-size: cover;
+                                        }
+                    }
+                    &.views-row-2.nid-32{//contrat etat
+                                        a:hover{
+                                            @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100% top);
+                                            background-size: cover;
+                                        }
+                    }
+                    &.views-row-3.nid-108{//inscriptions
+                                         a:hover{
+                                             @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  76% top);
+                                             background-size: cover;
+                                         }
+                    }
+                    &.views-row-4.nid-337{//liens utiles
+                                         a:hover{
+                                             @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51%  top);
+                                             background-size: cover;
+                                         }
+                    }  
 
                 }
 
-                .views-row-1{
-                    a:hover{
-                        @include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);
-                        background-size: cover;
-                    }
-                }
-                .views-row-2{
-                    a:hover{
-                        @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51% top);
-                        background-size: cover;
-                    }
-                }
-                .views-row-3{
-                    a:hover{
-                        @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  76% top);
-                        background-size: cover;
-                    }
-                }
-                .views-row-4{
-                    a:hover{
-                        @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100%  top);
-                        background-size: cover;
-                    }
-                }
+
             }
         }
         aside.AccesLycees{
@@ -478,7 +493,7 @@ body .conteneur {
             img { 
                 @include adaptable-img();
                 contain:content;
-                
+
                 opacity: 0;
                 transition-duration: 0.4s;
                 &:hover{
