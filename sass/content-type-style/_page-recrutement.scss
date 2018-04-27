@@ -163,39 +163,41 @@ ______________________________*/
 
 #zone-1.page-recrutement{
     //Lien vers les offres de postes
-     h2:first-child{
-         /*position:relative;*/
-         
-        a[href*="node"]{
-            display: block;
-        transform: rotate(-4deg);
-        color: $jaune;
-        background: $gris-anthracite;
-        padding: span(0.01);
-        margin: em(5px) 10vw;
-        /*max-width: fit-content;*/
-        max-width: 45%;
-        text-decoration: none;
-        @include clignote(3s);
-        @include arrondis();
-        }
+    h2:first-child{
+        &:not(.offre-titre){
+            /*position:relative;*/
+
+            a[href*="node"]{
+                display: block;
+                transform: rotate(-4deg);
+                color: $jaune;
+                background: $gris-anthracite;
+                padding: span(0.01);
+                margin: em(5px) 10vw;
+                /*max-width: fit-content;*/
+                max-width: 45%;
+                text-decoration: none;
+                @include clignote(3s);
+                @include arrondis();
+            }
             &::after{
                 //Ajout d'une indication sur présence du menu
                 content: "<- Les Postes";
                 color:$orange-fonce;
                 @include font-size(s);//utilisation de typey
                 font-family: $FontRaleway;
-                    left: 40vw;
-                    top: -3vw;
-    position: relative;
-    text-decoration: none;
-    min-width: 4em;
-    max-width: 7em;
-    display: block;
-    @include anim-coulisseX();
-    
-     /*transition:transform 0.5s ease-in-out;*/
+                left: 40vw;
+                top: -3vw;
+                position: relative;
+                text-decoration: none;
+                min-width: 4em;
+                max-width: 7em;
+                display: block;
+                @include anim-coulisseX();
+
+                /*transition:transform 0.5s ease-in-out;*/
             }
+        }
     }
     .docs-enseignant{
         @include arrondis;
