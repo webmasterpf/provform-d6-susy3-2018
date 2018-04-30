@@ -40,7 +40,8 @@ body.not-front.logged-in{
 /*----Navigation backoffice------*/
 
 #block-user-1 {
-  background: url("../images/bg_nav_backoffice.gif") repeat scroll left top;
+    @include backgroundImage(("bg_nav_backoffice.gif"),transparent,top left,repeat);
+  
   padding: 0;
   margin: 0;
   a {
@@ -75,7 +76,7 @@ body.not-front.logged-in{
 /*Workspace*/
 
 .sticky-table {
-  color: #606071;
+  color: $gris-anthracite;
   a {
     color: red;
   }
