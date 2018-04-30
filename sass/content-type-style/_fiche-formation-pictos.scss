@@ -72,7 +72,7 @@ ______________________________*/
              @include backgroundImageOpacity(("PNG/Pictos/CAP_Vente@4x.png"));
     }
     &.nid-84{//	CAP Cuisine
-             /*@include backgroundImageOpacity(("PNG/Pictos/CAP_Logistique@4x.png"),7%);*/
+             @include backgroundImageOpacity(("PNG/Pictos/BAC_Cuisine@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
     }
 
     &.nid-85{//CAP Assistant technique en milieu familial et collectif (ATMFC) 
@@ -100,27 +100,66 @@ ______________________________*/
     &.nid-95{//	BAC Pro Artisanat et Métiers d'Art Communication Visuelle (AMACV)
              @include backgroundImageOpacity(("PNG/Pictos/BAC_AMACV@4x.png"));
     }
-    &.nid-96{}//	BAC Pro Vente - Section Européenne	
-    &.nid-97{}//	BAC Pro Transport
-    &.nid-98{}//	BAC Pro Accueil Relation Clients et Usagers (ARCU)	
-    &.nid-99{}//	BAC Pro Etude et Définition de Produits Industriels
-    &.nid-101{}//	BAC Pro Commerce	Français	
-    &.nid-102{}//	BAC Pro Logistique
-    &.nid-103{}//	FCIL Prépa Concours Infirmière (IFSI)	
-    &.nid-104{}//	Mention complémentaire Aide à Domicile	Français
-    &.nid-107{}//	Préparation aux concours aide soignant(e) - IFAS	
-    &.nid-229{}//	Préparation aux concours auxiliaire de puériculture - IFAP	
-    &.nid-255{}//	BAC Techno Sciences et Technologies du Design et des Arts Appliqués (ST2A)
-    &.nid-258{}//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Structure 
-    &.nid-259{}//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Domicile	
-    &.nid-271{}//	BAC Pro Esthétique Cosmétique Parfumerie (ECP)
-    &.nid-272{}//	Formation professionnelle pour élèves en situation de handicap - ULIS -					
-    &.nid-309{}//	Mention complémentaire Secrétariat Médical	
-    &.nid-354{}//	BAC Pro Gestion Administration (GA)	
+    &.nid-96{//	BAC Pro Vente - Section Européenne	
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_Vente@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-97{//	BAC Pro Transport Logistique
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_Logistique@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-98{//	BAC Pro Accueil Relation Clients et Usagers (ARCU)	
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_ARCU@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-99{//	BAC Pro Etude et Définition de Produits Industriels
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_EDPI@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-101{//	BAC Pro Commerce
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_Commerce@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }		
+    &.nid-102{//	BAC Pro Logistique
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_Logistique@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-103{//	FCIL Prépa Concours Infirmière (IFSI)	
+        @include backgroundImageOpacity(("PNG/Pictos/PREPA_IFSI@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-104{//	Mention complémentaire Aide à Domicile	
+    }
+    &.nid-107{        //	Préparation aux concours aide soignant(e) - IFAS	
+       @include backgroundImageOpacity(("PNG/Pictos/PREPA_AS@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-229{//	Préparation aux concours auxiliaire de puériculture - IFAP	
+       @include backgroundImageOpacity(("PNG/Pictos/PREPA_AP@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain); 
+    }
+    &.nid-255{//	BAC Techno Sciences et Technologies du Design et des Arts Appliqués (ST2A)
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_STD2A@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-258{//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Structure 
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_ASSP_Structure@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-259{//	BAC Pro Accompagnement, Soins et Services à la personne (ASSP) option Domicile	
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_ASSP_Domicile@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-271{//	BAC Pro Esthétique Cosmétique Parfumerie (ECP)
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_ECP@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-272{//	Formation professionnelle pour élèves en situation de handicap - ULIS -					
+    }
+    &.nid-309{//	Mention complémentaire Secrétariat Médical	
+    
+    }
+    &.nid-354{//	BAC Pro Gestion Administration (GA)	
+       @include backgroundImageOpacity(("PNG/Pictos/BAC_GAdministration@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    
+    }
     &.nid-393{}//	Préparation au concours ATSEM 
-    &.nid-486{}//	BAC Pro Commercialisation et services en restauration - CSR	
-    &.nid-488{}//	BAC Professionnel Cuisine	
-    &.nid-807{}//	CAP Commercialisation et service Hôtel-Café-Restaurant	
+    &.nid-486{//	BAC Pro Commercialisation et services en restauration - CSR	
+       @include backgroundImageOpacity(("PNG/Pictos/BAC_CSR@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-488{//	BAC Professionnel Cuisine	
+        @include backgroundImageOpacity(("PNG/Pictos/BAC_Cuisine@4x.png"),$couleur:transparent,$position: top,$repeat: no-repeat,$left:0,$bgsize:contain);
+    }
+    &.nid-807{//	CAP Commercialisation et service Hôtel-Café-Restaurant	
+        @include backgroundImageOpacity(("PNG/Pictos/CAP_Restaurant@4x.png"));
+    }
 }
 
 #zone-1.fiche-bts{
