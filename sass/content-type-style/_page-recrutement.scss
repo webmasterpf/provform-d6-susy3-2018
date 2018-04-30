@@ -169,6 +169,7 @@ ______________________________*/
 
             a[href*="node"]{
                 display: block;
+                position: relative;
                 transform: rotate(-4deg);
                 color: $jaune;
                 background: $gris-anthracite;
@@ -179,10 +180,17 @@ ______________________________*/
                 text-decoration: none;
                 @include clignote(3s);
                 @include arrondis();
+         
             }
+                   &::before{
+/*                content:"";
+                 padding: span(0.01);
+                background: $orange-fonce;   
+               @include border-orangePF-orangePF;*/
+                }
             &::after{
-                //Ajout d'une indication sur présence du menu
-                content: "<- Les Postes";
+                //Ajout d'une indication 
+/*                content: "<- Les Postes";
                 color:$orange-fonce;
                 @include font-size(s);//utilisation de typey
                 font-family: $FontRaleway;
@@ -193,7 +201,7 @@ ______________________________*/
                 min-width: 4em;
                 max-width: 7em;
                 display: block;
-                @include anim-coulisseX();
+                @include anim-coulisseX();*/
 
                 /*transition:transform 0.5s ease-in-out;*/
             }
