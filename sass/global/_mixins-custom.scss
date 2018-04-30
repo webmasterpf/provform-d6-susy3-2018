@@ -85,6 +85,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
              height: 100%;
              display: block;
              background-size: $bgsize;
+             z-index: -10;//Sinon liens inopérants
          }   
     }
 @mixin backgroundRGBA($color, $opacity){
