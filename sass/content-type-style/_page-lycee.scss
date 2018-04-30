@@ -24,6 +24,26 @@ body .conteneur .conteneur-flex{
     }
 }
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
+#zone-diaporama.page-lycee{
+        min-height: 35vw;
+    max-height: 90vw;
+    overflow: hidden;
+    
+        @include backgroundImage('SVG/image_defaut_actu_2500.svg');
+        @include background-size(cover);
+    
+    img,.view-Diapo-multichoix{
+        transform: translate(0%,0%);
+    }
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        min-height: 20vw;
+        max-height: 24vw;
+    img,.view-Diapo-multichoix{
+            transform: translate(0%,-12%);
+        }
+    }
+
+}
 .logos_lycee{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         width: span(3 of $desktopcol);
@@ -81,23 +101,32 @@ h1.titre_page{
 #zone-3.page-lycee,
 #zone-4.page-lycee
 {
-    p{
+     p,ul,li{
+        @include font-size(m);//utilisation de typey
         padding: em(5px);
+        line-height: 1.5em;
     }
-    span{
-        font-size: small;
-        padding: em(5px);
+    u{
+        font-weight: bold;
+        color: $bleu-turquoise;
     }
-    strong,b{
-        color: $rose-fushia;
+    h2{
+        @include font-size(l);//utilisation de typey
+        color: $orange-fonce;
+    }
+    h3{
+        @include font-size(m);//utilisation de typey
+        color: $orange-fonce;
     }
     a{
-        color: $violet;
         text-decoration: none;
+        color: $orange-fonce;
         &:hover{
             text-decoration: underline;
         }
-
+    }
+    strong{
+        color: $orange-fonce;
     }
 
 }
@@ -105,24 +134,7 @@ h1.titre_page{
 /*------------------------------------
         ¤¤¤ STYLES PROPRES ¤¤¤
 ______________________________*/
-#zone-diaporama.page-lycee{
-    #illustration-pleinepage {
-        position: relative;
-        /*display: inline-block;*/
-        overflow: hidden;
-        /*min-height: 15vw;*/
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            /*min-height: 20vw;*/
-        }
-        img{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                margin: 0 12vw;
-                max-height: 30vw;
-                transform: scale(1.4);
-            }
-        }
-    }
-}
+
 #zone-1.page-lycee{
     h2{}
     h3{}
@@ -138,8 +150,22 @@ ______________________________*/
         @include adaptable-img;
         width: auto;
         float: none;
-        border: em(2px) solid $violet;
+        border: em(2px) solid $orange-fonce;
         padding: em(2px);
+        
+    }
+    aside.logo-lycee {
+        position: relative;
+                      //Effet coin retourné
+            &::before{
+                content: "";
+                position: absolute;
+                top: em(-3px);
+                right: em(-3px);
+                border-width: 0 em(20px) em(20px) 0;
+                border-style: solid;
+                border-color: $orange-fonce ;
+            }
     }
     .lycee-coordlogo {
         background: $gris-anthracite;
@@ -254,6 +280,17 @@ a{
     table{
         margin: 0 auto;
         //display:table;//casse le système de stacktable js
+         position: relative;
+                      //Effet coin retourné
+            &::before{
+                content: "";
+                position: absolute;
+                top: em(-3px);
+                right: em(-3px);
+                border-width: 0 em(20px) em(20px) 0;
+                border-style: solid;
+                border-color: $orange-fonce ;
+            }
         tbody{
             max-width: 100%;
 

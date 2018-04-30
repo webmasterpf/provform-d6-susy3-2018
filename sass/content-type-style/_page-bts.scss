@@ -137,7 +137,8 @@ body .conteneur{
 
 
     #vue-liste-bts{
-        @include backgroundImage('bg_nav_backoffice.gif',0, repeat );
+        @include backgroundImage(("bg_nav_backoffice.gif"),transparent,top left,repeat);
+        @include arrondis();
         padding:  span(0.1) 0;
         .view-header p{
             background: white;
@@ -176,8 +177,19 @@ body .conteneur{
     }
     table.table-bts-coord{
         width: 97%;
-        border: em(3px) solid $orange-fonce;
-        
+        border: 0;
+        margin: span(0.1) 0;
+            position: relative;
+                      //Effet coin retourné
+            &::before{
+                content: "";
+                position: absolute;
+                top: em(-3px);
+                right: em(-3px);
+                border-width: 0 em(20px) em(20px) 0;
+                border-style: solid;
+                border-color: $orange-fonce ;
+            }
         tbody{
             background: $gris-anthracite;
         color:$blanc-casse;
@@ -193,6 +205,7 @@ body .conteneur{
            em{
                padding: 0 span(0.01);
            }
+
         }
     }
 }

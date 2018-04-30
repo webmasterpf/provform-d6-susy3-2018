@@ -92,7 +92,7 @@ body .conteneur{
         }
     }
     table#infos-pratiques-bts,div#info-plus-fiche-bts{
-            
+
         margin: span(0.02) auto;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(7);
@@ -168,9 +168,9 @@ ______________________________*/
     }
 }
 #zone-2.fiche-bts{
-    
+
     .galerie{
-    background: $orange-fonce;    
+        background: $orange-fonce;    
         //Voir  "../galeries/_baguettebox-vignette-zoom.scss";
     }
 }
@@ -186,12 +186,12 @@ ______________________________*/
         /*max-width: 90%;*/
     }
     table#infos-pratiques-bts{
-    
+
         border: em(2px) solid $gris-clair-moyen;
         @include font-size(s);//utilisation de typey
         @include arrondis();
-         border-collapse:separate;
-    
+        border-collapse:separate;
+
         tbody{}
         tr{}
         td{
@@ -216,7 +216,7 @@ ______________________________*/
             margin:0;
             li{
                 list-style: square;
-                    list-style-position: inside;
+                list-style-position: inside;
             }
         }
         td.col1{
@@ -225,7 +225,7 @@ ______________________________*/
         }
         td.col2{
             @include backgroundRGBA($gris-clair,0.5)
-            
+
         }
         td.col3{
             background: none ;
@@ -233,30 +233,50 @@ ______________________________*/
         td.col1 :hover{
 
         }
-               a[type*="pdf"]{
-                &::before{
-                        @include backgroundImage("PNG/Fichiers@3x.png");
-                        background-size: contain;
-                        content: "";
-                        position: relative;
-                        vertical-align: sub;
-                        padding: em(10px);
-                        margin:em(3px);
-                        transition:0.5s all;
-                        display: inline-block;
-                        transform: scale(1.1);
-                    }
+        td.col1{
+            ul{
+                li{
+                    list-style: none;
+
                 }
-                  img.filefield-icon{
-                    
-                    display: none;//initial
-                }
-                h3{
-                    background: transparent;
-                }
-                #liens-fiche-bts{
-                    
-                }
+            }
+        }
+        a[type*="pdf"]{
+            &::before{
+                @include backgroundImage("PNG/Fichiers@3x.png");
+                background-size: contain;
+                content: "";
+                position: relative;
+                vertical-align: sub;
+                padding: em(10px);
+                margin:em(3px);
+                transition:0.5s all;
+                display: inline-block;
+                transform: scale(1.1);
+            }
+        }
+        img.filefield-icon{
+
+            display: none;//initial
+        }
+        a[href*="http"] {
+            &::before{
+                @include backgroundImage("PNG/liens@3x.png");
+                background-size: contain;
+                content: "";
+                position: relative;
+                vertical-align: sub;
+                padding: em(10px);
+                margin:em(3px);
+                transition:0.5s all;
+            }
+
+        }
+
+        h3{
+            background: transparent;
+        }
+
     }
 
 
