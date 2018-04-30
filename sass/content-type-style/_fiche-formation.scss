@@ -67,19 +67,19 @@ body .conteneur{
     aside.ficheform-savoirplus,aside.lycees-possibles{
         margin: span(0.01) auto;
         padding: span(0.01);
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(5);
-            
+
         }
     }
     aside.lycees-possibles{
         ul{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                 column-count: 2;
-            column-fill: balance;
+                column-count: 2;
+                column-fill: balance;
             }
         }    
-        
+
     }
 }
 
@@ -109,6 +109,10 @@ body .conteneur{
         @include font-size(m);//utilisation de typey
         color: $orange-fonce;
     }
+    h4{
+        @include font-size(s);//utilisation de typey
+        color: $orange-fonce;
+    }
     a{
         text-decoration: none;
         color: $orange-fonce;
@@ -127,17 +131,17 @@ ______________________________*/
 .illustration-fiche{
     h1{
         &.pole-98{//ajout de picto selon le pôle
-            &::before{
-                @include backgroundImage("PNG/CAP_ATMFC@4x.png");
-                    background-size: contain;
-                             content: "";
-                        position: relative;
-                        vertical-align: sub;
-                        padding: em(10px);
-                        margin:em(3px);
-                        transition:0.5s all;
-            }
-            
+                  &::before{
+                      @include backgroundImage("PNG/CAP_ATMFC@4x.png");
+                      background-size: contain;
+                      content: "";
+                      position: relative;
+                      vertical-align: sub;
+                      padding: em(10px);
+                      margin:em(3px);
+                      transition:0.5s all;
+                  }
+
         }
         &.pole-98{}
         &.pole-98{}
@@ -147,7 +151,7 @@ ______________________________*/
 
 
 #zone-1.fiche-formation{
-    
+
     .complement-titre-fiche{
 
 
@@ -162,16 +166,16 @@ ______________________________*/
         }
     }
     .content{
-         h3{
-        transform: rotate(-1deg);
-        max-width: fit-content;
+        h3{
+            transform: rotate(-1deg);
+            max-width: 90%;
+            max-width: fit-content;
+            color: $blanc-casse;
+            background: $orange-fonce;
+            padding: em(3px);
+            margin: em(5px) em(20px);
 
-        color: $blanc-casse;
-        background: $orange-fonce;
-        padding: em(3px);
-        margin: em(5px) em(20px);
-
-    }
+        }
     }
     aside.ficheform-savoirplus{}
 }
@@ -195,34 +199,34 @@ ______________________________*/
         }
     }
     h2.lien-section-europe{
-        
+
         margin: span(0.01) auto;
         padding:0;
         *{
-             @include font-size(l);//utilisation de typey
+            @include font-size(l);//utilisation de typey
             color: $bleu-turquoise;
             background: $blanc-casse;
             position: relative;
             padding: span(0.01);
-            
+
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            display: block;
-            margin: 0 auto;
-            max-width: fit-content;//Marche pas sous Edge
-            width: 30%;
+                display: block;
+                margin: 0 auto;
+                max-width: fit-content;//Marche pas sous Edge
+                width: 30%;
             }
             //Effet coin retourné
             &:before{
-                 content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-width: 0 em(10px) em(10px) 0;
-  border-style: solid;
-  border-color: $bleu-turquoise ;
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-width: 0 em(10px) em(10px) 0;
+                border-style: solid;
+                border-color: $bleu-turquoise ;
             }
         }
-           
+
     }
     article.paragraphe-section-europe{
         h3{
@@ -231,6 +235,9 @@ ______________________________*/
             @include txt-cesure;
             @include font-size(s);//utilisation de typey
             margin: em(10px) em(20px);
+            
+            max-width: 100%;
+            max-width: fit-content;
         }
         h4{
             @include font-size(m);//utilisation de typey
@@ -239,12 +246,12 @@ ______________________________*/
     }
 
     aside.ficheform-savoirplus{
-        
+
         background-color: $gris-clair;
-        
+
         @include arrondis(1em);
-        
-    
+
+
         a{
             color: $bleu-turquoise;
             text-decoration: none;
@@ -278,21 +285,21 @@ ______________________________*/
         background-size: contain;
         ul{
             @include backgroundImage(("PNG/motif_img_overlay.png"),transparent,top left,repeat);
-            
+
             li{
                 list-style: none;
                 a{
-         
+
                     &:hover{
                         background: $orange-fonce;
                         color: $gris-anthracite;
                         text-decoration: none;
                     }
                 }
-                
+
             }
         }
-    
+
     }
 }
 #zone-4.fiche-formation{}

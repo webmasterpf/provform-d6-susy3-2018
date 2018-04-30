@@ -355,11 +355,11 @@ body .conteneur {
                             text-decoration: none;
                             text-transform: uppercase;
                             font-weight: bold;
-                            color: whitesmoke;
+                            color: $blanc-casse;
 
                             /*@include backgroundImage("SVG/bg_acces_contact.svg");*/
                             background-size: cover;
-                            background-clip: padding-box;
+                            /*background-clip: padding-box;*/
                             min-width: inherit;
                             min-height:  inherit; 
                             transition-duration: 0.0s;//Permet de jouer sur un effet de slide
@@ -387,13 +387,15 @@ body .conteneur {
                     }
                     &.views-row-1.nid-63{//contact
                                          a:hover{
-                                             @include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);
+                                             /*@include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);*/
+                                             @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 25.5% top, no-repeat);
                                              background-size: cover;
                                          }
                     }
                     &.views-row-2.nid-32{//contrat etat
                                          a:hover{
-                                             @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100% top);
+                                             /*@include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100% top);*/
+                                             @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 100% top, no-repeat);
                                              background-size: cover;
                                          }
                     }

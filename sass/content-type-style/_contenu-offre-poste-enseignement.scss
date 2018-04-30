@@ -155,6 +155,14 @@ ______________________________*/
 }
 }
 #zone-2.offre-poste-enseignement{
+    h3.block-title{
+           transform: rotate(-1deg);
+        color: $orange-fonce;
+        background: $gris-anthracite;
+        width: 70%;
+        width: fit-content;
+        margin: span(0.1) auto;
+    }
      ul.liste-autre-offres {
     
      

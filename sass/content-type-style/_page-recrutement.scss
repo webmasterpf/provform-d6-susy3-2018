@@ -179,7 +179,17 @@ ______________________________*/
                 max-width: 45%;
                 text-decoration: none;
                 @include clignote(3s);
-                @include arrondis();
+                
+                //Effet coin retourné
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-width: 0 em(10px) em(10px) 0;
+                border-style: solid;
+                border-color: $orange-fonce ;
+            }
          
             }
                    &::before{

@@ -3,8 +3,8 @@
 
 /*-------------------------------------|
 |       CONTENU CUSTOM               |
-|               NODE.TPL                    |
-|               PAGE ERREUR              |
+|               NODE.TPL                      |
+|  PAGE ERREUR  & RECHERCHE    |
 |--------------------------------------*/
 
 //@include breakpoint ($mobile){}
@@ -68,6 +68,7 @@ body .conteneur{
         }
     }
 }
+
 /*######-------- ||| STYLE ||| --------######*/
 
 /*¤¤¤ STYLES COMMUNS ¤¤¤*/
@@ -118,3 +119,4 @@ ______________________________*/
 #zone-3.page-erreur{}
 #zone-4.page-erreur{}
 #zone-5.page-erreur{}
+

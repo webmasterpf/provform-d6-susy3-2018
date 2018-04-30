@@ -38,7 +38,7 @@ body .conteneur #footer{
 
     @include breakpoint ($mobile){
 
-        @include background-size();
+        @include background-size(100%);
         p{
             padding: 0 0 em(15px) 0;
         }

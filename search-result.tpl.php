@@ -1,5 +1,4 @@
 <?php
-// $Id: search-result.tpl.php,v 1.1.2.1 2008/08/28 08:21:44 dries Exp $
 
 /**
  * @file search-result.tpl.php
@@ -46,14 +45,14 @@
  * @see template_preprocess_search_result()
  */
 ?>
-<dt class="title-search-result">
+<dt class="title">
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
 </dt>
-<dd>
+<article>
   <?php if ($snippet) : ?>
     <p class="search-snippet"><?php print $snippet; ?></p>
   <?php endif; ?>
   <?php if ($info) : ?>
   <p class="search-info"><?php print $info; ?></p>
   <?php endif; ?>
-</dd>
+</article>
