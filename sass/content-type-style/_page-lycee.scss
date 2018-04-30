@@ -270,13 +270,14 @@ a{
         }
     }
     div.content{
-        .entrefilet{
-            @include backgroundImage('bg-merci.gif');
+           .entrefilet{
+           
             display: block;
             color: $orange-fonce;
             @include font-size(l);//utilisation de typey
-            text-transform: capitalize;
+            text-transform: uppercase;
             font-weight: bold;
+            quotes: "\201C""\201D""\2018""\2019";
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.2);
             transform: translate(1%,2%);
@@ -284,6 +285,11 @@ a{
                 margin: span(0.1);
                 min-width: span(3);
                 max-width: span(5);
+            }
+            &::before{
+                 /*@include backgroundImage('bg-merci.gif');*/
+                 content: open-quote;
+                 @include font-size(l);//utilisation de typey
             }
         }
         //style pour le dernier élément § de content
