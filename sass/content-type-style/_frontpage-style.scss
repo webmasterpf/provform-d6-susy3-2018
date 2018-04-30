@@ -273,9 +273,9 @@ body .conteneur {
                 max-width: span(11);
                 margin:0 auto;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                column-count: 6;
-            column-fill: balance;
-            white-space: normal;
+                    column-count: 6;
+                    column-fill: balance;
+                    white-space: normal;
                 }
                 li{
                     list-style: none;
@@ -284,13 +284,13 @@ body .conteneur {
                     float: none;
 
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-/*                        margin: span(0.1);
-                        float: left;
-                        min-width: span(2);*/
-    @include txt-cesure;
-               @include txt-colonnes;
-                @include hack-Edge;
-                @include hack-IE;
+                        /*                        margin: span(0.1);
+                                                float: left;
+                                                min-width: span(2);*/
+                        @include txt-cesure;
+                        @include txt-colonnes;
+                        @include hack-Edge;
+                        @include hack-IE;
                     }
                     a{
                         background: $orange-fonce;
@@ -318,24 +318,24 @@ body .conteneur {
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     display:inline-block;
                     column-count: 4;
-            column-fill: balance;
-            white-space: normal;
+                    column-fill: balance;
+                    white-space: normal;
                 }
                 li{
                     list-style: none;
                     width: 95%;
                     margin: 0 0 span(0.2) span(0.2);
-                    
-                    
+
+
 
 
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                         @include txt-cesure;
-               @include txt-colonnes;
-                @include hack-Edge;
-                @include hack-IE;
-                margin: 0;
-                padding: 0 span(0.9);
+                        @include txt-cesure;
+                        @include txt-colonnes;
+                        @include hack-Edge;
+                        @include hack-IE;
+                        margin: 0;
+                        padding: 0 span(0.9);
                     }
                     span.titre-admin{
                         display: block;
@@ -371,8 +371,8 @@ body .conteneur {
                             background-color: $gris-anthracite;
 
                             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                                 max-width: 11vw;
-                            max-height: 11vw;
+                                max-width: 11vw;
+                                max-height: 11vw;
 
                                 word-spacing: em(3px);
 
@@ -380,34 +380,34 @@ body .conteneur {
                             &:hover{
 
                                 /*        @include backgroundImage("SVG/bg_acces_contact.svg", -29em top);*/
-                               
+
                                 text-indent: em(-9000px);
                             }
                         }
                     }
                     &.views-row-1.nid-63{//contact
-                                        a:hover{
-                                            @include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);
-                                            background-size: cover;
-                                        }
+                                         a:hover{
+                                             @include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);
+                                             background-size: cover;
+                                         }
                     }
                     &.views-row-2.nid-32{//contrat etat
-                                        a:hover{
-                                            @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100% top);
-                                            background-size: cover;
-                                        }
+                                         a:hover{
+                                             @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100% top);
+                                             background-size: cover;
+                                         }
                     }
                     &.views-row-3.nid-108{//inscriptions
-                                         a:hover{
-                                             @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  76% top);
-                                             background-size: cover;
-                                         }
+                                          a:hover{
+                                              @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  76% top);
+                                              background-size: cover;
+                                          }
                     }
                     &.views-row-4.nid-337{//liens utiles
-                                         a:hover{
-                                             @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51%  top);
-                                             background-size: cover;
-                                         }
+                                          a:hover{
+                                              @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51%  top);
+                                              background-size: cover;
+                                          }
                     }  
 
                 }

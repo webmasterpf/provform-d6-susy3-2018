@@ -66,7 +66,7 @@ body .conteneur{
             width: 95%;
             margin: 0 auto;
             @include arrondis(1.5em);
-        @include backgroundImage("PNG/motif_img_overlay.png",0 0, repeat);
+        @include backgroundImage(("PNG/motif_img_overlay.png"),transparent,top left,repeat);
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: 75%;
         margin: span(0.1) auto; 
@@ -140,6 +140,14 @@ ______________________________*/
           color: $blanc-casse;
           padding: span(0.01);
       }
+          input[type="submit"]{
+        margin: 0 auto;  display: block;
+        @include txt-cesure;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        width: span(3);
+        @include arrondis(1em);
+        }
+    }
       tbody{
           border: 0;
       }

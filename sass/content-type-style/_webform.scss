@@ -108,7 +108,7 @@ form.webform-client-form{
         margin: span(0.1) auto; 
         padding: span(0.1);
         @include arrondis(1.5em);
-        @include backgroundImage("PNG/motif_img_overlay.png",0 0, repeat);
+     @include backgroundImage(("PNG/motif_img_overlay.png"),transparent,top left,repeat);
                     
     label{font-size: smaller;}
     .webform-component{
