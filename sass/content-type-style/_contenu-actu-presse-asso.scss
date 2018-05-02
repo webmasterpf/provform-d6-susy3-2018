@@ -65,21 +65,29 @@ body .conteneur{
             padding: span(0.5);
         }
     }
-         //Galerie d'image
-        aside.galerie{
-            background: $orange-fonce;   
-            display: flex;
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                padding: span(0.05);
-            }
-
+    //Galerie d'image
+    aside.galerie{
+        background: $orange-fonce;   
+        display: flex;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.05);
         }
+    }
+       .slideshare,.video{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.05);
+            width: span(6);
+            margin: 0 auto;
+        }    
+
+
+    }
 }
 #zone-2.actu-presse{
     aside{
         h3{
             margin: span(0.1) 0 0 span(0.1);
-             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
         }
     }
     ul.actu-hasard-list-ul{
@@ -145,7 +153,9 @@ body .conteneur{
         text-decoration: none;
         color: $orange-fonce;
         &:hover{
+
             text-decoration: underline;
+            transition: all 0.5s ease;
         }
     }
     strong{
@@ -156,69 +166,54 @@ body .conteneur{
 /*------------------------------------
         ¤¤¤ STYLES PROPRES ¤¤¤
 ______________________________*/
-body .conteneur {
-    h1.titre_page_tpl{
-        display: none;//Effacement du titre issue de page.tpl
-    }
- 
-    .actu-presse {
 
-        p,ul,li{
-            font-size: medium;
-        }
-           strong{
-        color: $orange-fonce;
-    }
-        h1.titre_page{
-            @include titre-page;
+#zone-1.actu-presse {
+
+    img{padding: 0;}
+    a{  color: $orange-fonce;font-weight: bold;text-decoration: none;
+        &:hover{
+            background: $orange-fonce;
             color: $blanc-casse;
-            @include backgroundRGBA($orange-fonce, 0.8);
+            //    text-decoration: underline;
+        }
+    }
 
-        }
+    table.table-jpo{
+        width: span(8);
+        margin: 0 auto;
+    }
 
-        img{padding: 0;}
-        a{  color: $orange-fonce;font-weight: bold;text-decoration: none;
-            &:hover{text-decoration: underline;}
-        }
-        @include breakpoint(($desktop,$tablet))
-        {
-            
-        }
-        table.table-jpo{
-            width: span(8);
-            margin: 0 auto;
-        }
-        h1.titre_overlay{
-            @include titre_overlay();
-        }
-       
 
-        table.doc-joints,ul.doc-joints{
-            
-           width: span(10);
-            margin: 0 auto;
+    table.doc-joints,ul.doc-joints{
+
+        width: span(10);
+        margin: 0 auto;
         list-style: none;
         background: transparent;
         li{
             border-bottom: em(1px) dashed $gris-anthracite;
         }
-           a[type*="pdf"]{
-                &::before{
-                        @include backgroundImage("PNG/Fichiers@3x.png");
-                        background-size: contain;
-                        content: "";
-                        position: relative;
-                        vertical-align: sub;
-                        padding: em(10px);
-                        margin:em(3px);
-                        transition:0.5s all;
-                        display: inline-block;
-                        transform: scale(1.1);
-                    }
-                }
-               
+        a[type*="pdf"]{
+            &:hover{
+                background: transparent;
+                color: $orange-fonce;
+            }
+            &::before{
+                @include backgroundImage("PNG/Fichiers@3x.png");
+                background-size: contain;
+                content: "";
+                position: relative;
+                vertical-align: sub;
+                padding: em(10px);
+                margin:em(3px);
+                transition:0.5s all;
+                display: inline-block;
+                transform: scale(1.1);
+            }
+        }
+
         img.filefield-icon{
-           
+
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 display: inline-block;
                 text-indent: em(2px);
@@ -227,91 +222,60 @@ body .conteneur {
                 width: 2vw;
                 height: 2vw;
             }
-                      
+
         }
-        
-   th{text-align: center;font-size: large;color: $gris-anthracite;border-bottom: em(3px) solid $orange-fonce;}
+
+        th{text-align: center;font-size: large;color: $gris-anthracite;border-bottom: em(3px) solid $orange-fonce;}
         td{padding: em(2px);}
-        tbody, tr{background: transparent;border-bottom: 1px dashed #606070;}
+        tbody, tr{background: transparent;border-bottom: 1px dashed $gris-anthracite;}
         thead{}
     }
-    .slideshare,.video{
+ 
+}
+
+#zone-2.actu-presse{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                padding: span(0.05);
-                width: span(6);
-                margin: 0 auto;
-            }    
-    
-    
-    }
-    }
-
-    .actu-minipresse{
-        img{
-            @include adaptable-img;
-            margin: 0 auto;
-        }
-        .field-field-minipresse img{
-            float: right;
-            padding: 3px;
-            margin: 0;
-            line-height: 0;
-
-            box-shadow: 0px 0px 5px #888;
-        }
-    }
-    
-    
-
-
-    
-    
-
-
-    #zone-2.actu-presse{
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         @include border-L-orangePF;
-        }
-        aside{
-            
-                h3{
-        transform: rotate(-1deg);
-        color: $jaune;
-        background: $gris-anthracite;
-        padding: em(3px);
-        
-        text-align: center;
-        max-width: 80%;
     }
-        }
-        ul.actu-hasard-list-ul{
-            padding:span(0.5);
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                display: flow-root;
-            }
-            li{
-                list-style:none;
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    padding: span(0.5);
-                    display: inherit;
-                }
-                a{
-                    text-align: center;
-                }
-                span.titre-au-hasard{
-                    text-align: center;
-                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        float: left;
-                        clear: both;
-                    }
+    aside{
 
+        h3{
+            transform: rotate(-1deg);
+            color: $jaune;
+            background: $gris-anthracite;
+            padding: em(3px);
+
+            text-align: center;
+            max-width: 80%;
+        }
+    }
+    ul.actu-hasard-list-ul{
+        padding:span(0.5);
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            display: flow-root;
+        }
+        li{
+            list-style:none;
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                padding: span(0.5);
+                display: inherit;
+            }
+            a{
+                text-align: center;
+            }
+            span.titre-au-hasard{
+                text-align: center;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    float: left;
+                    clear: both;
                 }
-                img{
-                    @include cadre-ombre(0.3em,white,$gris-anthracite);
-                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        /*float: right;*/
-                        max-width: 75%;
-                    }
+
+            }
+            img{
+                @include cadre-ombre(0.3em,white,$gris-anthracite);
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    /*float: right;*/
+                    max-width: 75%;
                 }
             }
         }
