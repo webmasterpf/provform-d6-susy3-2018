@@ -119,6 +119,7 @@ function pf_d6_susy3_preprocess_page(&$vars){
     drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/jquery_plugin/selectnav.min.js', 'theme');
 //    drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/jquery_plugin/jquery.sticky.js', 'theme');
     drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/jquery_plugin/jquery.sticky-kit.js', 'theme');
+//    drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/jquery_plugin/stickUp.js', 'theme');
   //  drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/jquery.sidebar.min.js', 'theme');
 
 //chargement des scripts qui utilisent la version de jQuery par défaut du site

@@ -159,22 +159,23 @@
         $(".lightSlider").lightSlider();
     });
     
-    // StickUp pour barre de partage social 
-//    jQuery(window).load(function () {
-//    console.log('Chargement de StickUp.js pour jQuery>=1.11');
-//$('.service-links').stickUp();
-//});
 
-jQuery(document).ready(function () {
-    console.log('Chargement de Floatit.js pour jQuery>=1.12');
-$('#block-service_links-service_links').floatit({
-		  limiter: 'footer',
-		preserve_width: true,
-		top_spacing: 40,
-		bottom_spacing: 10,
-		recalculate: true
-	  });
-});
+//Bloc Social position fixe
+    jQuery(document).ready(function () {
+        console.log('Chargement de Floatit.js pour jQuery>=1.12');
+        $('#block-service_links-service_links').floatit({
+            //Set the 'limiter' element that stops sidebar scrolling at a certain position.
+            limiter: 'footer',
+            //Decide whether to preserve the width when the sidebar widget is sticky.
+            preserve_width: true,
+            //Set the top and bottom spacing while scrolling.
+            top_spacing: 40,
+            bottom_spacing: 10,
+            left_spacing: 80,
+            //Decide whether to recalculate the top & bottom position on window resize.
+            recalculate: true
+        });
+    });
 
 
     //Pour stacktable (tableaux RWD)
@@ -304,6 +305,8 @@ $('#block-service_links-service_links').floatit({
         $("#zone-2 ul").removeAttr("style");
         $(".masonry-brick").removeAttr("style");//pas d'effet
         $("img.filefield-icon").removeAttr("style");
+//Retirer attribut spécifique du style en ligne
+        $("#block-service_links-service_links").css('left', '');
         
 
         //Retrait du style des objets imbriqués comme object,iframe,etc...

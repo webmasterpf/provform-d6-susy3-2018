@@ -44,7 +44,8 @@ body .conteneur .conteneur-flex{
     }
 
 }
-.logos_lycee{
+#zone-1.page-lycee{
+    .logos_lycee{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         width: span(3 of $desktopcol);
         margin-left: span(1 wide);//push
@@ -66,6 +67,13 @@ aside.logo-lycee,aside.logo-lycee-metiers{
         padding: span(0.01);
     }
 }
+}
+#zone-2.page-lycee{
+    .content{
+        padding: span(0.1);
+    }
+}
+
 /*######-------- ||| BORDURES ||| --------######*/
 body .conteneur{
     @include breakpoint ($desktop){
@@ -154,9 +162,9 @@ ______________________________*/
         padding: em(2px);
         
     }
-    aside.logo-lycee {
+    aside.logo-lycee,aside.logo-lycee-metiers {
         position: relative;
-                      //Effet coin retourné
+       //Effet coin retourné
             &::before{
                 content: "";
                 position: absolute;
@@ -341,11 +349,7 @@ a{
                 overflow: initial;
             }
         }
-        //style particulier pour le 1er § qui ne contient pas la iframe 
-        p,p:first-child {
-            margin: 0 em(15px);
-            padding: 0;
-        }
+
         iframe,object{
             border: em(2px) solid $violet;
             padding: em(1px);

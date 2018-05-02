@@ -36,5 +36,21 @@
 // Sticky-kit pour barre de partage social 
 //console.log('Appel du script sticky-kit.js pour jQuery 1.3');
 //$('.service-links').stick_in_parent();
+
+    // StickUp pour barre de partage social 
+//    jQuery(document).ready(function () {
+//        console.log('Chargement de StickUp.js pour jQuery>=1.11');
+//        $('#block-service_links-service_links').stickUp({
+//            // distance from the top of the webpage
+//            topMargin: "auto",
+//// Z-index property
+//            zIndex: 5,
+//            // forces stickUp to synchronize left position
+//            syncPosition: false,
+//            // change CSS classes here
+//            namespaceClass: "stuckElement",
+//            fixedClass: "isStuck"
+//        });
+//    });
        
 })(jQuery);
