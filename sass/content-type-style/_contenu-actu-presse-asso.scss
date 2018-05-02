@@ -73,14 +73,12 @@ body .conteneur{
             padding: span(0.05);
         }
     }
-       .slideshare,.video{
+    .slideshare,.video{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.05);
             width: span(6);
             margin: 0 auto;
         }    
-
-
     }
 }
 #zone-2.actu-presse{
@@ -110,7 +108,6 @@ body .conteneur{
                     float: left;
                     clear: both;
                 }
-
             }
             img{
                 @include cadre-ombre(0.3em,white,$gris-anthracite);
