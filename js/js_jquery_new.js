@@ -410,8 +410,13 @@ $(".contenu-international p:has(iframe)").addClass('external-content');
         });
         
         //Cache / Affiche les enfants dans le menu overlay - Pas fonctionnel
-$('#block-menu-menu-menu-general').click(function() {
-  $('.collapsed').toggle( "slow", function() {
+//$('#block-menu-menu-menu-general').click(function() {
+//  $('.collapsed').toggle( "slow", function() {
+//    // Animation complete.
+//  });
+//});
+$('.collapsed').click(function() {
+  $('.collapsed > li.leaf').toggle( "slow", function() {
     // Animation complete.
   });
 });

@@ -89,6 +89,11 @@ aside.contenu-rubrique{
     }
     .rubrique-lycees,.rubrique-association,.rubrique-international{
         column-count: 0;
+        li{
+                   a{
+                    display: flex;
+                }
+        }
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             column-count: 2;
             column-fill: balance;
@@ -111,7 +116,7 @@ aside.contenu-rubrique{
 
                     }
                 a{
-                    display: inherit;
+                    display: flex;
                 }
             }
         }
@@ -273,27 +278,27 @@ ______________________________*/
     aside.contenu-rubrique{
         .rubrique-lycees{
             ul{
-                //Classes dynamiques attribuées par le titre dans la vue
+                //Classes dynamiques attribuées par NiD de chaque contenus
                 li{
-                    &.Rostand{
+                    &.nid-5{
                         background: $rouge;
                     }
-                    &.Célony{
+                    &.nid-8{
                         background: $vert;
                     }
-                    &.Rocher{
+                    &.nid-10{
                         background: $violet;
                     }
-                    &.Gasquet{
+                    &.nid-6{
                         background: $rose-fushia;
                     }
-                    &.Caucadis{
+                    &.nid-9{
                         background: $gris-clair-moyen;
                     }
-                    &.Brise-Lames{
+                    &.nid-11{
                         background: $bleu-turquoise;
                     }
-                    &.Grawitz{
+                    &.nid-2{
                         background: $orange;
                     }
                 }
@@ -315,7 +320,7 @@ ______________________________*/
                         color: $blanc-casse;
                         @include txt-cesure();
                         display: inline-block;
-                        float: left;
+                        /*float: left;*/
       
 
                     }
