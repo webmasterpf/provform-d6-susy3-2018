@@ -25,20 +25,20 @@ body .conteneur .conteneur-flex{
 }
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
 #zone-diaporama.page-lycee{
-        min-height: 35vw;
+    min-height: 35vw;
     max-height: 90vw;
     overflow: hidden;
-    
-        @include backgroundImage('SVG/image_defaut_actu_2500.svg');
-        @include background-size(cover);
-    
+
+    @include backgroundImage('SVG/image_defaut_actu_2500.svg');
+    @include background-size(cover);
+
     img,.view-Diapo-multichoix{
         transform: translate(0%,0%);
     }
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         min-height: 20vw;
         max-height: 24vw;
-    img,.view-Diapo-multichoix{
+        img,.view-Diapo-multichoix{
             transform: translate(0%,-12%);
         }
     }
@@ -46,27 +46,27 @@ body .conteneur .conteneur-flex{
 }
 #zone-1.page-lycee{
     .logos_lycee{
-    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-        width: span(3 of $desktopcol);
-        margin-left: span(1 wide);//push
-        display: inline-block;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            width: span(3 of $desktopcol);
+            margin-left: span(1 wide);//push
+            display: inline-block;
+        }
     }
-}
-aside.logo-lycee,aside.logo-lycee-metiers{
-    margin: span(0.01) 0;
-    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-        float: left;
-        
-    }
-}
+    aside.logo-lycee,aside.logo-lycee-metiers{
+        margin: span(0.01) 0;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            float: left;
 
-.lycee-coordlogo{
-    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-        float: right;
-        width: span(7 of $desktopcol);
-        padding: span(0.01);
+        }
     }
-}
+
+    .lycee-coordlogo{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            float: right;
+            width: span(7 of $desktopcol);
+            padding: span(0.01);
+        }
+    }
 }
 #zone-2.page-lycee{
     .content{
@@ -74,424 +74,21 @@ aside.logo-lycee,aside.logo-lycee-metiers{
     }
 }
 
-/*######-------- ||| BORDURES ||| --------######*/
-body .conteneur{
-    @include breakpoint ($desktop){
-        #zone-2.page-lycee{}
-    }
-
-}
-/*######-------- ||| BREAKPOINTS ||| --------######*/
-@include breakpoint ($mobile){
-    aside.deco-lycee{
-        display: none;
-    }
-}
-
-/*######-------- ||| STYLE ||| --------######*/
-h1.titre-lycee,h1.title-classes{
-    font-size: em(24px);
-    color: $violet;
-    line-height: 1.0em
-}
-h1.titre_overlay{
-    @include titre_overlay();
-}
-h1.titre_page{
-    @include titre-page;
-    color: $blanc-casse;
-    @include backgroundRGBA($orange-fonce, 0.8);
-
-}
-/*¤¤¤ STYLES COMMUNS ¤¤¤*/
-#zone-1.page-lycee,
-#zone-2.page-lycee,
-#zone-3.page-lycee,
-#zone-4.page-lycee
-{
-     p,ul,li{
-        @include font-size(m);//utilisation de typey
-        padding: em(5px);
-        line-height: 1.5em;
-    }
-    u{
-        font-weight: bold;
-        color: $bleu-turquoise;
-    }
-    h2{
-        @include font-size(l);//utilisation de typey
-        color: $orange-fonce;
-    }
-    h3{
-        @include font-size(m);//utilisation de typey
-        color: $orange-fonce;
-    }
-    a{
-        text-decoration: none;
-        color: $orange-fonce;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    strong{
-        color: $orange-fonce;
-    }
-
-}
-
-/*------------------------------------
-        ¤¤¤ STYLES PROPRES ¤¤¤
-______________________________*/
-
-#zone-1.page-lycee{
-    h2{}
-    h3{}
-    h4{}
-    p{}
-    ul{
-        width: auto;
-    }
-    img{
-        //@include ombrage(0.3em,0,0,0.1em);
-        display: block;
-        margin: 0 auto;
-        @include adaptable-img;
-        width: auto;
-        float: none;
-        border: em(2px) solid $orange-fonce;
-        padding: em(2px);
-        
-    }
-    aside.logo-lycee,aside.logo-lycee-metiers {
-        position: relative;
-       //Effet coin retourné
-            &::before{
-                content: "";
-                position: absolute;
-                top: em(-3px);
-                right: em(-3px);
-                border-width: 0 em(20px) em(20px) 0;
-                border-style: solid;
-                border-color: $orange-fonce ;
-            }
-    }
-    .lycee-coordlogo {
-        background: $gris-anthracite;
-        display:block;
-        color:$blanc-casse;
-        font-size: medium;
-/*        img[src*="logo"]{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                float: left;
-                margin: 0 span(0.5);
-            }   
-        }
-        img[src*="label"]{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                padding: 0;
-                transform: translate(em(-550px), em(-40px));
-    
-            }
-        }*/
-h2#logo_lpp{
-    color: $blanc-casse;
-    font-size: large;
-}
-a{
-    color:$blanc-casse;
-    font-weight:bold;
-    &:hover{
-    color:$orange-fonce;
-        
-    }
-}
-    }
-    div.illus-lycee{
-        img{
-
-            transform: scale(0.8);
-        }
-    }
-    a{
-        &:hover{}
-    }
-
-    h2 a{}
-    h2 a:hover{}
-    h3 a{}
-    h3 a:hover{}
-    h4 a{}
-    h4 a:hover{}
-    aside.diapo_lycee{
-        display: block;
-        margin: 0 auto;
-        width: em(175px) !important;
-        width: em(174px);/*IE*/
-        * {//cible le contenu
-           position:relative;
-           /*position:relative !important;*/
-           min-height: 100%;
-        }
-        .views_slideshow_cycle_main{
-            /*position:relative !important;*/
-
-
-        }
-        .views_slideshow_cycle_slide{
-            overflow: auto;
-        }
-        img{
-            border: em(2px) solid $violet;
-            margin: em(10px) 0 0;
-        }
-    }
-
-} 
-/*######-------- ZONE 2 --------######*/
-#zone-2.page-lycee{
-    h2,h3,h4,p,ul,ol,img{
-        margin: 0;
-    }
-    h2{
-        color: $vert;
-        padding: em(5px);
-    }
-    h3{
-        color: $violet;
-        padding: em(5px);
-    }
-    h4{
-        padding: em(5px);
-        color: $violet;
-    }
-    p,li{
-        @include font-size(m);//utilisation de typey
-        padding: em(5px);
-        line-height: 1.5em;
-    }
-    ul{
-        padding: em(5px);
-    }
-    img{
-
-    }
-    a{
-        color: $violet;
-        text-decoration: none;
-        padding: em(2px);
-        &:hover{
-            color: white;
-            background: $violet;
-        }
-    }
-    form{margin: 0 6em;}
-    table{
-        margin: 0 auto;
-        //display:table;//casse le système de stacktable js
-         position: relative;
-                      //Effet coin retourné
-            &::before{
-                content: "";
-                position: absolute;
-                top: em(-3px);
-                right: em(-3px);
-                border-width: 0 em(20px) em(20px) 0;
-                border-style: solid;
-                border-color: $orange-fonce ;
-            }
-        tbody{
-            max-width: 100%;
-
-            tr{
-                border:0;
-            }
-            tr.even{
-                background: $gris-clair;
-            }
-            tr.odd{
-                background: $gris-clair-moyen;
-            }
-            td{}
-        }
-    }
-    div.content{
-           .entrefilet{
-           
-            display: block;
-            color: $orange-fonce;
-            @include font-size(l);//utilisation de typey
-            text-transform: uppercase;
-            font-weight: bold;
-            quotes: "\201C""\201D""\2018""\2019";
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            padding: span(0.2);
-            transform: translate(1%,2%);
-            float: right;
-                margin: span(0.1);
-                min-width: span(3);
-                max-width: span(5);
-            }
-            &::before{
-                 /*@include backgroundImage('bg-merci.gif');*/
-                 content: open-quote;
-                 @include font-size(l);//utilisation de typey
-            }
-        }
-        //style pour le dernier élément § de content
-        p.external-content{
-            width: 95%;
-            margin: em(15px) auto;
-            @include breakpoint ($desktop){
-                position: relative;
-                padding-bottom: 56.25%;
-                padding-top: em(85px);
-                height: 0;
-                overflow: initial;
-            }
-        }
-
-        iframe,object{
-            border: em(2px) solid $violet;
-            padding: em(1px);
-            @include img-centered;
-            max-width: 95%;
-
-            @include breakpoint ($desktop){
-                position: absolute;
-                top:0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-
-            }
-        }
-    }
-
-    #video_lycee{
-        width: 95%;
-        margin: em(15px) auto;
-        @include breakpoint ($desktop){
-            position: relative;
-            padding-bottom: 56.25%;
-            padding-top: em(35px);
-            height: 0;
-            overflow: initial;
-        }
-        iframe,object{
-            border: em(2px) solid $violet;
-            padding: em(1px);
-            @include img-centered;
-            max-width: 95%;
-
-            @include breakpoint ($desktop){
-                position: absolute;
-                top:0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-
-            }
-        }
-    }
-
-}
-
-#zone-2.page-classes{
-    padding: 0.5em;
-}
-
-
-/*######-------- ZONE 3 --------######*/
 #zone-3.page-lycee{
     span#lycee-formation{
-        background: $orange-fonce;
+
         display: grid;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.5) span(1);
 
         }
-        h3{
-            color: $blanc-casse;
-            text-transform: uppercase;
-            font-size: large;
-        }
         ul.liste-formations-lycee{
-
-            li{
-                list-style:none;
-                margin:span(0.01);          
-                a{
-                    font-size: medium;
-                    color: $blanc-casse;
-                    text-decoration: none;
-                    padding: span(0.02);
-                    @include txt-cesure;
-                    &:hover{
-                        background: $gris-anthracite;
-                    }
-                }
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                width: 100%;
             }
         }
     }
-    #docs_lycee{
-
-        h3{
-            font-family:$AristaFont;
-            text-align: center;
-            color: $violet;
-            padding: 5px 0;
-            font-size: medium;
-            margin: 0 0 5px 0;
-        }
-
-        table{
-
-            margin: 0 auto;
-            width: 95%;
-
-            border: em(3px) solid $gris-clair-moyen;
-            background: #EFEFEF;
-            box-shadow:0px 0px 7px 1px $prune;
-            -moz-box-shadow: 3px $prune;
-            -webkit-box-shadow: 3px $prune;
-            behavior: url(/sites/all/libraries/PIE/PIE.htc);
-            position: relative;
-        }
-        tbody{
-            border: 0;
-            padding: em(10px) em(15px);
-
-        }
-        tr{
-            border: 0;
-            background: 0;
-
-        }
-        td{
-            text-align: center;
-
-            a{
-                display: block;
-                color: $prune;
-                text-decoration: none;
-
-                font-size: small;
-                &:hover{
-                    background: $rose-fushia;
-                    @include arrondis(em(10px));
-                    @include PIE;
-                    position: relative;
-                }
-            }
-        }
-        
-        .filefield-icon{
-            display: none;
-        }
-    }
-
 }
-/*######-------- ZONE 4 --------######*/
 #zone-4.page-lycee{
     span#gmap-lycee{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
@@ -508,4 +105,391 @@ a{
             min-height: 20vw;    
         }
     }
-}
+}        
+        /*######-------- ||| BORDURES ||| --------######*/
+        body .conteneur{
+            @include breakpoint ($desktop){
+                #zone-2.page-lycee{}
+            }
+
+        }
+        /*######-------- ||| BREAKPOINTS ||| --------######*/
+        @include breakpoint ($mobile){
+            aside.deco-lycee{
+                display: none;
+            }
+        }
+
+        /*######-------- ||| STYLE ||| --------######*/
+
+        h1.titre_overlay{
+            @include titre_overlay();
+        }
+        h1.titre_page{
+            @include titre-page;
+            color: $blanc-casse;
+            @include backgroundRGBA($orange-fonce, 0.8);
+
+        }
+        /*¤¤¤ STYLES COMMUNS ¤¤¤*/
+        #zone-1.page-lycee,
+        #zone-2.page-lycee,
+        #zone-3.page-lycee,
+        #zone-4.page-lycee
+        {
+            p,ul,li{
+                @include font-size(m);//utilisation de typey
+                padding: em(5px);
+                line-height: 1.5em;
+            }
+            u{
+                font-weight: bold;
+                color: $bleu-turquoise;
+            }
+            h2{
+                @include font-size(l);//utilisation de typey
+                color: $orange-fonce;
+            }
+            h3{
+                @include font-size(m);//utilisation de typey
+                color: $orange-fonce;
+            }
+            a{
+                text-decoration: none;
+                color: $orange-fonce;
+                &:hover{
+                    text-decoration: underline;
+                    transition: all 0.5s ease;
+                }
+            }
+            strong{
+                color: $orange-fonce;
+            }
+
+        }
+
+        /*------------------------------------
+                ¤¤¤ STYLES PROPRES ¤¤¤
+        ______________________________*/
+
+        #zone-1.page-lycee{
+
+            img{
+                //@include ombrage(0.3em,0,0,0.1em);
+                display: block;
+                margin: 0 auto;
+                @include adaptable-img;
+                width: auto;
+                float: none;
+                border: em(2px) solid $orange-fonce;
+                padding: em(2px);
+
+            }
+            aside.logo-lycee,aside.logo-lycee-metiers {
+                position: relative;
+                //Effet coin retourné
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: em(-3px);
+                    right: em(-3px);
+                    border-width: 0 em(20px) em(20px) 0;
+                    border-style: solid;
+                    border-color: $orange-fonce ;
+                }
+            }
+            .lycee-coordlogo {
+                background: $gris-anthracite;
+                display:block;
+                color:$blanc-casse;
+                @include font-size(m);//utilisation de typey
+                /*        img[src*="logo"]{
+                            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                                float: left;
+                                margin: 0 span(0.5);
+                            }   
+                        }
+                        img[src*="label"]{
+                            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                                padding: 0;
+                                transform: translate(em(-550px), em(-40px));
+                    
+                            }
+                        }*/
+                h2#logo_lpp{
+                    color: $blanc-casse;
+                    @include font-size(l);//utilisation de typey
+                }
+                a{
+                    color:$blanc-casse;
+                    font-weight:bold;
+                    &:hover{
+                        color:$orange-fonce;
+
+                    }
+                }
+            }
+            div.illus-lycee{
+                img{
+
+                    transform: scale(0.8);
+                }
+            }
+            a{
+                &:hover{}
+            }
+
+
+            aside.diapo_lycee{
+                display: block;
+                margin: 0 auto;
+                width: em(175px) !important;
+                width: em(174px);/*IE*/
+                * {//cible le contenu
+                   position:relative;
+                   /*position:relative !important;*/
+                   min-height: 100%;
+                }
+                .views_slideshow_cycle_main{
+                    /*position:relative !important;*/
+
+
+                }
+                .views_slideshow_cycle_slide{
+                    overflow: auto;
+                }
+                img{
+                    border: em(2px) solid $violet;
+                    margin: em(10px) 0 0;
+                }
+            }
+
+        } 
+        /*######-------- ZONE 2 --------######*/
+        #zone-2.page-lycee{
+
+            a{
+                color: $violet;
+                text-decoration: none;
+                padding: em(2px);
+                &:hover{
+                    color: white;
+                    background: $violet;
+                }
+            }
+            form{margin: 0 6em;}
+            table{
+                margin: 0 auto;
+                //display:table;//casse le système de stacktable js
+                position: relative;
+                //Effet coin retourné
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: em(-3px);
+                    right: em(-3px);
+                    border-width: 0 em(20px) em(20px) 0;
+                    border-style: solid;
+                    border-color: $orange-fonce ;
+                }
+                tbody{
+                    max-width: 100%;
+
+                    tr{
+                        border:0;
+                    }
+                    tr.even{
+                        background: $gris-clair;
+                    }
+                    tr.odd{
+                        background: $gris-clair-moyen;
+                    }
+                    td{}
+                }
+            }
+            div.content{
+                .entrefilet{
+
+                    display: block;
+                    color: $orange-fonce;
+                    @include font-size(l);//utilisation de typey
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    quotes: "\201C""\201D""\2018""\2019";
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                        padding: span(0.2);
+                        transform: translate(1%,2%);
+                        float: right;
+                        margin: span(0.1);
+                        min-width: span(3);
+                        max-width: span(5);
+                    }
+                    &::before{
+                        /*@include backgroundImage('bg-merci.gif');*/
+                        content: open-quote;
+                        @include font-size(l);//utilisation de typey
+                    }
+                }
+                //style pour le dernier élément § de content
+                p.external-content{
+                    width: 95%;
+                    margin: em(15px) auto;
+                    @include breakpoint ($desktop){
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        padding-top: em(85px);
+                        height: 0;
+                        overflow: initial;
+                    }
+                }
+
+                iframe,object{
+                    border: em(2px) solid $violet;
+                    padding: em(1px);
+                    @include img-centered;
+                    max-width: 95%;
+
+                    @include breakpoint ($desktop){
+                        position: absolute;
+                        top:0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                    }
+                }
+            }
+
+            #video_lycee{
+                width: 95%;
+                margin: em(15px) auto;
+                @include breakpoint ($desktop){
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    padding-top: em(35px);
+                    height: 0;
+                    overflow: initial;
+                }
+                iframe,object{
+                    border: em(2px) solid $violet;
+                    padding: em(1px);
+                    @include img-centered;
+                    max-width: 95%;
+
+                    @include breakpoint ($desktop){
+                        position: absolute;
+                        top:0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                    }
+                }
+            }
+
+        }
+
+        #zone-2.page-classes{
+            padding: 0.5em;
+        }
+
+
+        /*######-------- ZONE 3 --------######*/
+        #zone-3.page-lycee{
+            span#lycee-formation{
+                background: $orange-fonce;
+
+                h3{
+                    color: $blanc-casse;
+                    text-transform: uppercase;
+                    @include font-size(l);//utilisation de typey
+                }
+                ul.liste-formations-lycee{
+
+                    li{
+                        list-style:none;
+                        margin:span(0.01);          
+                        a{
+                            @include font-size(m);//utilisation de typey
+                            color: $blanc-casse;
+                            text-decoration: none;
+                            padding: span(0.02);
+                              word-spacing: em(3px);
+                            @include txt-cesure;
+                            &:hover{
+                                background: $gris-anthracite;
+                                transition: all 0.5s ease;
+                                &::before{
+                                    content: ">>";
+                                    position: relative;
+                                    padding: 0 span(0.1) 0 0;
+                                    transition: all 0.5s ease;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #docs_lycee{
+
+                h3{
+                    font-family:$AristaFont;
+                    text-align: center;
+                    color: $violet;
+                    padding: 5px 0;
+                    @include font-size(m);//utilisation de typey
+                    margin: 0 0 5px 0;
+                }
+
+                table{
+
+                    margin: 0 auto;
+                    width: 95%;
+
+                    border: em(3px) solid $gris-clair-moyen;
+                    background: #EFEFEF;
+                    box-shadow:0px 0px 7px 1px $prune;
+                    -moz-box-shadow: 3px $prune;
+                    -webkit-box-shadow: 3px $prune;
+                    behavior: url(/sites/all/libraries/PIE/PIE.htc);
+                    position: relative;
+                }
+                tbody{
+                    border: 0;
+                    padding: em(10px) em(15px);
+
+                }
+                tr{
+                    border: 0;
+                    background: 0;
+
+                }
+                td{
+                    text-align: center;
+
+                    a{
+                        display: block;
+                        color: $prune;
+                        text-decoration: none;
+
+                        @include font-size(s);//utilisation de typey
+                        &:hover{
+                            background: $rose-fushia;
+                            @include arrondis(em(10px));
+                            @include PIE;
+                            position: relative;
+                        }
+                    }
+                }
+
+                .filefield-icon{
+                    display: none;
+                }
+            }
+        }
+
+        /*######-------- ZONE 4 --------######*/
+        #zone-4.page-lycee{
+
+        }
