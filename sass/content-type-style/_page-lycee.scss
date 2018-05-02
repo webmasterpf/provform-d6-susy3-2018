@@ -121,7 +121,7 @@ body .conteneur .conteneur-flex{
         }
 
         /*######-------- ||| STYLE ||| --------######*/
-
+//Commun pour tous les H1 titre du site
         h1.titre_overlay{
             @include titre_overlay();
         }
@@ -130,6 +130,9 @@ body .conteneur .conteneur-flex{
             color: $blanc-casse;
             @include backgroundRGBA($orange-fonce, 0.8);
 
+        }
+        h1.titre_page_tpl{
+            display: none;//Effacement du titre issue de page.tpl
         }
         /*¤¤¤ STYLES COMMUNS ¤¤¤*/
         #zone-1.page-lycee,
