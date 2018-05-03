@@ -4,7 +4,8 @@
 /*-------------------------------------|
 |       CONTENU CUSTOM               |
 |               NODE.TPL                      |
-|     CONTENU ASSOCIATION            |
+|     CONTENU ASSOCIATION          |
+|        ACTU LYCEE RSS                   |
 |--------------------------------------*/
 
 //@include breakpoint ($mobile){}
@@ -88,7 +89,8 @@ h1.titre_overlay{
         color: $orange-fonce;
         text-decoration:none;
         &:hover{
-            text-decoration: underline;
+                text-decoration: underline;
+                 transition: all 0.5s ease;
         }
     }
 }
@@ -133,6 +135,22 @@ ______________________________*/
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     padding: span(0.01);
                     margin: 0 span(2);
+                }
+            }
+        }
+        .lien-origine{
+            font-weight: bold;
+            position: relative;
+            &::before{
+                content: " >> ";
+                
+            }
+            a{
+                
+                &:hover{
+                color: $blanc-casse;
+                background: $orange-fonce;
+                text-decoration: none;
                 }
             }
         }

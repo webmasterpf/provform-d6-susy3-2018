@@ -211,14 +211,14 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 
 }
 @mixin image-overlay($filename,$position:0 0,$repeat: repeat){
-     content: "";
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                        position: absolute;
-                        z-index: 2;
-                        background: transparent url('#{$imagedir}#{$filename}') $position $repeat;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    background: transparent url('#{$imagedir}#{$filename}') $position $repeat;
                         
 }
 /*----------  FORMULAIRES RWD -----------*/

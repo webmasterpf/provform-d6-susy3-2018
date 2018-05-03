@@ -99,7 +99,7 @@ ______________________________*/
         .entrefilet{
             /*@include maskImage('SVG/quotes.svg', 0,no-repeat,6%);*/
             
-            @include backgroundRGBA($gris-anthracite,0.7);
+            /*@include backgroundRGBA($gris-anthracite,0.7);*/
             @include arrondis();
             display: block;
             color: $orange-fonce;
@@ -117,6 +117,7 @@ ______________________________*/
             &::before{
                 content: "«";
                 color: $orange-fonce;
+                
             }
             &::after{
                 content: '»';

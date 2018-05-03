@@ -30,15 +30,18 @@
 <?php if ($submitted): ?>
                 <span class="submitted"><?php print $submitted; ?></span>
 <?php endif; ?>
+                
+                    <?php if (!empty($node->content['body']['#value'])):
+     print '<div class="content">'.$node->content['body']['#value'].'</div>';
+     endif;
+               ?> 
+                
       <?php
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
               ?>
                 
-                  <?php if (!empty($node->content['body']['#value'])):
-     print '<div class="content">'.$node->content['body']['#value'].'</div>';
-     endif;
-               ?> 
+              
                
 
                         <?php if ($node->field_vue_content_vr[0]['view']):
