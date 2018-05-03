@@ -6,7 +6,7 @@
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
     <div class="node-inner">
             <!--______________ ILLUSTRATION et TITRE ________________ -->
-        <div id="zone-illustration" class="page-association">
+        <div id="zone-illustration" class="page-association contenu-externe">
                      <?php if ($title): /*copier le titre dans la zone desirée*/?>
          
             <?php endif; ?>
@@ -25,7 +25,7 @@
             </div><!-- /zone-illustration -->
             <!--______________ZONE 1________________ -->
       
-        <div id="zone-1" class="zone_layout_max_centre page-association">
+        <div id="zone-1" class="zone_layout_max_centre page-association contenu-externe">
           <?php print $picture; ?>
 
             <?php if ($submitted): ?>
@@ -48,17 +48,15 @@
                    
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
                    
-         <?php if ($centralBloc): ?>
-                <div id="middleGalerie"><?php print $centralBloc; ?></div>
-              <?php endif; ?>
-
-                <?php if ($centre_partenaire): ?>
-         <div id="centre-asso">
-            <?php print $centre_partenaire; ?>
-          </div>
+         <?php if ($node->field_lien_origine[0]['view']): ?>
+                 <aside class="lien-origine">
+                        <?php  //récupération du nom du champ
+               print $node->content['field_lien_origine']['field']['#title']." : " ?>
+                            <?php print $node->field_lien_origine[0]['view'];?>
+                 </aside>
+                    <?php endif; ?>
                 
                 
-             <?php endif; ?>
     <?php if ($node->field_video_externe[0]['view']): ?>
                  <aside class="video">
                             <?php print $node->field_video_externe[0]['view'];?>
