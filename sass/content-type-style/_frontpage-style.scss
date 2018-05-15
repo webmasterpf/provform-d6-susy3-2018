@@ -156,8 +156,7 @@ body .conteneur {
                 border: em(3px) $noir solid;
                 font-family: $FontRaleway;
                 font-size: medium;
-                @include backgroundImage(('deuil.png'), no-repeat, top right);//nouvelle mixin 2018
-
+                @include backgroundImage(('deuil.png'),transparent,top right,no-repeat); //nouvelle mixin 2018
                 text-transform: uppercase;
             }
             a{
@@ -270,7 +269,7 @@ body .conteneur {
 
             ul{
                 //pas besoin de fixer un display en mobile, vertical automatique
-                max-width: span(11);
+                max-width: span(12);
                 margin:0 auto;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     column-count: 6;
