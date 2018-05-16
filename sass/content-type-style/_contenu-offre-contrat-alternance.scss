@@ -60,6 +60,12 @@ body .conteneur{
             padding: span(0.2);
         }
     }
+       a.retour-liste{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        padding: span(0.2);
+        display: block;
+        }
+    }
     .table-poste-bts,.table-offre-apprentissage{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             margin: span(0.1) auto;

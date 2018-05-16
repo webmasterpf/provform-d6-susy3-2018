@@ -1,12 +1,28 @@
-<!-- ******* TEMPLATE DE NODE POUR PAGE BTS ET ENTREPRISE *********************** -->
+<!--______________NODE TPL POUR Contenu Entreprise Node/111 .TPL CUSTOM________________ -->
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
-  <div class="node-inner">
+    <div class="node-inner">
+                 <!--______________ ILLUSTRATION et TITRE ________________ -->
+        <div id="zone-illustration" class="contenu-entreprise">
+                     <?php if ($title): /*copier le titre dans la zone desirée*/?>
+         
+            <?php endif; ?>
+            
+             <?php if ($node->field_illus_entreprise[0]['view']
+                 OR
+                 $title
+                 ): ?>
+            <div id="illustration-pleinepage" class="illustration-contenu-entreprise">
+                   <h1 class="titre_overlay titre_page"><?php print $title; ?></h1>
+                 <?php  print $node->field_illus_entreprise[0]['view'] ?>
+            </div>
+            <?php endif;?>
+     
+            
+            </div><!-- /zone-illustration -->
+        <!--______________ ZONE 1 ________________ -->
+      
+        <div id="zone-1" class="zone1_layout_8_4 contenu-entreprise">
 
-      <!--_______________________ COLONNE 1 __________________ -->
-      <div id="colonne-1" class="col-1-btsentrepise">
-    <?php if (!$page): ?>
-      <h2 class="title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
 
     <?php print $picture; ?>
 
@@ -17,66 +33,53 @@
     <div class="content">
       <?php  print $node->content['body']['#value']; ?>
 
-         <?php
-       if ($node->field_docs_bts_alternance[0]['view']
-        OR $node->field_docs_bts_alternance[1]['view']
-        OR $node->field_docs_bts_alternance[2]['view']
-        OR $node->field_docs_bts_alternance[3]['view']
-        ): ?>
-        <ul id="docs-alternance-bts">
-           <?php if ($node->field_docs_bts_alternance[0]['view']): ?>
-              <li>      <?php  print $node->field_docs_bts_alternance[0]['view'] ?></li>
-              <?php endif; ?>
-              <?php if ($node->field_docs_bts_alternance[1]['view']): ?>
-              <li>      <?php  print $node->field_docs_bts_alternance[1]['view'] ?></li>
-              <?php endif; ?>
-                 <?php if ($node->field_docs_bts_alternance[2]['view']): ?>
-              <li>      <?php  print $node->field_docs_bts_alternance[2]['view'] ?></li>
-              <?php endif; ?>
-              <?php if ($node->field_docs_bts_alternance[3]['view']): ?>
-              <li>      <?php  print $node->field_docs_bts_alternance[3]['view'] ?></li>
-              <?php endif; ?>
-        </ul>
-   <?php endif; ?>
 
-
-
-
-        <br clear="all"/>
-       
       
+                  <?php
+            if ($node->field_docs_bts_alternance[0]['view']):
+
+              global $theme_path;
+                include($theme_path . '/includes/dedicates_inc/inc_docs_bts_alternance_111.php');
+            endif;
+            //il ne s'agit pas d'une vue mais de code PHP !!
+            ?>
+        
+                  <?php
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
+              ?>
+        
     </div>
 
     <?php if ($terms): ?>
 
       <div id="taxonomy">
-<?php print Cyrano_PF_print_terms($node);?>
+<?php //print Cyrano_PF_print_terms($node);?>
       </div>
     <?php endif;?>
 
     <?php if ($links): ?> 
       <div class="links"> <?php print $links; ?></div>
     <?php endif; ?>
-       <!-- retour haut selon resolution de l'ecran -->
-          <a href="#general" id="retour_haut">Haut de page</a>
+       
       </div>
 
-<!--_______________________ COLONNE 2 __________________ -->
-      <div id="colonne-2" class="col-2-btsentrepise">
-         
-<?php
- $theme_path = drupal_get_path('theme', 'cyrano_pf');
- include ($theme_path.'/includes/inc_objectif_bts.php');
- ?>
+<!--_______________________ ZONE 2 __________________ -->
+<div id="zone-2" class="zone2_layout_8_4 contenu-entreprise">
+    
+            <?php
+            if ($node->field_fichier_joint_partenaires[0]['view']):
 
-          
+              global $theme_path;
+                include($theme_path . '/includes/dedicates_inc/inc_objectif_bts.php');
+            endif;
+            //il ne s'agit pas d'une vue mais de code PHP !!
+            ?>
 
-  <?php
- $theme_path = drupal_get_path('theme', 'cyrano_pf');
- include ($theme_path.'/includes/inc_region_col_G3.php');
- ?>
-
-
+          <?php
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
+              ?>
       </div>
 
   </div> <!-- /node-inner -->

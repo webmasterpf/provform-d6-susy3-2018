@@ -30,6 +30,8 @@
             <?php if ($submitted): ?>
             <span class="submitted"><?php print $submitted; ?></span>
             <?php endif; ?>
+            
+            <a href="/node/169" class="retour-liste"><< Retourner à la liste des offres</a>
 
                  <table class="table-poste-bts">
            <tr class="line1">

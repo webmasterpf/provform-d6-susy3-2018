@@ -8,7 +8,6 @@
  */
 ?>
 <?php
-
 foreach($node->field_fichier_joint_partenaires as $file) {
   if ($file['view']) {
       $header = array('data' => 'Les objectifs des formations BTS');

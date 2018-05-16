@@ -63,6 +63,7 @@
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
               ?>
+                    
             </div>
 
             

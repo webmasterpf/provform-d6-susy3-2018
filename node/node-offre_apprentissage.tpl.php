@@ -30,7 +30,7 @@
             <span class="submitted"><?php print $submitted; ?></span>
             <?php endif; ?>
 
-
+<a href="/node/741" class="retour-liste"><< Retourner à la liste des offres</a>
        <table class="table-offre-apprentissage">
            <tr class="line1">
                <td>  <?php  print $node->content['field_reference_pbts']['field']['#title']  ?></td>
