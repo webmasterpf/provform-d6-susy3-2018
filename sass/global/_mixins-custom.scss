@@ -138,11 +138,13 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
     word-wrap: $typecesure;
     word-break: $typecesure2;
     overflow-wrap: break-word;
+    
 }
 @mixin txt-ellipse($hyphenation:auto,$surplustxt:ellipsis){
     overflow:hidden; 
     hyphens: $hyphenation;
     text-overflow: $surplustxt;
+    hyphenate-limit-chars: 6 3 2;//CSS4 - expérimental
 }
 @mixin txt-colonnes($param1:avoid-column,$param2:avoid){
     break-inside: $param1;//empêche césure au milieu de l'élément 

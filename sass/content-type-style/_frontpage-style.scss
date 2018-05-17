@@ -123,7 +123,7 @@ body .conteneur {
                 padding: span(0.005);
                 border: em(3px) $orange-fonce solid;
                 font-family: $FontRaleway;
-                font-size: medium;
+                @include font-size(m);//utilisation de typey
 
                 text-transform: uppercase;
             }
@@ -155,7 +155,7 @@ body .conteneur {
                 padding: span(0.005);
                 border: em(3px) $noir solid;
                 font-family: $FontRaleway;
-                font-size: medium;
+                @include font-size(m);//utilisation de typey
                 @include backgroundImage(('deuil.png'),transparent,top right,no-repeat); //nouvelle mixin 2018
                 text-transform: uppercase;
             }
@@ -175,7 +175,7 @@ body .conteneur {
         a{
             color: white;
             font-family: $FontRaleway;
-            font-size: xx-large;
+            @include font-size(xl);//utilisation de typey
             text-decoration: none;
         }
         img{
@@ -257,7 +257,7 @@ body .conteneur {
                     }
                 }
                 span.accroche-admin{
-                    font-size: small;
+                    @include font-size(s);//utilisation de typey
                     padding: em(6px);
                     display: block;
                     word-break: break-word;
@@ -269,8 +269,9 @@ body .conteneur {
 
             ul{
                 //pas besoin de fixer un display en mobile, vertical automatique
-                max-width: span(12);
+                max-width: span(11);
                 margin:0 auto;
+                padding: span(0.02);
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     column-count: 6;
                     column-fill: balance;
@@ -278,16 +279,15 @@ body .conteneur {
                 }
                 li{
                     list-style: none;
-                    width: 95%;
+                    
                     margin: 0 0 span(0.2) span(0.2);
                     float: none;
+                    
+                    @include txt-cesure;
+                    @include txt-colonnes;
 
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        /*                        margin: span(0.1);
-                                                float: left;
-                                                min-width: span(2);*/
-                        @include txt-cesure;
-                        @include txt-colonnes;
+
                         @include hack-Edge;
                         @include hack-IE;
                     }
@@ -298,8 +298,9 @@ body .conteneur {
                         padding: span(0.1);
                         text-decoration: none;
                         text-align: center;
-                        font-size: x-large;
+                        @include font-size(l);//utilisation de typey
                         transition-duration: 0.4s;
+                        @include txt-ellipse;
                         @include txt-cesure(break-word);
                         &:hover{
                             background: $gris-clair-moyen;
@@ -510,7 +511,7 @@ body .conteneur {
                 text-decoration: none;
                 color: whitesmoke;
                 text-transform: uppercase;
-                font-size: medium;
+                @include font-size(m);//utilisation de typey
                 transition-duration: 0.4s;
                 &:hover{}
             }
