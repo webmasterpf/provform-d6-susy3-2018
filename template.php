@@ -38,20 +38,17 @@ function pf_d6_susy3_preprocess_node(&$vars, $hook) {
  $vars['pole_col2'] = theme('blocks', 'pole_col2');
  $vars['pole_col3'] = theme('blocks', 'pole_col3');
  $vars['pole_col4'] = theme('blocks', 'pole_col4');
+ 
  $vars['node_col_1'] = theme('blocks', 'node_col_1');
  $vars['node_col_2'] = theme('blocks', 'node_col_2');
  $vars['node_col_3'] = theme('blocks', 'node_col_3');
  $vars['node_col_4'] = theme('blocks', 'node_col_4');
  $vars['node_col_5'] = theme('blocks', 'node_col_5');
  $vars['actuAssociation'] = theme('blocks', 'actuAssociation');
- //Regions spécifique au site PF
- $vars['centralBloc'] = theme('blocks', 'centralBloc');
- $vars['centre_partenaire'] = theme('blocks', 'centre_partenaire');
- $vars['formulaire'] = theme('blocks', 'formulaire');
- //Regions custom pour theme suite generalisation node.tpl
-// $vars['pole_bloc_G'] = theme('blocks', 'pole_bloc_G');
-// $vars['pole_bloc_C'] = theme('blocks', 'pole_bloc_C');
-// $vars['pole_bloc_D'] = theme('blocks', 'pole_bloc_D');
+ 
+ //Regions spécifique au thème
+ //$vars['NOM_REGION'] = theme('blocks', 'NOM_REGION');
+
  //
 //Partie template node.tpl
 $node = $vars['node'];
