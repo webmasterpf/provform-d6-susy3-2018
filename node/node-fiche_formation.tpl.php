@@ -6,7 +6,7 @@
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
     <div class="node-inner">
             <!--______________ ILLUSTRATION et TITRE ________________ -->
-        <div id="zone-illustration" class="fiche-formation fiche-bts">
+        <div id="zone-illustration" class="fiche-formation fiche-bts nid-<?php print $node->nid; ?>">
    
 
             <?php
