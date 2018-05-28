@@ -123,6 +123,11 @@ body .conteneur{
 /*######-------- ||| STYLE ||| --------######*/
 
 /*¤¤¤ STYLES COMMUNS ¤¤¤*/
+#zone-illustration.actu-presse{
+    h1.titre_overlay{
+        @include titre_overlay();
+    }
+}
 #zone-1.actu-presse,
 #zone-2.actu-presse,
 #zone-3.actu-presse,

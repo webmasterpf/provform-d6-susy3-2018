@@ -55,9 +55,12 @@ body .conteneur{
 /*######-------- ||| STYLE ||| --------######*/
 
 /*¤¤¤ STYLES COMMUNS ¤¤¤*/
-h1.titre_overlay{
+#zone-illustration.page-bourses{
+    h1.titre_overlay{
     @include titre_overlay();
 }
+}
+
 #zone-1.page-bourses,
 #zone-2.page-bourses,
 #zone-3.page-bourses,
