@@ -56,6 +56,7 @@ body .conteneur{
         background-position: 0 -10vw;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             background-position: 0 -20vw;
+            min-height: 24vw;
         }
     }
 }

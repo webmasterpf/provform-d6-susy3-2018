@@ -306,7 +306,7 @@
         $(".masonry-brick").removeAttr("style");//pas d'effet
         $("img.filefield-icon").removeAttr("style");
 //Retirer attribut spécifique du style en ligne
-        $("#block-service_links-service_links").css('left', '');
+        $("#block-service_links-service_links").css('left', '0');
         
 
         //Retrait du style des objets imbriqués comme object,iframe,etc...

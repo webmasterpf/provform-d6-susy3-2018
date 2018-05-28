@@ -49,6 +49,16 @@ body .conteneur{
         }
     }
 }
+#node-855{
+    #zone-illustration.page-espace{
+          @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        
+        img{
+            transform: translate(0%,-28%);
+        }
+    }
+    }
+}
 aside.selecteur-langue{
     ul{
         padding: 0;
