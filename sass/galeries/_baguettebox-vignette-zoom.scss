@@ -23,7 +23,7 @@ Override du style de galerie vignettes BaguetteBox
                 /*margin: span(0.0001);*/
                 /*float: left;*/
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                
+                padding: span(0.1) 0;
                 @include txt-colonnes;
                               
             }
