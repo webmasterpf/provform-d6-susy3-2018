@@ -171,7 +171,7 @@
             //Set the top and bottom spacing while scrolling.
             top_spacing: 40,
             bottom_spacing: 10,
-            left_spacing: 80,
+            left_spacing: 85,
             //Decide whether to recalculate the top & bottom position on window resize.
             recalculate: true
         });
