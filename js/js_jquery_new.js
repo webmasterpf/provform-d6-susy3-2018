@@ -155,10 +155,11 @@
 
 
     });
-    jQuery(document).ready(function () {
-        $(".lightSlider").lightSlider();
-    });
     
+//    jQuery(document).ready(function () {
+//        $(".lightSlider").lightSlider();
+//    });
+//    
 
 //Bloc Social position fixe
     jQuery(document).ready(function () {
@@ -306,7 +307,7 @@
         $(".masonry-brick").removeAttr("style");//pas d'effet
         $("img.filefield-icon").removeAttr("style");
 //Retirer attribut spécifique du style en ligne
-        $("#block-service_links-service_links").css('left', '');
+        $("#block-service_links-service_links").css('left','');
         
 
         //Retrait du style des objets imbriqués comme object,iframe,etc...
