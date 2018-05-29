@@ -264,7 +264,7 @@ ______________________________*/
                 display: block;
                 margin:span(0.1) auto;
             }
-            a[type*="pdf"]{
+            a[href*=".pdf"]{
 
                 &::before{
                     @include backgroundImage("PNG/Fichiers@3x.png");

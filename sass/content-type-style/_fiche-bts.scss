@@ -241,7 +241,7 @@ ______________________________*/
                 }
             }
         }
-        a[type*="pdf"]{
+        a[href*=".pdf"]{
             &::before{
                 @include backgroundImage("PNG/Fichiers@3x.png");
                 background-size: contain;

@@ -195,7 +195,7 @@ ______________________________*/
         li{
             border-bottom: em(1px) dashed $gris-anthracite;
         }
-        a[type*="pdf"]{
+        a[href*=".pdf"]{
             &:hover{
                 background: transparent;
                 color: $orange-fonce;
