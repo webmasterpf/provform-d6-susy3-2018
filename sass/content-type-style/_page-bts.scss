@@ -132,7 +132,7 @@ body .conteneur{
             color: white;
         }
         input[type="submit"]{
-            @include font-size(m);//utilisation de typey
+            @include font-size(s);//utilisation de typey
         }
     }
 
