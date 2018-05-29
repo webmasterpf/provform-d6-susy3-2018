@@ -50,6 +50,15 @@ body .conteneur{
             }
         }
     }
+    aside.ficheform-savoirplus{
+        div.content{
+            column-count: 0;
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                column-count: 0 !important;
+
+            }
+        }
+    }
 }
 #zone-3.fiche-formation{
     article.paragraphe-section-europe{
@@ -59,6 +68,7 @@ body .conteneur{
             column-count: 2;
             column-fill: balance;
             white-space: nowrap;   
+            column-rule: em(1px) dashed $gris-anthracite;
             h3{
                 @include txt-colonnes;
             }
@@ -233,14 +243,14 @@ ______________________________*/
             color: $blanc-casse;
             background: $bleu-turquoise;
             @include txt-cesure;
-            @include font-size(s);//utilisation de typey
+            @include font-size(m);//utilisation de typey
             margin: em(10px) em(20px);
             
             max-width: 100%;
             max-width: fit-content;
         }
         h4{
-            @include font-size(m);//utilisation de typey
+            @include font-size(s);//utilisation de typey
             color: $gris-anthracite;
         }
     }
