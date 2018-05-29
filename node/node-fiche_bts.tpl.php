@@ -23,7 +23,6 @@
 
 
         </div><!-- /zone-illustration -->   
-
         <!--______________ ZONE 1 ________________ -->
         <div id="zone-1" class="zone_layout_max_centre fiche-bts nid-<?php print $node->nid; ?>">
             <?php print $picture; ?>
@@ -31,7 +30,6 @@
             <?php if ($submitted): ?>
                 <span class="submitted"><?php print $submitted; ?></span>
             <?php endif; ?>
-
 
             <?php
             if ($node->field_complement_fiche_bts[0]['view']):
@@ -48,7 +46,7 @@
 
             <?php
             if ($node->field_abreviation_bts[0]['view']):
-//                print '<span id="abreviation-bts">'.$node->field_abreviation_bts[0]['view'].'</span>';
+                print '<span id="abreviation-bts">'.$node->field_abreviation_bts[0]['view'].'</span>';
             endif;
             ?>
 
@@ -100,7 +98,7 @@
                             <?php if ($terms): ?>
 
                                 <div id="taxonomy">
-                                    <?php print Cyrano_PF_print_terms($node); ?>
+                                    <?php //print Cyrano_PF_print_terms($node); ?>
                                 </div>
                             <?php endif; ?>
                         </td>
