@@ -59,6 +59,7 @@ body .conteneur{
             padding: span(0.1);
         }
     }
+
     aside.liste-formations-initiales{
         div.bef-select-as-radios{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){

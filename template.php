@@ -143,7 +143,7 @@ function pf_d6_susy3_preprocess_page(&$vars){
     //drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/3rdparty/buttons/js/buttons.js', 'theme');
     drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/jquery_plugin/responsiveslides/responsiveslides.min.js', 'theme');
     drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/jquery_plugin/lazyload/jquery.lazyloadxt.extra.min.js', 'theme');
-    drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/3rdparty/lightslider/js/lightslider.js', 'theme');
+//    drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/3rdparty/lightslider/js/lightslider.js', 'theme');
     
     //*** Utilisation des plugins Jquery  plus récents - Toujours terminer avec ce JS***
      drupal_add_js(drupal_get_path('theme', 'pf_d6_susy3') . '/js/js_jquery_new.js', 'theme');

@@ -12,7 +12,7 @@
                     if ($node->field_detail_fiche_bts[0]['view']): ?>
                 <div class="CLASS_NAME">
                <?php  //récupération du nom du champ
-               print $node->content['field_detail_fiche_bts']['field']['#title'] ?>
+               print $node->content['field_NAME']['field']['#title'] ?>
                     <ul>
                <?php
                foreach ($node->field_detail_fiche_bts as $key => $lien) {

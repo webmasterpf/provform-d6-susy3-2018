@@ -53,7 +53,10 @@
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
                 </div>
 
-                
+                        <?php
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
+              ?>
          
          
         </div><!--  /zone-1-->
@@ -69,6 +72,7 @@
                 
 <!--______________ ZONE 3 ________________ -->
     <div id="zone-3" class="zone_layout_max_centre fiche-formation">
+        
         
         
              <?php if ($node->field_section_specifique[0]['view']): ?>
@@ -103,11 +107,7 @@
                 <?php endif; ?>             
         
         
-           <?php
-              global $theme_path;
-              include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
-              ?>
-        <?php if ($terms): ?>
+               <?php if ($terms): ?>
         <div class="taxonomy"><?php //print $terms; ?></div>
         <?php endif;?>
 
