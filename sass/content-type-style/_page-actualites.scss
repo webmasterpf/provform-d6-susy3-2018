@@ -243,7 +243,7 @@ ______________________________*/
                         color: $gris-anthracite;//cas particulier du fond clair
                     }
                 }
-                &.tid-152{
+                &.tid-150,&.tid-152{//152 en DEV
                     background: $violet;
                 }
                 a{
