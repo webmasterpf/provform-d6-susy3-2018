@@ -223,6 +223,19 @@ body .conteneur .conteneur-flex{
                     color: $blanc-casse;
                     @include font-size(l);//utilisation de typey
                 }
+                span.locality{
+                    text-transform: capitalize;
+                }
+                span.postal-code{
+                    float: left;
+                    padding: 0 em(5px) 0 0;
+                }
+                abbr[title]{
+                    display: none;
+                }
+                span.cde-lycee{
+                    
+                }
                 a{
                     color:$blanc-casse;
                     font-weight:bold;

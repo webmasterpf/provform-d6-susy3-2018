@@ -39,9 +39,16 @@
              </aside>
              <?php endif; ?>
           </div>
-        <?php if ($node->field_lycee_logocoordtxt[0]['view']): ?>
+        <?php if ($node->field_lycee_logocoordtxt[0]['view']
+            OR
+            $node->field_lycee_adresse[0]['view']
+            ): ?>
       <span class="lycee-coordlogo">
                  <?php  print $node->field_lycee_logocoordtxt[0]['view'] ?>
+           <?php  print $node->field_lycee_adresse[0]['view'] ?>
+          <?php  print $node->field_lycee_site[0]['view'] ?>     -     <?php  print $node->field_lycee_contact[0]['view'] ?>
+          <span class="cde-lycee"><?php  print $node->field_lycee_cde[0]['view'] ?></span>
+          
       </span>
              <?php endif; ?>    
              
