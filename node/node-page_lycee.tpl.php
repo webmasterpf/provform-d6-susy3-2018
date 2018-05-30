@@ -47,7 +47,8 @@
                  <?php  print $node->field_lycee_logocoordtxt[0]['view'] ?>
            <?php  print $node->field_lycee_adresse[0]['view'] ?>
           <?php  print $node->field_lycee_site[0]['view'] ?>     -     <?php  print $node->field_lycee_contact[0]['view'] ?>
-          <span class="cde-lycee"><?php  print $node->field_lycee_cde[0]['view'] ?></span>
+          <span class="cde-lycee">       <?php  //récupération du nom du champ
+               print $node->content['field_lycee_cde']['field']['#title'] ?> : <?php  print $node->field_lycee_cde[0]['view'] ?></span>
           
       </span>
              <?php endif; ?>    
