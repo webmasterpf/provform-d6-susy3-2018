@@ -223,6 +223,20 @@ body .conteneur .conteneur-flex{
                     color: $blanc-casse;
                     @include font-size(l);//utilisation de typey
                 }
+                span.additional{
+                    /*float: left;*/
+
+                    padding: 0 em(5px) 0 0;
+
+                    &::after{
+                        content: "";
+                        display: block; 
+                        clear: both;
+                    }
+                }
+    
+
+
                 span.locality{
                     text-transform: capitalize;
                 }

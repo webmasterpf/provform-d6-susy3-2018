@@ -17,7 +17,7 @@
                <?php
                foreach ($node->field_detail_fiche_bts as $key => $lien) {
                       //Ne pas afficher les champs vides du tableau
-                      if (!empty($liens['view'])):
+                      if (!empty($lien['view'])):
                     print '<li>'.$node->field_detail_fiche_bts[$key]['view'].'</li>';
                 endif;
                     

@@ -75,11 +75,11 @@ article.middle-content{
   clear: left; /* LTR */
 }
 /*resultats de la recherche*/
-.title-search-result a{
+.title-search-result a,.search-results a{
     color: $orange-fonce;
     text-decoration: none;
 }
-.title-search-result a:hover{
+.title-search-result a:hover,.search-results a:hover{
     color: white;
     background: $orange-fonce;
 }

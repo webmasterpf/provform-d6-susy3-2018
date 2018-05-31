@@ -46,12 +46,13 @@
 
             <?php
             if ($node->field_abreviation_bts[0]['view']):
-                print '<span id="abreviation-bts">'.$node->field_abreviation_bts[0]['view'].'</span>';
+            //    print '<span id="abreviation-bts">'.$node->field_abreviation_bts[0]['view'].'</span>';
             endif;
             ?>
 
 
-        </div><!--  /zone-1-->
+        </div>
+        <!--  /zone-1-->
 
         <?php if ($node->field_diapo_lycee_type[0]['view']): ?>
             <!--______________ ZONE 2 ________________ -->
@@ -86,12 +87,7 @@
                             global $theme_path;
                             include ($theme_path . '/includes/dedicates_inc/inc_fiche_bts_liste_fiches_details.php');
                             ?>
-                            <?php if ($node->field_detail_fiche_bts[0]['view']): ?>
-                                <div id="fiche-detaille-bts">
-                                    <?php print $node->field_detail_fiche_bts[0]['view'] ?>
-                                    <?php print $node->field_detail_fiche_bts[1]['view'] ?>
-                                </div>
-                            <?php endif; ?>
+                     
                         </td>
                         <td class="col3">
                             <h4>Utile...</h4>
