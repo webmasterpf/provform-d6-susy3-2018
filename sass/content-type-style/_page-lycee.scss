@@ -223,16 +223,18 @@ body .conteneur .conteneur-flex{
                     color: $blanc-casse;
                     @include font-size(l);//utilisation de typey
                 }
-                span.additional{
-                    /*float: left;*/
-
-                    padding: 0 em(5px) 0 0;
-
-                    &::after{
-                        content: "";
+                span.fn{
+                           &::after{//Forcer saut de ligne comme un <br>
+                        content:"\a";
                         display: block; 
-                        clear: both;
+                        white-space: pre;
                     }
+                }
+                span.additional{
+                    
+                    white-space: pre-line;
+                    padding: 0 em(5px) 0 0;
+            
                 }
     
 
@@ -246,6 +248,19 @@ body .conteneur .conteneur-flex{
                 }
                 abbr[title]{
                     display: none;
+                }
+                div.tel span.value{
+                    &::before{
+                        content: "Tél.";
+                    padding: 0 em(5px) 0 0;
+                    
+                    }
+                    
+                      &::after{//Forcer saut de ligne comme un <br>
+                        content:"\a";
+                        display: block; 
+                        white-space: pre;
+                    }
                 }
                 span.cde-lycee{
                     
