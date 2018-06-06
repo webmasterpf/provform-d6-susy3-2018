@@ -125,7 +125,9 @@ body .conteneur{
 /*¤¤¤ STYLES COMMUNS ¤¤¤*/
 #zone-illustration.actu-presse{
     h1.titre_overlay{
+        //transform: translate(0%, -45%) !important;
         @include titre_overlay();
+        
     }
 }
 #zone-1.actu-presse,

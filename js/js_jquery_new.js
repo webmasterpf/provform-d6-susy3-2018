@@ -330,6 +330,7 @@ $("#zone-2 #media-youtube-1").height('23vw').width('100vw');
 
 // Taille auto pour les images des logos partenaires sur accueil
 $(".logo_partenaires img").height('auto').width('auto');
+//Taille vidéo PF sur Accueil
 $(".acces-lycees #media-vimeo-1 iframe").height('11.5vw').width('20vw');
 
 //Taille auto des images sur les pages espace
