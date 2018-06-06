@@ -42,14 +42,13 @@
                 </blockquote>
              <?php endif; ?> 
                    
-                <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
-                   
-  
-                             <?php
+                                <?php
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
               ?>
-                
+                   
+                <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
+                   
                 
              
     <?php if ($node->field_video_externe[0]['view']): ?>

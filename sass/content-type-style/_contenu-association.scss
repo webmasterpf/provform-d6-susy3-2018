@@ -38,11 +38,11 @@ body .conteneur{
     min-height: 35vw;
     max-height: 90vw;
     overflow: hidden;
-    
+
     img{
-        
-            transform: translate(0%,-35%);
-        }
+
+        transform: translate(0%,-35%);
+    }
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         min-height: 25vw;
         max-height: 30vw;
@@ -92,8 +92,8 @@ body .conteneur{
         color: $orange-fonce;
         text-decoration:none;
         &:hover{
-                text-decoration: underline;
-                 transition: all 0.5s ease;
+            text-decoration: underline;
+            transition: all 0.5s ease;
         }
     }
 }
@@ -104,81 +104,86 @@ ______________________________*/
 
 #zone-1.page-association{
     img{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             //correction taille images dans le corps
-                width: auto;
-            }
+            width: auto;
+        }
     }
-        .entrefilet{
-           
-            display: block;
-            color: $orange-fonce;
-            @include font-size(l);//utilisation de typey
-            text-transform: uppercase;
-            font-weight: bold;
-            quotes: "\201C""\201D""\2018""\2019";
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+
+    .entrefilet{
+
+        display: block;
+        color: $orange-fonce;
+        @include font-size(l);//utilisation de typey
+        text-transform: uppercase;
+        font-weight: bold;
+        quotes: "\201C""\201D""\2018""\2019";
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.2);
             transform: translate(1%,2%);
             float: right;
-                margin: span(0.1);
-                min-width: span(3);
-                max-width: span(5);
-            }
-            &::before{
-                 /*@include backgroundImage('bg-merci.gif');*/
-                 content: open-quote;
-                 @include font-size(l);//utilisation de typey
-            }
+            margin: span(0.1);
+            min-width: span(3);
+            max-width: span(5);
         }
-        aside{
-            img[src*="deco"]{
+        &::before{
+            /*@include backgroundImage('bg-merci.gif');*/
+            content: open-quote;
+            @include font-size(l);//utilisation de typey
+        }
+    }
+    aside.deco-bloc{
+
+        padding: span(0.1);
+    }
+    aside{
+        img[src*="deco"]{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                float: right;
+                float: left;
                 margin: span(0.01);
             }
-            }
-            &.video{
-                @include backgroundImage(('zebra-gros-clair.gif'),transparent,top left,repeat);
-                @include arrondis();
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    padding: span(0.01);
-                    margin: 0 span(2);
-                }
+        }
+        &.video{
+            @include backgroundImage(('zebra-gros-clair.gif'),transparent,top left,repeat);
+            @include arrondis();
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                padding: span(0.01);
+                margin: 0 span(2);
             }
         }
-        .lien-origine{
-            font-weight: bold;
-            position: relative;
-            &::before{
-                content: " >> ";
-                
-            }
-            a{
-                
-                &:hover{
+    }
+    .lien-origine{
+        font-weight: bold;
+        position: relative;
+        &::before{
+            content: " >> ";
+
+        }
+        a{
+
+            &:hover{
                 color: $blanc-casse;
                 background: $orange-fonce;
                 text-decoration: none;
-                }
             }
         }
-        /*Contenu du QT pour afficher temoignage anciens élèves sur page association*/
-.temoignage-anciens {
-    h2{
-        text-align: left;
     }
-    h3{
-        
+    /*Contenu du QT pour afficher temoignage anciens élèves sur page association*/
+    .temoignage-anciens {
+        h2{
+            text-align: left;
+        }
+        h3{
+
+        }
+        li.active a {
+            color: white;
+        }
+        a{
+            &:hover{}
+        }
+        img{}
     }
-    li.active a {
-        color: white;
-    }
-    a{
-        &:hover{}
-    }
-    img{}
-}
 }
 #zone-2.page-association{}
 #zone-3.page-association{}
