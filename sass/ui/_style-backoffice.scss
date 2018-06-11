@@ -14,9 +14,12 @@ body.not-front.logged-in{
          width: span(10 of $desktopcol);
         margin-left: span(1 wide);//push
         @include clearfix;
-          .middle-content  img{
-        width: auto;
+          .middle-content {
+              #zone-1:not(img){
+                  width: auto;
         display: initial;
+              }
+        
     }
         }
     }

@@ -243,9 +243,80 @@ ______________________________*/
                         color: $gris-anthracite;//cas particulier du fond clair
                     }
                 }
-                &.tid-150,&.tid-152{//152 en DEV
-                    background: $violet;
+                &.tid-150,&.tid-152{//152 en DEV - Actus Lycées importées
+                                    background: $violet;
                 }
+                //Style différencié selon Origine Actu - Réglages communs puis spécifiques
+                &.tid-153,&.tid-154,&.tid-155,&.tid-156,&.tid-157,&.tid-158,&.tid-159,&.tid-160,&.tid-161,&.tid-162,&.tid-163{
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        bottom: em(-3px);
+                        right: em(-3px);
+                        padding: em(3px);
+                        border-style: solid;
+                        font-weight: bold;
+                        @include font-size(s);//utilisation de typey
+                    }      
+                }
+                &.tid-153,&.tid-154{//Style pour Actu importée ER
+                                    //Effet coin retourné
+                                    &::before{
+                                        content: "ER";
+                                        border-color: $rouge;
+                                        background: $rouge;
+                                    }
+                }
+                &.tid-155{//Style pour Actu importée CE
+                          //Effet coin retourné
+                          &::before{
+                              content: "CE";
+                              border-color: $vert;
+                              background: $vert;
+                          }
+                }
+                     &.tid-156{//Style pour Actu importée CA
+                          //Effet coin retourné
+                          &::before{
+                              content: "CA";
+                              color: $gris-anthracite;
+                              border-color: $gris-clair;
+                              background: $gris-clair;
+                          }
+                }
+                     &.tid-157{//Style pour Actu importée CG
+                          //Effet coin retourné
+                          &::before{
+                              content: "CG";
+                              border-color: $orange;
+                              background: $orange;
+                          }
+                }
+                     &.tid-158,&.tid-159{//Style pour Actu importée LR
+                          //Effet coin retourné
+                          &::before{
+                              content: "LR";
+                              border-color: $violet;
+                              background: $violet;
+                          }
+                }
+                             &.tid-160,&.tid-161{//Style pour Actu importée BL
+                          //Effet coin retourné
+                          &::before{
+                              content: "BL";
+                              border-color: $bleu-turquoise;
+                              background: $bleu-turquoise;
+                          }
+                }
+                             &.tid-162,&.tid-163{//Style pour Actu importée MG
+                          //Effet coin retourné
+                          &::before{
+                              content: "MG";
+                              border-color: $rose-fushia;
+                              background: $rose-fushia;
+                          }
+                }
+                
                 a{
                     color: $blanc-casse;
                     text-decoration: none;
