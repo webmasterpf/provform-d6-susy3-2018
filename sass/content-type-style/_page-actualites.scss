@@ -275,7 +275,7 @@ ______________________________*/
                               background: $vert;
                           }
                 }
-                     &.tid-156{//Style pour Actu importée CA
+                     &.tid-161{//Style pour Actu importée CA
                           //Effet coin retourné
                           &::before{
                               content: "CA";
@@ -292,7 +292,7 @@ ______________________________*/
                               background: $orange;
                           }
                 }
-                     &.tid-158,&.tid-159{//Style pour Actu importée LR
+                     &.tid-158,&.tid-162{//Style pour Actu importée LR
                           //Effet coin retourné
                           &::before{
                               content: "LR";
@@ -300,7 +300,7 @@ ______________________________*/
                               background: $violet;
                           }
                 }
-                             &.tid-160,&.tid-161{//Style pour Actu importée BL
+                             &.tid-160,&.tid-163{//Style pour Actu importée BL
                           //Effet coin retourné
                           &::before{
                               content: "BL";
@@ -308,7 +308,7 @@ ______________________________*/
                               background: $bleu-turquoise;
                           }
                 }
-                             &.tid-162,&.tid-163{//Style pour Actu importée MG
+                             &.tid-159,&.tid-156{//Style pour Actu importée MG
                           //Effet coin retourné
                           &::before{
                               content: "MG";
