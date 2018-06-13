@@ -117,7 +117,7 @@
         $('.bxslider-hp').bxSlider({
             mode: 'fade',
             controls: true,
-            captions: true,
+            captions: false,
             auto: true,
             autoStart: true,
             pager: false,
