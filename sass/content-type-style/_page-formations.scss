@@ -101,7 +101,7 @@ body .conteneur{
 
                     :not(img):not(a):not(.complement){
                         padding: span(0.1);
-                        
+
                     }
 
                 }
@@ -135,6 +135,13 @@ ______________________________*/
 
 #zone-1.page-formations{
     aside.liste-formations-initiales{
+        //Titre du bloc
+        h3.title{
+            color:$orange-fonce;
+            @include font-size(l);//utilisation de typey
+            font-family: $FontRaleway;
+
+        }
         //Style du filtrage de la vue
         div.bef-select-as-radios{
             div.form-item{
@@ -152,8 +159,9 @@ ______________________________*/
                     }
                 }
                 &:hover:not(#edit-term-node-tid-depth-limited-All-wrapper){
+
                     
-                    @include backgroundImage('bg_filtre_pole.png',center, no-repeat );
+                    @include backgroundImage(('bg_filtre_pole.png'),transparent,center,no-repeat);
                     background-size:60%;
                     background-color: $orange-fonce;
                     label{
@@ -179,7 +187,7 @@ ______________________________*/
                 width:25vw;
                 padding:0;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                width: 10vw;
+                    width: 10vw;
                 }
                 input[type="submit"] {
                     background: $orange-fonce;
@@ -205,7 +213,7 @@ ______________________________*/
                 color: $blanc-casse;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     @include ombrage-bloc(0em,0em,0.5em,$gris-anthracite);
-                    
+
                 }
                 span{
                     font-weight: bold;
@@ -234,7 +242,7 @@ ______________________________*/
                    &:before{
 
                        @include image-overlay('PNG/motif_img_overlay.png', 0 0, repeat);
-                          bottom: 7px;//override des valeurs de la mixin
+                       bottom: 7px;//override des valeurs de la mixin
                    }
                 }
                 &.tid-98{
@@ -255,7 +263,7 @@ ______________________________*/
                 }
                 &.tid-102{
                     background: $orange-fonce;
-                    
+
                 }
                 &.tid-103{
                     background: $rose-fushia;
