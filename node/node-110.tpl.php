@@ -30,15 +30,7 @@
       <span class="submitted"><?php print $submitted; ?></span>
     <?php endif; ?>
            
-        <?php
-              global $theme_path;
-              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
-              ?>
-      
-             <?php
-              global $theme_path;
-              include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
-              ?>
+
       
     <div class="content">
       <?php  print $node->content['body']['#value']; ?>
@@ -48,7 +40,10 @@
                 <?php  print $node->field_txt_dossier[0]['view'] ?>
         </div>
    <?php endif; ?>
-
+       <?php
+ global $theme_path;
+ include ($theme_path.'/includes/dedicates_inc/inc_liste_bts.php');
+ ?> 
 
          <?php if ($node->field_dossier_bts[0]['view']): ?>
         <div id="dossier-bts">
@@ -64,17 +59,24 @@
         </div>
    <?php endif; ?>    
             
-       <?php
- global $theme_path;
- include ($theme_path.'/includes/dedicates_inc/inc_liste_bts.php');
- ?> 
+
  <?php if ($node->field_corps2_page_bts[0]['view']): ?>
         <div id="content2-bts">
                 <?php  print $node->field_corps2_page_bts[0]['view'] ?>
         </div>
    <?php endif; ?>        
 
-
+        <?php
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
+              ?>
+      
+             <?php
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
+              ?>
+        
+        
     </div>
 
     <?php if ($terms): ?>
