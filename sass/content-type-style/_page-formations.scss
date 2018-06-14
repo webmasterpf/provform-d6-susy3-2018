@@ -79,23 +79,26 @@ body .conteneur{
         }
         ul.formations-initiales{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                column-count: 6;
-                
-                column-fill: auto;
-                white-space: normal;
-
+                /*                column-count: 6;
+                                column-fill: auto;
+                                white-space: normal;*/
+                display: flex;
+                flex-wrap:wrap;
+                padding: 0 0 0 span(0.1);
             }
             li{
                 padding: 0;
                 margin: span(0.1) 0;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                
-                    @include hack-Edge;
+
+                    /*@include hack-Edge;*/
                     @include hack-IE;
-                    
-                @include  txt-colonnes();
-                    margin: 0 0 span(0.1) 0;
-                    
+                    @include  txt-colonnes();
+                    /*margin: 0 0 span(0.1) 0;*/
+                    margin: 0 span(0.1) span(0.1) 0;
+                    display: inline-block;
+                    width: span(1.8);
+
                     :not(img):not(a):not(.complement){
                         padding: span(0.1);
                         
