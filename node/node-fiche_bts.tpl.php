@@ -37,6 +37,39 @@
             endif;
             ?>
 
+                  <table id="infos-pratiques-bts">
+                <tbody>
+                    <tr>
+                        <td class="col1">
+                            <h4>Des liens...</h4>
+                            <?php
+                            global $theme_path;
+                            include ($theme_path . '/includes/dedicates_inc/inc_fiche_bts_liste_liens.php');
+                            ?>
+                        </td>
+                        <td class="col2">
+                            <h4>En détail...</h4>
+                            <?php
+                            global $theme_path;
+                            include ($theme_path . '/includes/dedicates_inc/inc_fiche_bts_liste_fiches_details.php');
+                            ?>
+                     
+                        </td>
+                        <td class="col3">
+                            <h4>Utile...</h4>
+                            <?php if ($terms): ?>
+
+                                <div id="taxonomy">
+                                    <?php print Cyrano_PF_print_terms($node); ?>
+                                </div>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+                
             <?php
             if ($node->field_intro_fiche_bts[0]['view']):
                 print '<div class="intro-fiche-bts">' . $node->field_intro_fiche_bts[0]['view'] . '</div>';
@@ -71,38 +104,7 @@
                 <?php print $node->content['body']['#value']; /* déplacer le contenu dans la colonne désirée */ ?>
             </div>
 
-            <table id="infos-pratiques-bts">
-                <tbody>
-                    <tr>
-                        <td class="col1">
-                            <h4>Des liens...</h4>
-                            <?php
-                            global $theme_path;
-                            include ($theme_path . '/includes/dedicates_inc/inc_fiche_bts_liste_liens.php');
-                            ?>
-                        </td>
-                        <td class="col2">
-                            <h4>En détail...</h4>
-                            <?php
-                            global $theme_path;
-                            include ($theme_path . '/includes/dedicates_inc/inc_fiche_bts_liste_fiches_details.php');
-                            ?>
-                     
-                        </td>
-                        <td class="col3">
-                            <h4>Utile...</h4>
-                            <?php if ($terms): ?>
-
-                                <div id="taxonomy">
-                                    <?php //print Cyrano_PF_print_terms($node); ?>
-                                </div>
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-
-                </tbody>
-
-            </table>
+          
             <?php if ($node->field_info_plus_bts[0]['view']): ?>
                 <div id="info-plus-fiche-bts">
                     <h3>En savoir plus...</h3>

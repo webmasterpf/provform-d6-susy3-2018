@@ -57,6 +57,18 @@ body .conteneur{
         }
 
     }
+        table#infos-pratiques-bts,div#info-plus-fiche-bts{
+
+        margin: span(0.02) auto;
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            width: span(7);
+        }
+    }
+    div#liens-fiche-bts{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.1);
+        }
+    }
 }
 #zone-2.fiche-bts{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
@@ -166,26 +178,7 @@ ______________________________*/
             margin: span(0.01) 0;
         }
     }
-}
-#zone-2.fiche-bts{
-
-    .galerie{
-        background: $orange-fonce;    
-        //Voir  "../galeries/_baguettebox-vignette-zoom.scss";
-    }
-}
-#zone-3.fiche-bts{
-
-    h3{
-        transform: rotate(-1deg);
-        color: $jaune;
-        background: $gris-anthracite;
-        padding: em(3px);
-        margin: em(5px) em(20px);
-        max-width: fit-content;
-        /*max-width: 90%;*/
-    }
-    table#infos-pratiques-bts{
+      table#infos-pratiques-bts{
 
         border: em(2px) solid $gris-clair-moyen;
         @include font-size(s);//utilisation de typey
@@ -278,6 +271,26 @@ ______________________________*/
         }
 
     }
+}
+#zone-2.fiche-bts{
+
+    .galerie{
+        background: $orange-fonce;    
+        //Voir  "../galeries/_baguettebox-vignette-zoom.scss";
+    }
+}
+#zone-3.fiche-bts{
+
+    h3{
+        transform: rotate(-1deg);
+        color: $jaune;
+        background: $gris-anthracite;
+        padding: em(3px);
+        margin: em(5px) em(20px);
+        max-width: fit-content;
+        /*max-width: 90%;*/
+    }
+  
 
 
     #info-plus-fiche-bts{
