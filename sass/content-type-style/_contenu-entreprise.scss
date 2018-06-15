@@ -113,7 +113,7 @@ body .conteneur{
         @include font-size(xs);//utilisation de typey
         color: $orange-fonce;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            margin: 0 50em;
+            margin: 0 0 0 em(230px);
         }
     }
 
