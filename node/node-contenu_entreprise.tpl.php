@@ -64,6 +64,11 @@
               include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
               ?>
                     
+                               <?php if ($node->field_vue_content_vr[0]['view']):
+     print '<aside class="liste-contenus">'.$node->field_vue_content_vr[0]['view'].'</aside>';
+ endif;
+                            ?>
+                    
             </div>
 
             
