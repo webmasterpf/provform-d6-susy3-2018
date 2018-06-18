@@ -4,7 +4,7 @@
 <?php
 $viewname = 'liste_bts_fiches';
 $view = views_get_view ($viewname);
-$view->set_display('block_1');
+$view->set_display('block_1');//block_3 pour 
 
 
 //Exécution de le vue

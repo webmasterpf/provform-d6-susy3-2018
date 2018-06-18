@@ -41,10 +41,15 @@
         </div>
    <?php endif; ?>
        <?php
- global $theme_path;
- include ($theme_path.'/includes/dedicates_inc/inc_liste_bts.php');
+// global $theme_path;
+// include ($theme_path.'/includes/dedicates_inc/inc_liste_bts.php');
  ?> 
-
+        
+     <?php if ($node->field_vue_content_vr[0]['view']):
+     print '<aside class="liste-bts-visuelle">'.$node->field_vue_content_vr[0]['view'].'</aside>';
+     //Liste incluse via un champ ViewReference suite Redesign 2018
+ endif;
+                            ?>
          <?php if ($node->field_dossier_bts[0]['view']): ?>
         <div id="dossier-bts">
             <span id="DossierBTS">

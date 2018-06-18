@@ -33,13 +33,13 @@ body .conteneur{
 
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
 #zone-illustration.page-bts{
-   min-height: 35vw;
+    min-height: 35vw;
     max-height: 90vw;
     overflow: hidden;
 
     img{
         transform: translate(0%,0%);
-            
+
     }
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         min-height: 25vw;
@@ -84,6 +84,20 @@ body .conteneur{
             }
         }
     }
+    aside.liste-bts-visuelle{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
+        ul.liste-bts-mur{
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                column-count: 4;
+                /*column-fill: auto;*/ //Pas supporté par FF60
+                white-space: normal;
+            }
+            li{
+                break-inside: avoid-column;
+                @include txt-colonnes;
+            }
+        }
+    }
 }
 
 /*######-------- ||| STYLE ||| --------######*/
@@ -113,7 +127,7 @@ body .conteneur{
         color: $orange-fonce;
         &:hover{
             text-decoration: underline;
-                 transition: all 0.5s ease;
+            transition: all 0.5s ease;
         }
     }
 
@@ -156,7 +170,7 @@ body .conteneur{
                     font-weight: bold;
                     padding: span(0.001) span(0.01);
                     max-width: fit-content;
-                        font-size: large;
+                    font-size: large;
                     color: $violet;
                     &:hover{
                         background: $violet;
@@ -165,7 +179,7 @@ body .conteneur{
                 }
                 span.centre{
                     background: white;
-                    
+
                     white-space: nowrap;
                 }
                 span.complement-bts{
@@ -180,24 +194,24 @@ body .conteneur{
         width: 97%;
         border: 0;
         margin: span(0.1) 0;
-            position: relative;
-                      //Effet coin retourné
-            &::before{
-                content: "";
-                position: absolute;
-                top: em(-3px);
-                right: em(-3px);
-                border-width: 0 em(20px) em(20px) 0;
-                border-style: solid;
-                border-color: $orange-fonce ;
-            }
+        position: relative;
+        //Effet coin retourné
+        &::before{
+            content: "";
+            position: absolute;
+            top: em(-3px);
+            right: em(-3px);
+            border-width: 0 em(20px) em(20px) 0;
+            border-style: solid;
+            border-color: $orange-fonce ;
+        }
         tbody{
             background: $gris-anthracite;
-        color:$blanc-casse;
+            color:$blanc-casse;
             height: auto;
-              margin: span(0.1) 0;
-              padding: 0;
-              border: none;}
+            margin: span(0.1) 0;
+            padding: 0;
+            border: none;}
         tr{
             background: none;
             border: none;}
@@ -215,7 +229,65 @@ body .conteneur{
         ¤¤¤ STYLES PROPRES ¤¤¤
 ______________________________*/
 
-#zone-1.page-bts{}
+#zone-1.page-bts{
+    aside.liste-bts-visuelle{
+        background: transparent;
+        i{//texte d'en-tête de la vue
+            color: $orange-fonce;
+        }
+        ul.liste-bts-mur{
+            li{
+                list-style: none;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    @include ombrage-bloc(0em,0em,0.5em,$gris-anthracite);
+                    margin: span(0.1) 0;
+                }
+                span{
+                display: block;
+                text-align: center;
+                max-width: 80%;
+                margin: em(5px) auto;
+                color: $blanc-casse;
+                @include font-size(s);//utilisation de typey
+                &.centre{
+                    //classe ajoutée dans la vue - réécriture du champ
+                    border: em(1px) dashed;//couleur héritée du LI parent
+                }
+            }
+            a{//pour tous les liens contenus dans l'élément LI
+                display: block;
+            }
+            a[class*="imagecache"]{//uniquement les "a" sur l'image
+                position:relative;//pour overlay image
+                &:before{
+                    @include image-overlay('PNG/motif_img_overlay.png', 0 0, repeat);
+                }
+            }
+            a[href*="fiche"]{
+                font-weight: bold;
+                text-align: center;
+                color: $blanc-casse;
+            }
+            &.tid-28{
+                background: $rose-fushia;
+            }
+            &.tid-30{
+                background: $vert;
+            }
+            &.tid-31{
+                background: $gris-clair-moyen;
+            }
+            &.tid-32{
+                background: $violet;
+            }
+            &.tid-33{
+                background: $bleu-turquoise;
+            }
+        }
+    }
+    }
+    
+}
 #zone-2.page-bts{}
 #zone-3.page-bts{}
 #zone-4.page-bts{}
