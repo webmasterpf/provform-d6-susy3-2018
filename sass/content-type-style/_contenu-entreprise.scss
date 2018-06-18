@@ -240,7 +240,12 @@ ______________________________*/
 
 }
 #zone-2.contenu-entreprise{
-    .objectif-bts{
+    asidede.liste-bts{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        border-left: em(1px) dashed $orange-fonce;
+        }
+    }
+    .objectif-bts,asidede.liste-bts{
         h3{
             transform: rotate(-1deg);
             color: $orange-fonce;
@@ -250,9 +255,9 @@ ______________________________*/
             margin: span(0.1) auto;
         }
         ul{
-
-            border-left: em(1px) dashed $orange-fonce;
-
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                border-left: em(1px) dashed $orange-fonce;
+            }
             li{
                 list-style: none;
             }
@@ -265,7 +270,6 @@ ______________________________*/
                 margin:span(0.1) auto;
             }
             a[href*=".pdf"]{
-
                 &::before{
                     @include backgroundImage("PNG/Fichiers@3x.png");
                     background-size: contain;

@@ -68,11 +68,11 @@
 <div id="zone-2" class="zone2_layout_8_4 contenu-entreprise">
     
             <?php
-            if ($node->field_fichier_joint_partenaires[0]['view']):
-
-              global $theme_path;
-                include($theme_path . '/includes/dedicates_inc/inc_objectif_bts.php');
-            endif;
+//            if ($node->field_fichier_joint_partenaires[0]['view']):
+//
+//              global $theme_path;
+//                include($theme_path . '/includes/dedicates_inc/inc_objectif_bts.php');
+//            endif;
             //il ne s'agit pas d'une vue mais de code PHP !!
             ?>
                <?php if ($node->field_vue_content_vr[0]['view']):
