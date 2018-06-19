@@ -29,6 +29,7 @@ body .conteneur {
     }
     .close{
         background: $orange-fonce;//changer couleur selon le site !!!
+        margin: em(10px) 0;
     }
     img.close-btn{
         vertical-align: middle;
@@ -46,8 +47,8 @@ body .conteneur {
         text-decoration: none;
         padding: 0.3em;
         top: 0;//vertical 4em
-        left: 20%; //vertical -4em- position onglet sur mobile
-
+        left: 4%; //vertical -4em- position onglet sur mobile
+        @include font-size(s);//utilisation de typey
         /* quelques styles CSS3 270deg pour vertical gauche ; 0deg */
 /*        -ms-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -82,7 +83,7 @@ body .conteneur {
             position: relative;
             padding: 0.3em;
             left: 40%;
-
+            @include font-size(m);//utilisation de typey
             /* CSS3 : pour IE, fixer rotation */
             -ms-transform: rotate(0deg);
             -moz-transform: rotate(0deg);
