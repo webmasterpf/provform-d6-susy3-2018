@@ -240,12 +240,13 @@ ______________________________*/
 
 }
 #zone-2.contenu-entreprise{
-    asidede.liste-bts{
+    aside.liste-bts{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         border-left: em(1px) dashed $orange-fonce;
+        padding: span(0.1);
         }
     }
-    .objectif-bts,asidede.liste-bts{
+    .objectif-bts,aside.liste-bts{
         h3{
             transform: rotate(-1deg);
             color: $orange-fonce;

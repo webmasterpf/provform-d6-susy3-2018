@@ -76,11 +76,11 @@ box-sizing: $value;
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,*/
-$mobile   :  (max-width 767px);//500px
-$tablet   :  (min-width 768px) (max-width 1024px);//800px
+$mobile   :  (max-width 767px);//medium
+$tablet   :  (min-width 768px) (max-width 1024px);//large
 
-$desktop  :  1200px;// sortie=>> min-width: XXXpx
-$desktopwide  :  1440px;// sortie=>> min-width: XXXpx
+$desktop  :  1200px;// sortie=>> min-width: XXXpx xlarge
+$desktopwide  :  1440px;// sortie=>> min-width: XXXpx xxlarge
 
 // Breakpoint pour les format paysage 
 $mobilelandscape : (min-height 319px) (max-height 765px) (orientation landscape);//pour orientation paysage

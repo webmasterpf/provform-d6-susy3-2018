@@ -10,7 +10,7 @@ Style - layout pour le bandeau des autres sites de l'ASSO
    // voir "_layout-off-canvas-susy.scss" pour taille du contenant
     ul{
             background: $blanc-casse;
-            
+            max-width: 100%;
             
             li{
                 //@include span (1 of 7);
@@ -26,23 +26,43 @@ Style - layout pour le bandeau des autres sites de l'ASSO
                 }
             }
         }
-    @include breakpoint ($desktop){
+            @include breakpoint($desktop){
+        //petits écrans PC, moins de 1440px de large
+        ul{
+             display: block;
+            height: 2em;
+            margin: em(7px) auto;
+            li{
+                    float: left;
+                list-style : none;
+                max-width: span(3);
+                margin: 0 2vw;
+                a{}
+            }
+        }
+    }
+    
+        @include breakpoint(($desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         display: block;
         height: auto;
         ul{
             background: $blanc-casse;
             display: block;
             height: 2em;
+            margin: em(7px) auto;
             
             li{
                 float: left;
                 list-style : none;
-                margin: 0 4%;
+                max-width: span(3);
+                margin: 0 2.5vw;
                 &:last-child{
                     /*@include last;*/
                 }
                 a{
-                    text-decoration: none;font-size:small;
+                    text-decoration: none;
+                    @include font-size(m);//utilisation de typey
+                    
                     &:hover{color: #FBFBFB;
                             transition: background 2s ease,color 1000ms ease;-webkit-transition: background 2s ease,color 1000ms ease;}
                 }
