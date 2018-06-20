@@ -404,13 +404,15 @@ body .conteneur {
                     }
                     &.views-row-3.nid-108{//inscriptions
                                           a:hover{
-                                              @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  76% top);
+                                         @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 76% top, no-repeat);
+                                              
                                               background-size: cover;
                                           }
                     }
                     &.views-row-4.nid-337{//liens utiles
                                           a:hover{
-                                              @include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51%  top);
+                                         @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 51% top, no-repeat);     
+                                              /*@include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51%  top);*/
                                               background-size: cover;
                                           }
                     }  
