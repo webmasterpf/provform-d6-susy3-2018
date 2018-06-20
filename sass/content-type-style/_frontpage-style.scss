@@ -103,6 +103,7 @@ body .conteneur {
                text-indent: -9000px;
                float: left;
                height: em(80px);
+               width: em(80px);
                margin-left: span(0.1);
            }
         }
@@ -388,28 +389,28 @@ body .conteneur {
                             }
                         }
                     }
-                    &.views-row-1.nid-63{//contact
+                    &.nid-63{//contact
                                          a:hover{
                                              /*@include backgroundImage(("SVG/bg_acces_contact.svg"), $orange-fonce, 25.5% top, no-repeat);*/
                                              @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 25.5% top, no-repeat);
                                              background-size: cover;
                                          }
                     }
-                    &.views-row-2.nid-32{//contrat etat
+                    &.nid-32{//contrat etat
                                          a:hover{
                                              /*@include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100% top);*/
                                              @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 100% top, no-repeat);
                                              background-size: cover;
                                          }
                     }
-                    &.views-row-3.nid-108{//inscriptions
+                    &.nid-108{//inscriptions
                                           a:hover{
                                          @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 76% top, no-repeat);
                                               
                                               background-size: cover;
                                           }
                     }
-                    &.views-row-4.nid-337{//liens utiles
+                    &.nid-337{//liens utiles
                                           a:hover{
                                          @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 51% top, no-repeat);     
                                               /*@include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51%  top);*/
