@@ -57,7 +57,7 @@ body .conteneur #header {
     .site-slogan,.objectif{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(9);
-            padding: span(0.1) 0 0 span(0.1); //Ajoute un padding pour positionner boite
+            padding: span(0.05) 0 0 span(0.1); //Ajoute un padding pour positionner boite
             float: left;
         }
     }

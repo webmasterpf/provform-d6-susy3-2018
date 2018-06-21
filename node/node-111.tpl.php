@@ -1,3 +1,7 @@
+<?php
+/* Ce template permet la création d'un template pour un node ID spécifique
+ */?>
+
 <!--______________NODE TPL POUR Contenu Entreprise Node/111 .TPL CUSTOM________________ -->
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
     <div class="node-inner">

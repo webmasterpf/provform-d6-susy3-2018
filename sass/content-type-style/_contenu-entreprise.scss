@@ -113,7 +113,9 @@ body .conteneur{
         @include font-size(xs);//utilisation de typey
         color: $orange-fonce;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            margin: 0 0 0 em(230px);
+            /*margin: 0 0 0 em(230px);*/
+            margin: 0 auto;
+            width: 25%;
         }
     }
 
@@ -133,6 +135,7 @@ body .conteneur{
             padding: em(5px);
             display: table-cell;
         }
+
     }
 
     table.table-bts-coord{
@@ -235,7 +238,23 @@ ______________________________*/
             border-color: $orange-fonce ;
         }*/
     }
-
+    aside.liste-contenus{
+        //Vue incluse via ViewRef
+        max-width: span(8);
+        background: $orange-fonce;
+        h3{
+            color:$blanc-casse;
+            @include font-size(l);//utilisation de typey
+        }
+        .view-header{
+            color:$gris-clair;
+        }
+        ul.formations-apprentissage{
+            li,a{
+                color:$blanc-casse;
+            }
+        }
+    }
 
 
 }

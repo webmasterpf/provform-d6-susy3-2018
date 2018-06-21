@@ -396,16 +396,16 @@ body .conteneur {
                                              background-size: cover;
                                          }
                     }
-                    &.nid-32{//contrat etat
+                    &.nid-108{//inscriptions
                                          a:hover{
                                              /*@include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  100% top);*/
-                                             @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 100% top, no-repeat);
+                                             @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 76% top, no-repeat);
                                              background-size: cover;
                                          }
                     }
-                    &.nid-108{//inscriptions
+                    &.nid-46{//actus
                                           a:hover{
-                                         @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 76% top, no-repeat);
+                                         @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 100% top, no-repeat);
                                               
                                               background-size: cover;
                                           }
