@@ -149,26 +149,54 @@ ______________________________*/
                 color: $blanc-casse;
                 text-align: center;
                 cursor: pointer;
-                label{
-                    cursor: pointer;
-                    &:after{
-                        content: "PôLE";
-                        color:$orange-fonce;
-                        @include font-size(l);//utilisation de typey
-                        font-family: $FontRaleway;
-                    }
-                }
-                &:hover:not(#edit-term-node-tid-depth-limited-All-wrapper){
 
-                    
-                    @include backgroundImage(('bg_filtre_pole.png'),transparent,center,no-repeat);
-                    background-size:60%;
-                    background-color: $orange-fonce;
+
+            }
+            //Hover différent pour le label selon le filtre utilisé,en fonction de l'ID du bouton
+            //Liste dynamique des IDs en Sass pour alléger le code, définition d'une variable qui liste les IDs
+            $idsformations: 98,99,100,101,103,106,107;
+            $idsspecificites:145,168;
+            @each $i in $idsformations{
+                div#edit-term-node-tid-depth-limited-#{$i}-wrapper{
                     label{
-                        @include opacity(0.45);
+                        cursor: pointer;
+        
+                    }
+                    &:hover:not(#edit-term-node-tid-depth-limited-All-wrapper){
+                                            @include backgroundImage(('bg_filtre_pole.png'),transparent,center,no-repeat);
+                                            background-size:60%;
+                                            background-color: $orange-fonce;
+                        &::after{
+                            //abandon solution pseudo élément,ne fonctionne pas
+                            content: "PôLE";
+                            color:$orange-fonce;
+                            @include font-size(l);//utilisation de typey
+                            font-family: $FontRaleway;
+                        }
+
+                        label{
+                            @include opacity(0.45);
+                        }
                     }
                 }
             }
+            @each $i in $idsspecificites{
+                div#edit-term-node-tid-depth-#{$i}-wrapper{
+                    label{
+                        cursor: pointer;
+                        &::after{
+                            &:hover{
+                                content: "Spécificité";
+                                color:$orange-fonce;
+                                @include font-size(l);//utilisation de typey
+                                font-family: $FontRaleway;
+                            }
+
+                        }
+                    }
+                }
+            }
+
         }
         .views-exposed-form{
             //Masquer la roue bleue de drupal
