@@ -274,9 +274,9 @@ ______________________________*/
             width: fit-content;
             margin: span(0.1) auto;
         }
-        ul{
+        ul,div{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                border-left: em(1px) dashed $orange-fonce;
+                /*border-left: em(1px) dashed $orange-fonce;*/
             }
             li{
                 list-style: none;
@@ -300,6 +300,15 @@ ______________________________*/
                     margin:em(3px);
                     transition:0.5s all;
 
+                }
+            }
+            a[href*="fiche"]{
+                color:$orange-fonce;
+                &:hover{
+                      background: $gris-anthracite;
+                      color: $blanc-casse;
+                      transition: all 0.5s ease;
+                      
                 }
             }
         }
