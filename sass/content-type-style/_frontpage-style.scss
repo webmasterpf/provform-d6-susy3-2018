@@ -123,18 +123,27 @@ body .conteneur {
             }
             .breaking-news-element{
                 padding: span(0.005);
-                border: em(3px) $orange-fonce solid;
+                border: em(3px) transparent solid;
+                background: $orange-fonce;
+                color: $blanc-casse;
                 font-family: $FontRaleway;
                 @include font-size(m);//utilisation de typey
-
                 text-transform: uppercase;
+                &:hover{
+                    transition: .1s ease;
+                    border: em(3px) $orange-fonce solid;
+                    background: transparent;
+                    color: $gris-clair-moyen;
+                }
             }
             a{
-                color: $gris-anthracite;
+                
                 text-decoration:none;
-
+                color: $blanc-casse;
                 &:hover{
-                    color: $gris-clair-moyen;
+                    color: $gris-anthracite;
+                    /*color: $gris-clair-moyen;*/
+                    transition: .5s ease;
                 }
             }
         }
