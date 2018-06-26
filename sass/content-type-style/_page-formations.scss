@@ -72,7 +72,7 @@ body .conteneur{
                 margin: 0 0 span(0.01) 0;   
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     @include  txt-colonnes();
-
+                    min-height: 3.8em;
                     padding: span(0.01);
                 }
             }
@@ -149,13 +149,13 @@ ______________________________*/
                 color: $blanc-casse;
                 text-align: center;
                 cursor: pointer;
-
+                
 
             }
             //Hover différent pour le label selon le filtre utilisé,en fonction de l'ID du bouton
             //Liste dynamique des IDs en Sass pour alléger le code, définition d'une variable qui liste les IDs
-            $idsformations: 98,99,100,101,103,106,107;
-            $idsspecificites:145,168;
+            $idsformations: 98,99,100,101,102,103,106,107;
+            $idsspecificites: 145,168;
             @each $i in $idsformations{
                 div#edit-term-node-tid-depth-limited-#{$i}-wrapper{
                     label{
@@ -168,10 +168,10 @@ ______________________________*/
                                             background-color: $orange-fonce;
                         &::after{
                             //abandon solution pseudo élément,ne fonctionne pas
-                            content: "PôLE";
+/*                            content: "PôLE";
                             color:$orange-fonce;
                             @include font-size(l);//utilisation de typey
-                            font-family: $FontRaleway;
+                            font-family: $FontRaleway;*/
                         }
 
                         label{
@@ -184,14 +184,21 @@ ______________________________*/
                 div#edit-term-node-tid-depth-#{$i}-wrapper{
                     label{
                         cursor: pointer;
+                    }
+                    &:hover:not(#edit-term-node-tid-depth-All-wrapper){
+                        @include backgroundImage(('PNG/bg_filtre_expose_formations.png'),transparent,center 50%,no-repeat);
+                        // center 5% pour autre visuel possible
+                                            background-size:80%;
+                                            background-color: $orange-fonce;
+                                            
                         &::after{
-                            &:hover{
-                                content: "Spécificité";
-                                color:$orange-fonce;
-                                @include font-size(l);//utilisation de typey
-                                font-family: $FontRaleway;
-                            }
-
+/*                            content: "Spécificité";
+                            color:$orange-fonce;
+                            @include font-size(l);//utilisation de typey
+                            font-family: $FontRaleway;*/
+                        }
+                         label{
+                            @include opacity(0.35);
                         }
                     }
                 }
