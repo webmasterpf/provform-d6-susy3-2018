@@ -7,7 +7,7 @@
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
     <div class="node-inner">
                  <!--______________ ILLUSTRATION et TITRE ________________ -->
-        <div id="zone-illustration" class="contenu-entreprise">
+        <div id="zone-illustration" class="contenu-entreprise nid-<?php print $node->nid; ?>">
                      <?php if ($title): /*copier le titre dans la zone desirée*/?>
          
             <?php endif; ?>
@@ -26,7 +26,7 @@
             </div><!-- /zone-illustration -->
         <!--______________ ZONE 1 ________________ -->
       
-        <div id="zone-1" class="zone_layout_max_centre contenu-entreprise">
+        <div id="zone-1" class="zone_layout_max_centre contenu-entreprise nid-<?php print $node->nid; ?>">
         
             
             <?php print $picture; ?>

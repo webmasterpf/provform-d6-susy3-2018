@@ -31,6 +31,25 @@
         }
     }
 }
+aside.DiapoHPFull{
+    min-height: 35vw;
+    max-height: 136vw;
+    overflow: hidden;
+
+    img{
+        transform: translate(0%,0%);
+
+    }
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        min-height: 25vw;
+        max-height: 33vw;
+        img{
+            zoom: 0.8;
+            transform: scale (0.8);
+            transform: translate(0,-30%);
+        }
+    }
+}
 .logo_partenaires{
     .acces-partenaires{
         ul{
@@ -111,33 +130,39 @@ body .conteneur {
             list-style: none;
 
             li{
+                list-style: none;
+                color: $gris-anthracite;
                 @include breakpoint ($mobile){
                     width: 95%;
-                    margin: 0 0 span(0.2) span(0.2);
+                    margin: span(0.1) 0 span(0.2) span(0.2);
                     float: none;
                 }
-                list-style: none;
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 margin: span(0.1) 0 span(0.1) span(0.2);
                 float: left;
                 max-width: 30%;
+                }
+                
+               
             }
             .breaking-news-element{
                 padding: span(0.005);
                 border: em(3px) transparent solid;
                 background: $orange-fonce;
-                color: $blanc-casse;
+                
                 font-family: $FontRaleway;
                 @include font-size(m);//utilisation de typey
                 text-transform: uppercase;
+                cursor:pointer;
                 &:hover{
                     transition: .1s ease;
                     border: em(3px) $orange-fonce solid;
                     background: transparent;
-                    color: $gris-clair-moyen;
+                color: $gris-anthracite;
                 }
             }
             a{
-                
+                display: block;
                 text-decoration:none;
                 color: $blanc-casse;
                 &:hover{
@@ -159,7 +184,7 @@ body .conteneur {
 
                 }
                 list-style: none;
-
+                
 
             }
             .breaking-news{
@@ -167,7 +192,7 @@ body .conteneur {
                 border: em(3px) $noir solid;
                 font-family: $FontRaleway;
                 @include font-size(m);//utilisation de typey
-                @include backgroundImage(('deuil.png'),transparent,top right,no-repeat); //nouvelle mixin 2018
+                @include backgroundImage(('PNG/deuil.png'),transparent,top right,no-repeat); //nouvelle mixin 2018
                 text-transform: uppercase;
             }
             a{
@@ -190,9 +215,7 @@ body .conteneur {
             text-decoration: none;
         }
         img{
-            zoom: 1.7;
-            transform: scale (1.7);
-            transform: translate(0,-25%);
+            //Voir Layout Spécifique Ligne34
         }
         .bxslider-hp{
             a{
@@ -221,6 +244,7 @@ body .conteneur {
                 img{
                     object-fit: cover;//permet que l'image occupe tout l'espace mais il faut définir une taille
                     width: 100%;
+                    max-height: 14.5vw;
                     &:hover{
                         filter: grayscale(100%);
                     }

@@ -48,6 +48,9 @@ body .conteneur{
             //couleur fond des captions
             @include backgroundRGBA($orange-fonce, 0.85);
             margin: 0 auto;
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                
+            }
             span{
                  color: white;
                 padding: em(5px);

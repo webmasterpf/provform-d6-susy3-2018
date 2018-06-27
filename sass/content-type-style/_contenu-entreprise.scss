@@ -67,6 +67,15 @@ body .conteneur{
 
     }
 }
+/*######-------- ||| POSITION VISUEL GD FORMAT ||| --------######*/
+#zone-illustration.contenu-entreprise{
+    &.nid-619{
+        img{
+            transform: translate(0%, -21%);
+        }
+        
+    }
+}
 /*######-------- ||| STYLE ||| --------######*/
 
 /*¤¤¤ STYLES COMMUNS ¤¤¤*/
