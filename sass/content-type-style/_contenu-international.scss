@@ -85,11 +85,18 @@ aside.selecteur-langue{
     }
     .docs-joints-international{
         ul{
-            column-count: inherit;
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                column-count: 3;
+            columns: inherit;
+            @include breakpoint ($desktop){
+                columns: 9.5vw 3;
                 column-fill: balance;    
-            }    
+                white-space: normal;
+            }
+            @include breakpoint(($desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                columns: 11vw 3;
+                column-fill: balance;    
+                white-space: normal;
+            }
+
         }
     }
 }
@@ -200,8 +207,8 @@ ______________________________*/
                         
                     }
                 }
-                a[href*=".pdf"]{
-                &::before{
+                a[type*="pdf"][href*="http"],a[type*="pdf"]{//double condition et cas du pdf seul sans http
+                    &::before{
                         @include backgroundImage("PNG/Fichiers@3x.png");
                         background-size: contain;
                         content: "";
@@ -210,26 +217,26 @@ ______________________________*/
                         padding: em(10px);
                         margin:em(3px);
                         transition:0.5s all;
-                        &:hover::before{
-                        content: "";
-                        position: relative;
-                        transform:rotate(50deg);
-                        }
+                        /*                        &:hover::before{
+                                                content: "";
+                                                position: relative;
+                                                transform:rotate(50deg);
+                                                }*/
                     }
                 }
-                
+
                 a[href*="http"] {
                     &::before{
                         @include backgroundImage("PNG/liens@3x.png");
-                    background-size: contain;
-                    content: "";
+                        background-size: contain;
+                        content: "";
                         position: relative;
                         vertical-align: sub;
                         padding: em(10px);
                         margin:em(3px);
                         transition:0.5s all;
                     }
-                    
+
                 }
                 
                 img.filefield-icon{
