@@ -19,8 +19,6 @@
 
 
 /*######-------- ||| LAYOUT Positionnement Illustration SPECIFIQUE ||| --------######*/
-
-//-- Fiches Formations --
 #zone-illustration.fiche-formation{
     min-height: 35vw;
     max-height: 90vw;
@@ -39,7 +37,7 @@
         }
     }
     
-//Avec nid dans template de type de contenu (Classe)
+
 
     &.nid-21{//	CAP Agent Polyvalent de Restauration (APR)
              img{
@@ -178,26 +176,5 @@
  
     }
    
-    }
-}
-
-//-- Contenus Administratifs (Asso,Lycées,autres) --
-//Avec nid fourni par défaut (Id)
-#node-69{
-    #zone-illustration.page-recrutement{
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            img{
-                transform: translate(0%,-24%);
-            }
-        }
-    }
-}
-#node-861{
-    #zone-illustration.contenu-international{
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            img{
-                transform: translate(0%,-24%);
-            }
-        }
     }
 }
