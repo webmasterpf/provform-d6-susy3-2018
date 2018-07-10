@@ -499,6 +499,14 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 @mixin border-L-orange { border-left: em(1px) solid $orange;}
 
 /*------- HACK pour Navigateurs -------------*/
+
+@mixin hack-Firefox(){
+    //ciblage de Firefox                    
+@-moz-document url-prefix() {
+        display: inline-block;
+        width:100%;
+    }
+}
 @mixin hack-IE(){
     //ciblage de IE10+
     @media screen and (min-width:0\0) {
