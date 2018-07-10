@@ -71,7 +71,7 @@ aside.selecteur-langue{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         ul{
             column-count: 2;
-            column-rule: 0;
+            column-rule: 0; //Séparation entre colonne
             
             li{
                 max-width: 100%;
@@ -114,7 +114,8 @@ aside.contenu-rubrique{
                     span{
                         @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
                             /*max-width: span(1);*/
-                            max-width: 29%;//correction
+                            max-width: 30%;//correction
+                            padding: 0 0 0 em(4px);
                             &.ville{
                             max-width: 50%;//correction    
                             }
@@ -125,11 +126,15 @@ aside.contenu-rubrique{
                             &.ville{
                             max-width: 75%;//correction    
                             }
+                            
                         }
                         @include breakpoint($desktopwide){
                             /*max-width: 10vw;*/
-                            max-width: 29%;//correction
+                            max-width: 30%;//correction
                             padding: 0 0 0 span(0.01);
+                            &.ville{
+                            max-width: 85%;//correction    
+                            }
                         }
 
                     }
@@ -172,12 +177,14 @@ aside.nav-espace-entreprise,aside.nav-espace-partenaire{
     padding: 0;
         }
     }
-    
+    /*Affichage en colonne des contenus*/
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
            
         ul{
             column-count: 6;
             column-fill: balance;
+           
+            
             white-space: normal;
             padding: span(0.1);
             display: block;
@@ -185,11 +192,13 @@ aside.nav-espace-entreprise,aside.nav-espace-partenaire{
             
             li{
                 @include txt-cesure;
-               @include txt-colonnes;
+                @include txt-colonnes;//évite cassure au milieu d'un élément pour FF et autres navigateurs
+                @include hack-Firefox;
                 @include hack-Edge;
                 @include hack-IE;
                 margin: 0;
                 padding: 0;
+                
                 a{
                     clear: left;
                     display: block;
@@ -365,8 +374,26 @@ ______________________________*/
                 }
             }
             ul.acces-contenu-lycees{
+                span{
+                    @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+                        @include font-size(s);//utilisation de typey
+                    }
+                    
+                    @include breakpoint($desktop){
+                        @include font-size(s);//utilisation de typey
+                    }
+                    @include breakpoint($desktopwide){
+                        font-size: 0.9em;
+                    }
+                }
                 span.ville{
                     text-transform: uppercase;
+                    @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){}
+                    
+                    @include breakpoint($desktop){}
+                    @include breakpoint($desktopwide){
+                        font-size: smaller;
+                    }
                 }
             }
         }
