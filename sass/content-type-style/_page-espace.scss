@@ -189,11 +189,11 @@ aside.nav-espace-entreprise,aside.nav-espace-partenaire{
             padding: span(0.1);
             display: block;
             @include clearfixsusy3;
-            
+            @include hack-Firefox;//inclus le li{}
             li{
                 @include txt-cesure;
                 @include txt-colonnes;//évite cassure au milieu d'un élément pour FF et autres navigateurs
-                @include hack-Firefox;
+                
                 @include hack-Edge;
                 @include hack-IE;
                 margin: 0;

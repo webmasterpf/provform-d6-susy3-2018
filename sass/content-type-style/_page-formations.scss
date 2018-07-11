@@ -112,6 +112,31 @@ body .conteneur{
             }
         }
     }
+    div.view-liste-actu-asso-archives{
+        //Mise en colonnes de la page archives - node 61
+        div.view-content{
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            column-count: 5;
+            column-fill: balance;
+            white-space: normal;
+            padding: span(0.1);
+            display: block;
+            @include clearfixsusy3;
+        }
+        }
+        
+        table{
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                @include txt-cesure;
+                @include txt-colonnes;//évite cassure au milieu d'un élément pour FF et autres navigateurs
+                @include hack-Firefox;
+                @include hack-Edge;
+                @include hack-IE;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
 }
 /*######-------- ||| STYLE ||| --------######*/
 
@@ -315,6 +340,48 @@ ______________________________*/
                 span{
                     display: block;
 
+                }
+            }
+        }
+    }
+    div.view-liste-actu-asso-archives{
+        //Style des blocs pour page archive
+        @include hack-Webkit();
+        @include hack-Firefox(table);
+        table.cols-1{
+            border:0;
+            background: $gris-anthracite;
+            min-width:100%;//pour chrome et FF
+            tbody{
+                display: block;
+            }
+            caption{
+                color: $blanc-casse;
+                font-weight: bold;
+                min-width: 100%;
+                display: block;
+            }
+            thead,tbody,th{
+                border: 0;
+            }
+            tr,td{
+                border: 0;
+                background: none;
+                min-width: 100%;
+                display: block;
+            }
+            td{
+                border-top: em(1px) dotted $blanc-casse;
+                padding:span(0.01);
+
+            }
+            a{
+                color: $blanc-casse;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                    background: $orange-fonce;
                 }
             }
         }

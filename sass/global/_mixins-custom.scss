@@ -500,11 +500,24 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 
 /*------- HACK pour Navigateurs -------------*/
 
-@mixin hack-Firefox(){
+@mixin hack-Webkit($element:table){
+ //ciblage de wbkit pour les tables
+    @media screen and (-webkit-min-device-pixel-ratio:0) { 
+        #{$element}{
+            margin: 0 0 span(0.1) 0;
+            display: block;
+            min-width:100%;//pour chrome
+        }
+}
+}
+@mixin hack-Firefox($element:li){
     //ciblage de Firefox                    
-@-moz-document url-prefix() {
-        display: inline-block;
-        width:100%;
+    @-moz-document url-prefix() {
+        #{$element}{
+            margin: 0 0 span(0.1) 0;
+            display: inline-block;
+            width:100%;
+        }
     }
 }
 @mixin hack-IE(){
@@ -517,6 +530,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 @mixin hack-Edge(){
     //ciblage de MS Edge                    
     @supports (-ms-ime-align: auto) {
+        
         display: inline-block;
         width:100%;
     }
