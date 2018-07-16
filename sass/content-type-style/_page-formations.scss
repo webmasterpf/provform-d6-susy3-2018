@@ -360,6 +360,7 @@ ______________________________*/
                 font-weight: bold;
                 min-width: 100%;
                 display: block;
+                    text-transform: capitalize;
             }
             thead,tbody,th{
                 border: 0;
@@ -378,9 +379,9 @@ ______________________________*/
             a{
                 color: $blanc-casse;
                 text-decoration: none;
-
+                padding: em(3px);
                 &:hover{
-                    text-decoration: underline;
+                    text-decoration: none;
                     background: $orange-fonce;
                 }
             }

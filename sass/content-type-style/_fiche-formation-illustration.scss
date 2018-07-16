@@ -201,3 +201,12 @@
         }
     }
 }
+#node-61{
+    #zone-illustration.page-formations{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            img{
+                transform: translate(0%,-40%);
+            }
+        }
+    }
+}

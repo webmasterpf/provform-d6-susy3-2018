@@ -501,7 +501,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 /*------- HACK pour Navigateurs -------------*/
 
 @mixin hack-Webkit($element:table){
- //ciblage de wbkit pour les tables
+ //ciblage de webkit  - choisir à quel élément appliquer le hack
     @media screen and (-webkit-min-device-pixel-ratio:0) { 
         #{$element}{
             margin: 0 0 span(0.1) 0;
@@ -511,7 +511,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
 }
 }
 @mixin hack-Firefox($element:li){
-    //ciblage de Firefox                    
+    //ciblage de Firefox et - choisir à quel élément appliquer le hack                   
     @-moz-document url-prefix() {
         #{$element}{
             margin: 0 0 span(0.1) 0;
