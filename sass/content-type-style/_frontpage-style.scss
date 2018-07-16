@@ -149,16 +149,24 @@ body .conteneur {
                 padding: span(0.005);
                 border: em(3px) transparent solid;
                 background: $orange-fonce;
-                
+                transition-property: background !important;
+                transition: all .3s ease;
                 font-family: $FontRaleway;
                 @include font-size(m);//utilisation de typey
                 text-transform: uppercase;
                 cursor:pointer;
+                &::before{
+                    transform: scale(0)!important;
+                }
                 &:hover{
-                    transition: .1s ease;
+                    transition: all .3s ease;
+                    transform: translateZ(0)!important;
                     border: em(3px) $orange-fonce solid;
                     background: transparent;
                 color: $gris-anthracite;
+                &::before{
+                    transform: scale(1)!important;
+                }
                 }
             }
             a{

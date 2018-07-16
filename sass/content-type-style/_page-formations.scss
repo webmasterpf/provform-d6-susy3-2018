@@ -180,7 +180,7 @@ ______________________________*/
             //Hover différent pour le label selon le filtre utilisé,en fonction de l'ID du bouton
             //Liste dynamique des IDs en Sass pour alléger le code, définition d'une variable qui liste les IDs
             $idsformations: 98,99,100,101,102,103,106,107;
-            $idsspecificites: 145,168;
+            $idsspecificites: 145,166;
             @each $i in $idsformations{
                 div#edit-term-node-tid-depth-limited-#{$i}-wrapper{
                     label{
