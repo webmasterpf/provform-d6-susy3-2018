@@ -373,7 +373,7 @@ ______________________________*/
 
                 }
             }
-            ul.acces-contenu-lycees{
+            ul.acces-contenu-lycees,ul.acces-contenu-international{
                 span{
                     @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
                         @include font-size(s);//utilisation de typey

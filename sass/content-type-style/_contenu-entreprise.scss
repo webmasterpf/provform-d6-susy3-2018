@@ -190,7 +190,30 @@ ______________________________*/
             @include backgroundImage(('zebra-gros-clair.gif'),transparent,top left,repeat);
 
         }
-        td{}
+        td{
+                   img.filefield-icon{
+            display: none;
+            visibility: hidden;
+        }
+        a{
+            display: block;
+            margin:span(0.1) auto;
+        }
+        a[href*=".pdf"]{
+            
+                &::before{
+                        @include backgroundImage("PNG/Fichiers@3x.png");
+                        background-size: contain;
+                        content: "";
+                        position: relative;
+                        vertical-align: sub;
+                        padding: em(10px);
+                        margin:em(3px);
+                        transition:0.5s all;
+                  
+                    }
+                }
+        }
     }
     /*Contenu du QT pour afficher temoignage partenaires*/
     .temoignage-partenaires{
