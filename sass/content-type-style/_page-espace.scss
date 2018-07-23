@@ -68,7 +68,8 @@ aside.selecteur-langue{
             }
         }
     }
-    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+    @include breakpoint ($tablet){}
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tabletlandscape)){
         ul{
             column-count: 2;
             column-rule: 0; //Séparation entre colonne
@@ -100,11 +101,28 @@ aside.contenu-rubrique{
     .rubrique-lycees,.rubrique-association,.rubrique-international{
         column-count: 0;
         li{
-                   a{
-                    display: flex;
-                }
+            a{
+                display: flex;
+            }
         }
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint ($tablet){
+            column-count: 1;
+             li{
+                @include  txt-colonnes();
+                    span{
+                        text-decoration: none;
+                        
+                            /*max-width: span(1);*/
+                            max-width: 30%;//correction
+                            padding: 0 0 0 em(4px);
+                            &.ville{
+                            max-width: 50%;//correction    
+                            }
+                        
+                    }
+             }
+        }
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tabletlandscape)){
             column-count: 2;
             column-fill: balance;
             white-space: normal;
@@ -112,6 +130,7 @@ aside.contenu-rubrique{
             li{
                 @include  txt-colonnes();
                     span{
+                        text-decoration: none;
                         @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
                             /*max-width: span(1);*/
                             max-width: 30%;//correction
@@ -451,6 +470,20 @@ ______________________________*/
         }
    .rubrique-international{
        //réglages différents pour page Europe/International
+       ul.acces-contenu-international{
+                span{
+                    @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+                        @include font-size(s);//utilisation de typey
+                    }
+                    
+                    @include breakpoint($desktop){
+                        @include font-size(s);//utilisation de typey
+                    }
+                    @include breakpoint($desktopwide){
+                        font-size: 0.9em;
+                    }
+                }
+       }
             ul{
                 li{
                     background: $bleu-turquoise;
