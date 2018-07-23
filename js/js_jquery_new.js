@@ -6,6 +6,8 @@
  */
 
 (function ($) {
+
+    
     jQuery(document).ready(function ()
     {
         //<!--Pour utiliser selectnav en RWD-->
@@ -320,18 +322,46 @@
             $(this).removeAttr('width');
             $(this).removeAttr('height');
         });
-         if (parseInt($(window).width()) > 500) {
-        $("#zone-1 #media-vimeo-1 iframe").height('23vw').width('100vw');
-$("#zone-2 #media-vimeo-1 iframe").height('23vw').width('100vw');
-$("#zone-1 #media-youtube-1").height('23vw').width('100vw');
-$("#zone-2 #media-youtube-1").height('23vw').width('100vw');
-    }
+        //Changement de réglages selon le nombre de colonnes Susy (équivalent breakpoint)
+        	function ajuste_elements() {
+//            if ($(".conteneur").css("padding-top") == "0em") {
+                         if (parseInt($(window).width()) >= 500) {
+                //Taille des éléments pour desktop/tablettes
+                $("#zone-1 #media-vimeo-1 iframe").height('23vw').width('100vw');
+                $("#zone-2 #media-vimeo-1 iframe").height('23vw').width('100vw');
+                $("#zone-1 #media-youtube-1").height('23vw').width('100vw');
+                $("#zone-2 #media-youtube-1").height('23vw').width('100vw');
+                // Taille auto pour les images des logos partenaires sur accueil
+                $(".logo_partenaires img").height('auto').width('auto');
+                //Taille vidéo PF sur Accueil
+                $(".acces-lycees #media-vimeo-1 iframe").height('11.5vw').width('20vw');
+            }
+            else {
+                //Taille des éléments pour mobile
+                $("#zone-1 #media-vimeo-1 iframe").height('23vw').width('100vw');
+                $("#zone-2 #media-vimeo-1 iframe").height('23vw').width('100vw');
+                $("#zone-1 #media-youtube-1").height('23vw').width('100vw');
+                $("#zone-2 #media-youtube-1").height('23vw').width('100vw');
+                // Taille auto pour les images des logos partenaires sur accueil
+                $(".logo_partenaires img").height('auto').width('auto');
+                //Taille vidéo PF sur Accueil (pour mobiles)
+                $(".acces-lycees #media-vimeo-1 iframe").height('75vw').width('95vw');
+            }
+        }
+        ;
+
+        ajuste_elements();
+
+        $(window).resize(ajuste_elements);	
+//         if (parseInt($(window).width()) > 500) {
+//        $("#zone-1 #media-vimeo-1 iframe").height('23vw').width('100vw');
+//$("#zone-2 #media-vimeo-1 iframe").height('23vw').width('100vw');
+//$("#zone-1 #media-youtube-1").height('23vw').width('100vw');
+//$("#zone-2 #media-youtube-1").height('23vw').width('100vw');
+//    }
 
 
-// Taille auto pour les images des logos partenaires sur accueil
-$(".logo_partenaires img").height('auto').width('auto');
-//Taille vidéo PF sur Accueil
-$(".acces-lycees #media-vimeo-1 iframe").height('11.5vw').width('20vw');
+
 
 //Taille auto des images sur les pages espace
      $('.page-espace li img').each(function () {

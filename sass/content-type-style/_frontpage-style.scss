@@ -42,7 +42,7 @@ aside.DiapoHPFull{
     }
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         min-height: 25vw;
-        max-height: 33vw;
+        max-height: 38vw;//Pour petites résolutions
         img{
             zoom: 0.8;
             transform: scale (0.8);
@@ -69,9 +69,9 @@ aside.DiapoHPFull{
                 }
                 img,object{
                     @include adaptable-img;
-                    max-height: 15vw;
+                    max-height: 80vw;
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        max-height: 8vw;
+                        max-height: 15vw;
                     }
                 }
                 a{
@@ -172,6 +172,7 @@ body .conteneur {
             a{
                 display: block;
                 text-decoration:none;
+                text-align: center;
                 color: $blanc-casse;
                 &:hover{
                     color: $gris-anthracite;
@@ -252,7 +253,10 @@ body .conteneur {
                 img{
                     object-fit: cover;//permet que l'image occupe tout l'espace mais il faut définir une taille
                     width: 100%;
-                    max-height: 14.5vw;
+                    max-height: 85vw;
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    max-height: 14.5vw;    
+                    }
                     &:hover{
                         filter: grayscale(100%);
                     }

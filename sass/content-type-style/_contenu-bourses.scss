@@ -142,6 +142,15 @@ ______________________________*/
                 }
             }
         }
+        .quicktabs_main {
+            .links{
+                img{
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    width: auto;
+                    }
+                }
+            }
+        }
 }
 #zone-2.page-bourses{}
 #zone-3.page-bourses{}

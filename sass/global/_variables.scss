@@ -71,16 +71,20 @@ box-sizing: $value;
 //Réglage du nombre de pixel pour changer de breakpoint() mixin 
 // qui simplifie les media-queries.Donner la largeur mini de l'ecran
 // Source 2018 https://foundation.zurb.com/sites/docs/media-queries.html
+// http://www.christophe-coyard.fr/blog/utiliser-les-media-queries
 /* small: 0px,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,*/
-$mobile   :  (max-width 767px);//medium
-$tablet   :  (min-width 768px) (max-width 1024px);//large
+
 
 $desktop  :  1200px;// sortie=>> min-width: XXXpx xlarge
 $desktopwide  :  1440px;// sortie=>> min-width: XXXpx xxlarge
+
+
+$mobile   :  (max-width 767px) (orientation portrait);//medium
+$tablet   :  (min-width 768px) (max-width 1024px) (orientation portrait);//large
 
 // Breakpoint pour les format paysage 
 $mobilelandscape : (min-height 319px) (max-height 765px) (orientation landscape);//pour orientation paysage
