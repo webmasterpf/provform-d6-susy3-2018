@@ -338,10 +338,10 @@
             }
             else {
                 //Taille des éléments pour mobile
-                $("#zone-1 #media-vimeo-1 iframe").height('23vw').width('100vw');
-                $("#zone-2 #media-vimeo-1 iframe").height('23vw').width('100vw');
-                $("#zone-1 #media-youtube-1").height('23vw').width('100vw');
-                $("#zone-2 #media-youtube-1").height('23vw').width('100vw');
+                $("#zone-1 #media-vimeo-1 iframe").height('65vw').width('100vw');
+                $("#zone-2 #media-vimeo-1 iframe").height('65vw').width('100vw');
+                $("#zone-1 #media-youtube-1").height('65vw').width('100vw');
+                $("#zone-2 #media-youtube-1").height('65vw').width('100vw');
                 // Taille auto pour les images des logos partenaires sur accueil
                 $(".logo_partenaires img").height('auto').width('auto');
                 //Taille vidéo PF sur Accueil (pour mobiles)
