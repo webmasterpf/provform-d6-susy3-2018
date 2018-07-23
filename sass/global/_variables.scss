@@ -85,10 +85,12 @@ $desktopwide  :  1440px;// sortie=>> min-width: XXXpx xxlarge
 
 $mobile   :  (max-width 767px) (orientation portrait);//medium
 $tablet   :  (min-width 768px) (max-width 1024px) (orientation portrait);//large
+$tablet-hd : (max-width 1550px) (orientation portrait);//tablette HD, GalaxyTab S3 1536x2048 par ex.
 
 // Breakpoint pour les format paysage 
 $mobilelandscape : (min-height 319px) (max-height 765px) (orientation landscape);//pour orientation paysage
 $tabletlandscape: (min-height 1023px) (max-width 1400px) (orientation landscape);//pour orientation paysage
+$tabletlandscape-hd: (max-width 2050px) (orientation landscape);//pour orientation paysage, tablette HD, GalaxyTab S3 1536x2048 par ex.
 
 //Valeurs de colonnes pour un contexte spécifié
 $mobilecol: susy-repeat(4);
