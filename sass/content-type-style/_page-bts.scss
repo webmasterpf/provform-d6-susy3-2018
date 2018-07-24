@@ -216,11 +216,14 @@ body .conteneur{
             background: none;
             border: none;}
         td{vertical-align: middle;
-           border: em(1px) solid $blanc-casse;
+           /*border: em(1px) solid $blanc-casse;*/
            em{
                padding: 0 span(0.01);
            }
-
+           img[src*=".png"]{}
+        }
+        td:first-child{
+            max-width:30%;
         }
     }
 }
