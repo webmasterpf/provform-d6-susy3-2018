@@ -31,16 +31,19 @@
                 <span class="submitted"><?php print $submitted; ?></span>
 <?php endif; ?>
                 
-                            <?php
-              global $theme_path;
-              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
-              ?>
+                       
 
                <?php if ($node->field_complement_info_formation[0]['view']): ?>
                     <div class="complement-titre-fiche">
                         <?php (print $node->field_complement_info_formation[0]['view']); /* Info complementaire sur formation */ ?>
                     </div>
                 <?php endif; ?>
+                
+                     <?php
+                     //Inclus le bloc Intro Fiche Formation issue d'une vue (Dev d'origine)
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
+              ?>
                 
                    <?php if ($node->field_intro_fiche_formation[0]['view']): ?>
                     <div class="intro-fiche">
@@ -54,6 +57,7 @@
                 </div>
 
                         <?php
+                        //Inclus le bloc Savoir+ Fiche Formation issue d'une vue (Dev d'origine)
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
               ?>
