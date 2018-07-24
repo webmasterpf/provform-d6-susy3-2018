@@ -107,16 +107,21 @@ body .conteneur{
             float:left;
             
         }
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         
             
         }
+        @include breakpoint(($tablet-hd,$tabletlandscape-hd)){}
     }
     .zone2_layout_8_4{
-@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
 
             width: span(4 of $desktopcol);
             float:left;
+        }
+        @include breakpoint(($tablet-hd,$tabletlandscape-hd)){
+            float: none;
+            width: span(12 of $desktopcol);
         }
     }
     

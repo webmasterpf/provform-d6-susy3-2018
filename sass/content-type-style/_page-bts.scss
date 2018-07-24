@@ -221,10 +221,14 @@ body .conteneur{
                padding: 0 span(0.01);
            }
            img[src*=".png"]{}
+           &:first-child{
+               max-width:30%;
+           }
+           &:last-child{
+               max-width:70%;
+           }
         }
-        td:first-child{
-            max-width:30%;
-        }
+
     }
 }
 

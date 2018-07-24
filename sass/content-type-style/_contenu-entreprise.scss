@@ -149,6 +149,7 @@ body .conteneur{
 
     table.table-bts-coord{
         width: 80%;
+        border: 0;
         border-top: em(2px) dashed $orange-fonce;
         margin: 0 auto;
         tbody{
@@ -157,18 +158,18 @@ body .conteneur{
             height: auto;
             margin: span(0.1) 0;
             padding: 0;
-            border: none;
+            border: 0;
         }
         tr{
             background: none;
-            border: none;
+            border: 0;
         }
         td{
             vertical-align: middle;
             border-top:0;
             border-bottom:0;
-            border: em(1px) dashed $blanc-casse;
-
+            /*border: em(1px) dashed $blanc-casse;*/
+            border:0;
             em{
                 padding: 0 span(0.01);
             }
@@ -295,6 +296,9 @@ ______________________________*/
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         border-left: em(1px) dashed $orange-fonce;
         padding: span(0.1);
+        }
+        @include breakpoint(($tablet-hd,$tablet,$tabletlandscape,$tabletlandscape-hd)){
+            border: 0;
         }
     }
     .objectif-bts,aside.liste-bts{
