@@ -109,7 +109,7 @@ body .conteneur{
             
         }
         @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
-        color: $vert;
+        /*color: $vert; Pour tester application du BP*/
             
         }
         
