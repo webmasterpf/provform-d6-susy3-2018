@@ -70,27 +70,31 @@ box-sizing: $value;
 
 //Réglage du nombre de pixel pour changer de breakpoint() mixin 
 // qui simplifie les media-queries.Donner la largeur mini de l'ecran
+// import via Gulp : https://github.com/at-import/breakpoint
 // Source 2018 https://foundation.zurb.com/sites/docs/media-queries.html
 // http://www.christophe-coyard.fr/blog/utiliser-les-media-queries
+//https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 /* small: 0px,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,*/
 
+$screen: 'only screen';
+$notscreen: 'not screen';
 
-$desktop  :  1200px;// sortie=>> min-width: XXXpx xlarge
-$desktopwide  :  1440px;// sortie=>> min-width: XXXpx xxlarge
+$desktop  :  "#{$screen}" 1200px;// sortie=>> min-width: XXXpx xlarge 1200px
+$desktopwide  : "#{$screen}" 1440px;// sortie=>> min-width: XXXpx xxlarge 1440px
 
 
 $mobile   :  (max-width 767px) (orientation portrait);//medium
 $tablet   :  (min-width 768px) (max-width 1024px) (orientation portrait);//large
-$tablet-hd : (max-width 1550px) (orientation portrait);//tablette HD, GalaxyTab S3 1536x2048 par ex.
+$tablet-hd : "#{$screen}" (max-width 1550px) (orientation portrait) (min-resolution 2dppx);//tablette HD, GalaxyTab S3 1536x2048 par ex.
 
 // Breakpoint pour les format paysage 
-$mobilelandscape : (min-height 319px) (max-height 765px) (orientation landscape);//pour orientation paysage
-$tabletlandscape: (min-height 1023px) (max-width 1400px) (orientation landscape);//pour orientation paysage
-$tabletlandscape-hd: (max-width 2050px) (orientation landscape);//pour orientation paysage, tablette HD, GalaxyTab S3 1536x2048 par ex.
+$mobilelandscape : "#{$screen}" (height 319px 765px) (orientation landscape);//pour orientation paysage (min-height 319px) (max-height 765px)
+$tabletlandscape: "#{$screen}" (min-height 1023px) (max-width 1400px)  (orientation landscape);//pour orientation paysage
+$tabletlandscape-hd: "#{$screen}" (max-width 2050px) (orientation landscape) (min-resolution 2dppx);//pour orientation paysage, tablette HD, GalaxyTab S3 1536x2048 par ex.
 
 //Valeurs de colonnes pour un contexte spécifié
 $mobilecol: susy-repeat(4);
