@@ -102,29 +102,35 @@ body .conteneur{
     //Variante de largeur de colonnes différentes
         .zone1_layout_8_4{
         
-        @include breakpoint(($desktop)){
+        @include breakpoint(($desktop,$desktopwide)){
             width: span(8 of $desktopcol);
             float:left;
+            //content: "BP appliqué pour '#{$desktop}' #{$desktopwide}";
             
         }
-        @include breakpoint(($desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+        color: $vert;
+            
+        }
         
-            
-        }
-        @include breakpoint(($tablet-hd,$tabletlandscape-hd)){}
-    }
-    .zone2_layout_8_4{
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-
-            width: span(4 of $desktopcol);
-            float:left;
-        }
         @include breakpoint(($tablet-hd,$tabletlandscape-hd)){
             float: none;
             width: span(12 of $desktopcol);
         }
     }
-    
+    .zone2_layout_8_4{
+        @include breakpoint(($desktop,$desktopwide)){
+            width: span(4 of $desktopcol);
+            float:left;
+        }
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){}
+        
+        @include breakpoint(($tablet-hd,$tabletlandscape-hd)){
+            float: none;
+            width: span(12 of $desktopcol);
+        }
+    }
+
     //Partie fixe
     .acces_rubriques{
         
