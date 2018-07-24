@@ -51,11 +51,15 @@ body .conteneur{
         }
     }
     aside.ficheform-savoirplus{
+        border: em(3px) dashed  $gris-anthracite;
+        margin: span(0.02) auto;   
         div.content{
             column-count: 0;
+            padding: span(0.02);
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 column-count: 0 !important;
-
+                margin: span(0.02) auto;   
+                
             }
         }
     }
@@ -74,12 +78,12 @@ body .conteneur{
             }
         }
     }
-    aside.ficheform-savoirplus,aside.lycees-possibles{
+    aside.lycees-possibles{
         margin: span(0.01) auto;
         padding: span(0.01);
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(5);
-
+            margin: span(0.02) auto;   
         }
     }
     aside.lycees-possibles{
@@ -187,7 +191,13 @@ ______________________________*/
 
         }
     }
-    aside.ficheform-savoirplus{}
+    aside.ficheform-savoirplus{
+        span.field-content{
+            @include font-size(m);//utilisation de typey
+            color: $orange-fonce;
+            font-weight: bold;
+        }
+    }
 }
 #zone-2.fiche-formation{}
 #zone-3.fiche-formation{
