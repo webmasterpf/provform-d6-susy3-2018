@@ -57,7 +57,7 @@ body .conteneur .conteneur-flex{
 //Position spécifique pour chaque image de chaque pages lycées (selon NiD)
 //Liste dynamique des IDs en Sass pour alléger le code, définition d'une variable qui liste les IDs
 $idslycees: 2,5,6,8,9,10,11;
-@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+@include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
     @each $i in $idslycees{
         #node-#{$i}{
             //Basés sur CG
@@ -94,11 +94,33 @@ $idslycees: 2,5,6,8,9,10,11;
 
     #node-11{//Page BL
              li.views-row-2 img {
-                 transform: translate(0%, -23%);
+                 transform: translate(0%, -18%);
              }
              li.views-row-3 img {
                  transform: translate(0%, -40%);
              }
+               li.views-row-4 img {
+                 transform: translate(0%, -20%);
+             }
+    }
+    #node-10{//Page LR
+                 li.views-row-1 img {
+                  transform: translate(0%, -42%);
+              }
+              li.views-row-2 img {
+                  transform: translate(0%, -18%);
+              }
+                  li.views-row-4 img {
+                  transform: translate(0%, -43%);
+              }
+    }
+    #node-8{//Page CE
+            li.views-row-1 img {
+                transform: translate(0%, -26%);
+            }
+            li.views-row-2 img {
+                transform: translate(0%, -28%);
+            }
     }
 }
 #zone-1.page-lycee{

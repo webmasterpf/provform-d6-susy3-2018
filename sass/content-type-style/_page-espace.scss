@@ -109,6 +109,7 @@ aside.contenu-rubrique{
             column-count: 1;
              li{
                 @include  txt-colonnes();
+             
                     span{
                         text-decoration: none;
                         
@@ -422,6 +423,7 @@ ______________________________*/
                     list-style: none;
                     background: $orange-fonce;
                     @include txt-cesure(); 
+                    @include txt-colonnes(); 
                 }
                 a{
                     color: $blanc-casse;
@@ -429,6 +431,8 @@ ______________________________*/
                     font-weight: bold;
                     @include font-size(l);//utilisation de typey
                     @include txt-ellipse();
+                    @include txt-cesure(); 
+                    
                     display: block;
                 }
 
