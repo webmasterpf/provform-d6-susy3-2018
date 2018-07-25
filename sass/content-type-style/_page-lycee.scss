@@ -37,9 +37,12 @@ body .conteneur .conteneur-flex{
     img,.view-Diapo-multichoix{
         transform: translate(0%,0%);
     }
+    @include breakpoint(($mobile-iphonehd,$mobile-galaxyS6)){
+        background:  $rose-fushia;
+    }
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         min-height: 20vw;
-        max-height: 24vw;
+        max-height: 30vw;//Pour pouvoir augmenter ensuite la hauteur des images via bx-wrapper dans _bxslider-cyrano.scss
         img{
             //Avec Diapo il faut séparer le contenu du conteneur à cause de la position absolute. Position générique.
             transform: translate(0%,-12%);
@@ -54,50 +57,50 @@ body .conteneur .conteneur-flex{
 //Position spécifique pour chaque image de chaque pages lycées (selon NiD)
 //Liste dynamique des IDs en Sass pour alléger le code, définition d'une variable qui liste les IDs
 $idslycees: 2,5,6,8,9,10,11;
+@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+    @each $i in $idslycees{
+        #node-#{$i}{
+            //Basés sur CG
+            li.views-row-1 img{transform: translate(0%,-16%);}
+            li.views-row-2 img{transform: translate(0%,-42%);}
+            li.views-row-3 img{transform: translate(0%,-25%);}
+            li.views-row-4 img{transform: translate(0%,-24%);}
+            li.views-row-5 img{}
+            li.views-row-6 img{}
+            li.views-row-7 img{}
+        }
+    }
+    //Outrepasser les réglages précedents par défaut - Toujours en dernière position dans CSS !!
+    #node-5{//Page ER
+            li.views-row-1 img {
+                transform: translate(0%, -26%);
+            }
+            li.views-row-2 img {
+                transform: translate(0%, -31%);
+            }
+            li.views-row-3 img {
+                transform: translate(0%, -43%);
+            }
+    }
 
-@each $i in $idslycees{
-    #node-#{$i}{
-        //Basés sur CG
-        li.views-row-1 img{transform: translate(0%,-16%);}
-        li.views-row-2 img{transform: translate(0%,-42%);}
-        li.views-row-3 img{transform: translate(0%,-25%);}
-        li.views-row-4 img{transform: translate(0%,-24%);}
-        li.views-row-5 img{}
-        li.views-row-6 img{}
-        li.views-row-7 img{}
+    #node-9{//Page CA
+            li.views-row-1 img {
+                transform: translate(0%, -39%);
+            }
+            li.views-row-2 img {
+                transform: translate(0%, -44%);
+            }
+    }
+
+    #node-11{//Page BL
+             li.views-row-2 img {
+                 transform: translate(0%, -23%);
+             }
+             li.views-row-3 img {
+                 transform: translate(0%, -40%);
+             }
     }
 }
-//Outrepasser les réglages précedents par défaut - Toujours en dernière position dans CSS !!
-#node-5{//Page ER
-        li.views-row-1 img {
-            transform: translate(0%, -26%);
-        }
-           li.views-row-2 img {
-            transform: translate(0%, -31%);
-        }
-           li.views-row-3 img {
-            transform: translate(0%, -43%);
-        }
-}
-
-#node-9{//Page CA
-        li.views-row-1 img {
-            transform: translate(0%, -39%);
-        }
-          li.views-row-2 img {
-            transform: translate(0%, -44%);
-        }
-}
-
-#node-11{//Page BL
-         li.views-row-2 img {
-             transform: translate(0%, -23%);
-         }
-         li.views-row-3 img {
-             transform: translate(0%, -40%);
-         }
-}
-
 #zone-1.page-lycee{
     .logos_lycee{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
