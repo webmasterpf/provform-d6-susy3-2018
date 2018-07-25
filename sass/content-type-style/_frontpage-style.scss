@@ -38,7 +38,7 @@ aside.DiapoHPFull{
 
     img{
         transform: translate(0%,0%);
-
+        @include adaptable-img();
     }
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         min-height: 25vw;

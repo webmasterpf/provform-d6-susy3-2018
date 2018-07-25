@@ -38,7 +38,11 @@ body .conteneur{
         box-shadow: none;
     border: none;
         background: none;
-        max-height: 30em;
+        max-height: 60vw;
+           @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+           min-height: 25vw;
+            max-height: 30vw;//Dépend de la valeur max donnée à la #zone-diaporama    
+            }
         }
         .bx-caption{
             position: fixed;
