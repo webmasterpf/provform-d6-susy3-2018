@@ -220,7 +220,7 @@ body .conteneur {
         a{
             color: white;
             font-family: $FontRaleway;
-            @include font-size(xl);//utilisation de typey
+            
             text-decoration: none;
         }
         img{
@@ -231,7 +231,16 @@ body .conteneur {
 //                padding: 0 0 0 span(0.1);
                 display: block;
             }
+            .bx-caption{
+                a{
+                    @include font-size(m);//utilisation de typey
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                        @include font-size(xl);//utilisation de typey
+                    }
+                }
+            }
         }
+        
     }
     .acces_rubriques{
 
