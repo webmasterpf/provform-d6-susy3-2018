@@ -61,7 +61,7 @@ $idslycees: 2,5,6,8,9,10,11;
         li.views-row-1 img{transform: translate(0%,-16%);}
         li.views-row-2 img{transform: translate(0%,-42%);}
         li.views-row-3 img{transform: translate(0%,-25%);}
-        li.views-row-4 img{transform: translate(0%,-25%);}
+        li.views-row-4 img{transform: translate(0%,-24%);}
         li.views-row-5 img{}
         li.views-row-6 img{}
         li.views-row-7 img{}
@@ -87,6 +87,15 @@ $idslycees: 2,5,6,8,9,10,11;
           li.views-row-2 img {
             transform: translate(0%, -44%);
         }
+}
+
+#node-11{//Page BL
+         li.views-row-2 img {
+             transform: translate(0%, -23%);
+         }
+         li.views-row-3 img {
+             transform: translate(0%, -40%);
+         }
 }
 
 #zone-1.page-lycee{
