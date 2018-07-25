@@ -77,7 +77,8 @@ body .conteneur{
             border: 0;
             max-width: 100%;
             box-shadow:none;
-            max-height: 30em;
+            min-height: 30vw;
+            max-height: 35vw;//Dépend de la valeur max donnée à la #zone-diaporama
             img{
                 margin: 0;
                 padding: 0;
