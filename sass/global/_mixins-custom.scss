@@ -134,6 +134,10 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
             }
         }
 /*------- GESTION DU TEXTE -------------*/
+/*
+https://openweb.eu.org/articles/la-gestion-de-la-cesure-en-css
+https://www.creativejuiz.fr/blog/css-css3/controles-fin-des-cesures-css4-text
+*/
 @mixin txt-cesure($typecesure : break-word,$typecesure2 : break-word){
     word-wrap: $typecesure;
     word-break: $typecesure2;
@@ -145,6 +149,8 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
     hyphens: $hyphenation;
     text-overflow: $surplustxt;
     hyphenate-limit-chars: 6 3 2;//CSS4 - expérimental
+    hyphenate-character: "\2010";//CSS4 - expérimental
+    hyphenate-limit-zone:em(20px);
 }
 @mixin txt-colonnes($param1:avoid-column,$param2:avoid){
     break-inside: $param1;//empêche césure au milieu de l'élément 
