@@ -30,6 +30,10 @@ BROWSER SYNC
 -----------------
 :/var/www/drupal-6/sites/all/themes/dossier_projet$ npm install browser-sync --save-dev
 
+DEBOGUER LES SUPPORTS MOBILES ( TELEPHONE-TABLETTE)
+----------------------------------------------------------------------
+http://people.apache.org/~pmuellr/weinre/docs/latest/
+
 
 REGLAGES A FAIRE
 ----------------
