@@ -9,6 +9,8 @@
 //@include breakpoint ($mobile){}
 //@include breakpoint ($desktop){}
 //@include breakpoint ($tablet){}
+//@include breakpoint(($desktop,$tablet)){}
+//@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
 
 /*######-------- ||| ORDRE FLEXBOX ||| --------######*/
 body .conteneur .conteneur-flex{
@@ -29,8 +31,8 @@ body .conteneur .conteneur-flex{
     max-height: 90vw;
     overflow: hidden;
 
-    @include backgroundImage('SVG/image_defaut_actu_2500.svg');
-    @include background-size(cover);
+    /*@include backgroundImage('SVG/image_defaut_actu_2500.svg');*/
+    /*@include background-size(cover);*/
 
     img,.view-Diapo-multichoix{
         transform: translate(0%,0%);
@@ -38,11 +40,44 @@ body .conteneur .conteneur-flex{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         min-height: 20vw;
         max-height: 24vw;
-        img,.view-Diapo-multichoix{
+        img{
+            //Avec Diapo il faut séparer le contenu du conteneur à cause de la position absolute. Position générique.
             transform: translate(0%,-12%);
         }
+           .view-Diapo-multichoix{
+            transform: translate(0%,-12%);
+        }
+        
     }
 
+}
+//Position spécifique pour chaque image de chaque pages lycées (selon NiD)
+//Liste dynamique des IDs en Sass pour alléger le code, définition d'une variable qui liste les IDs
+$idslycees: 2,5,6,8,9,10,11;
+
+@each $i in $idslycees{
+    #node-#{$i}{
+
+        li.views-row-1 img{transform: translate(0%,-16%);}
+        li.views-row-2 img{transform: translate(0%,-42%);}
+        li.views-row-3 img{transform: translate(0%,-25%);}
+        li.views-row-4 img{transform: translate(0%,-25%);}
+        li.views-row-5 img{}
+        li.views-row-6 img{}
+        li.views-row-7 img{}
+    }
+}
+//Outrepasse les réglages précedents par défaut - Toujours en dernière position dans CSS !!
+#node-5{//Page ER
+        li.views-row-1 img {
+            transform: translate(0%, -26%);
+        }
+           li.views-row-2 img {
+            transform: translate(0%, -31%);
+        }
+           li.views-row-3 img {
+            transform: translate(0%, -43%);
+        }
 }
 #zone-1.page-lycee{
     .logos_lycee{
