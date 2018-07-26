@@ -18,6 +18,7 @@ Plugin pour Gulp (permet de charger tous les plugins)
 
 Plugin pour Sass:
 npm install --save-dev  event-stream gulp-util node-sass-import-once gulp-sass  gulp-autoprefixer gulp-size gulp-shell gulp-notify notify-send gulp-sourcemaps typey susy node-normalize-scss gulp-plumber gulp-postcss
+breakpoint-sass
 
 Vérifier versions des npm:
 npm-check
@@ -85,6 +86,8 @@ Ainsi:
 
  Breakpoints pour SUSY
 ----------------------------------
+
+Utilisation de https://github.com/at-import/breakpoint , installé sur le serveur via NPM (abandon de la GEM)
 <pre>
  @include breakpoint ($mobile){}
  @include breakpoint ($desktop){}

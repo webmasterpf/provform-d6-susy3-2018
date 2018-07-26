@@ -49,14 +49,14 @@ var folderPaths = {
 var assetsPath = {
   gems: [
 //    basePaths.gems + 'susy-2.2.2/sass',
-    basePaths.gems + 'breakpoint-2.7.1/stylesheets'
+//    basePaths.gems + 'breakpoint-2.7.1/stylesheets'
     
     
   ],
    node_modules: [
        //Ajoutés avec les gems pour simplifier     
     basePaths.node_modules +  'node-normalize-scss',       
-//    basePaths.node_modules + 'breakpoint-sass/stylesheets',
+    basePaths.node_modules + 'breakpoint-sass/stylesheets',
     basePaths.node_modules +  'susy/sass',
     basePaths.node_modules +  'typey/stylesheets/_typey.scss'
   ],
