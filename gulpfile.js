@@ -45,6 +45,7 @@ var folderPaths = {
 
 //Variable pour les gems (à adapter selon environnement)
 // File paths to various assets are defined here.
+//Si utilisation de breakpoint via NPM, alors commenter la ligne dans Gems
 var assetsPath = {
   gems: [
 //    basePaths.gems + 'susy-2.2.2/sass',
@@ -55,6 +56,7 @@ var assetsPath = {
    node_modules: [
        //Ajoutés avec les gems pour simplifier     
     basePaths.node_modules +  'node-normalize-scss',       
+//    basePaths.node_modules + 'breakpoint-sass/stylesheets',
     basePaths.node_modules +  'susy/sass',
     basePaths.node_modules +  'typey/stylesheets/_typey.scss'
   ],
