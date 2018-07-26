@@ -23,6 +23,9 @@ breakpoint-sass
 Vérifier versions des npm:
 npm-check
 
+Vérifier maj pour NPM:
+ sudo npm update check
+
 !! Remplacer gulp-autoprefixer par autoprefixer pour avoir la dernière version du package.Utiliser avec PostCSS
 
 https://github.com/at-import/breakpoint

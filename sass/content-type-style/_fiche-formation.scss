@@ -34,8 +34,12 @@ body .conteneur{
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
 #zone-1.fiche-formation{
     .complement-titre-fiche{
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
             width: span(4);
+            margin: span(0.02) auto;   
+        }
+        @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+            width: span(10);
             margin: span(0.02) auto;   
         }
     }

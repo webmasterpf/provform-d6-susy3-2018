@@ -78,7 +78,7 @@ body .conteneur{
             }
         }
         ul.formations-initiales{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
                 /*                column-count: 6;
                                 column-fill: auto;
                                 white-space: normal;*/
@@ -86,10 +86,16 @@ body .conteneur{
                 flex-wrap:wrap;
                 padding: 0 0 0 span(0.1);
             }
+            @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+                 display: flex;
+                flex-wrap:wrap;
+                padding: 0 span(2);
+               
+            }
             li{
                 padding: 0;
                 margin: span(0.1) 0;
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
 
                     /*@include hack-Edge;*/
                     @include hack-IE;
@@ -104,6 +110,19 @@ body .conteneur{
 
                     }
 
+                }
+                @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+                            @include hack-IE;
+                    @include  txt-colonnes();
+                    /*margin: 0 0 span(0.1) 0;*/
+                    margin: 0 span(0.1) span(0.1) 0;
+                    display: inline-block;
+                    width: span(3.7);
+
+                    :not(img):not(a):not(.complement){
+                        padding: span(0.1);
+
+                    }
                 }
                 a{
                     //pour que motif utilise la taille du a

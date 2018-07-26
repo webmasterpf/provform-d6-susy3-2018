@@ -373,21 +373,28 @@ body .conteneur {
                 //pas besoin de fixer un display en mobile, vertical automatique
                 max-width: span(11);
                 margin: span(0.5)  span(2);
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
                     display:inline-block;
                     column-count: 4;
                     column-fill: balance;
                     white-space: normal;
+                }
+                @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+                     display:inline-block;
+                    column-count: 2;
+                    column-fill: balance;
+                    white-space: normal;
+                    //centrer le UL
+                    margin: 0 30vw;
+                    width: 30vw;
                 }
                 li{
                     list-style: none;
                     width: 95%;
                     margin: 0 0 span(0.2) span(0.2);
 
-
-
-
-                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,
+                    $tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
                         @include txt-cesure;
                         @include txt-colonnes;
                         @include hack-Edge;
@@ -395,10 +402,14 @@ body .conteneur {
                         margin: 0;
                         padding: 0 span(0.9);
                     }
+                    @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+                          padding: span(0.9);
+                    }
                     span.titre-admin{
                         display: block;
                         text-align:center;
-                        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                               @include breakpoint(($desktop,$desktopwide,$mobilelandscape,
+                    $tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
 
                             min-height: 11vw;          
                             min-width: 11vw;
@@ -414,7 +425,7 @@ body .conteneur {
                             text-transform: uppercase;
                             font-weight: bold;
                             color: $blanc-casse;
-
+                            @include font-size(s);//utilisation de typey
                             /*@include backgroundImage("SVG/bg_acces_contact.svg");*/
                             background-size: cover;
                             /*background-clip: padding-box;*/
@@ -428,12 +439,16 @@ body .conteneur {
                             @include arrondis(4em);  
                             background-color: $gris-anthracite;
 
-                            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                            @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
                                 max-width: 11vw;
                                 max-height: 11vw;
-
+                                @include font-size(m);//utilisation de typey
                                 word-spacing: em(3px);
 
+                            }
+                            @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+                                 @include arrondis(3em);  
+                                 @include font-size(s);//utilisation de typey
                             }
                             &:hover{
 
