@@ -29,11 +29,13 @@ breakpoint-2.7.1-
 /// !!! EDITER LE FICHIER GULPFILE.JS POUR DEFINIR LES CHEMINS DES GEMS et NPM !!!
 
 //Import des plugins de Sass (sans compass) via des Gems
-@import '../node_modules/susy/sass/susy'; // utiliser par défaut Susy 3 - import OK
+// utiliser par défaut Susy 3 - import OK - chemin définit dans Gulpfile
+
+/*@import '../node_modules/susy/sass/susy';*/ 
+@import "susy";
 
 //Debug de la grille Susy3
 /*@import '../node_modules/susy/sass/plugins/svg-grid';*/
-
 
 //@import "sassy-buttons";
 @import "breakpoint";
