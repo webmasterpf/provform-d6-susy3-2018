@@ -370,20 +370,20 @@ body .conteneur {
         }
         aside.acces-contact{
             ul{
-                //pas besoin de fixer un display en mobile, vertical automatique
+                //pas besoin de fixer un display en mobile, vertical automatique - mobile first
                 max-width: span(11);
                 margin: span(0.5)  span(2);
                 @include breakpoint(($desktop,$desktopwide,
-                $tablet-hd,$tabletlandscape-hd,$tablet,$tabletlandscape
+                $tablet-hd,$tabletlandscape-hd
                 )){
                     display:inline-block;
                     column-count: 4;
                     column-fill: balance;
                     white-space: normal;
                 }
-                      @include breakpoint(($tablet,$tabletlandscape
+                @include breakpoint(($tablet,$tabletlandscape
                 )){
-                margin: span(0.5) span(0.2);    
+                    margin: span(0.5) span(0.2);    
                 }
                 @include breakpoint($mobilelandscape){
                      display:inline-block;

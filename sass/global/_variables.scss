@@ -86,7 +86,7 @@ $onlyscreen: 'only screen';
 $notscreen: 'not screen';
 
 $desktop  :  "#{$screen}" (min-device-width 1200px);// sortie=>> min-width: XXXpx xlarge 1200px
-$desktopwide  : "#{$screen}" (min-device-width 1440px) ;// sortie=>> min-width: XXXpx xxlarge 1440px
+$desktopwide  : "#{$screen}" (min-device-width 1440px) (min-resolution 1dppx);// sortie=>> min-width: XXXpx xxlarge 1440px
 
 
 $mobile   : "#{$onlyscreen}" (max-device-width 667px) (orientation portrait) (min-resolution 2dppx);//medium - Iphone->8
@@ -95,12 +95,12 @@ $mobile-iphoneX   : "#{$onlyscreen}" (device-width 375px 812px) (orientation por
 $mobile-galaxyShd   : "#{$screen}" (device-width 320px 640px) (orientation portrait) (min-resolution 3dppx);//medium - GalaxyS4 et suivants
 $mobile-galaxyS6   : "#{$screen}" (device-width 360px 640px) (orientation portrait) (min-resolution 4dppx);//medium - GalaxyS4 et suivants
 $tablet   :  "#{$onlyscreen}" (min-device-width 768px) (max-device-width 1024px) (orientation portrait) (min-resolution 1dppx);//large - Tablettes non HD
-$tablet-hd : "#{$onlyscreen}" (max-device-width 1550px) (orientation portrait) (min-resolution 2dppx);//tablette HD, GalaxyTab S3 1536x2048 par ex.(Ipad2->)
+$tablet-hd : "#{$onlyscreen}" (max-device-width 1550px) (orientation portrait) (min-resolution 2dppx);//tablette HD, GalaxyTab S3 2048 x 1536 (QXGA) par ex.(Ipad2->)
 
 // Breakpoint pour les format paysage 
 $mobilelandscape : "#{$onlyscreen}" (device-height 319px 765px) (orientation landscape);//pour orientation paysage (min-height 319px) (max-height 765px)
-$tabletlandscape: "#{$onlyscreen}" (min-device-height 1023px) (max-device-width 1400px)  (orientation landscape) (min-resolution 1dppx);//pour orientation paysage - Tablettes non HD
-$tabletlandscape-hd: "#{$onlyscreen}" (max-device-width 2050px) (orientation landscape) (min-resolution 2dppx);//pour orientation paysage, tablette HD, GalaxyTab S3 1536x2048 par ex.
+$tabletlandscape: "#{$onlyscreen}"  (max-device-width 1150px)  (orientation landscape) (min-resolution 1dppx);//pour orientation paysage - Tablettes non HD
+$tabletlandscape-hd: "#{$onlyscreen}" (max-device-width 2050px) (orientation landscape) (min-resolution 2dppx);//pour orientation paysage, tablette HD, GalaxyTab S3 2048 x 1536 (QXGA) par ex.
 
 //Valeurs de colonnes pour un contexte spécifié
 $mobilecol: susy-repeat(4);
