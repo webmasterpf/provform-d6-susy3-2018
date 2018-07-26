@@ -115,7 +115,7 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
                         bottom: 1054.4vw;//83%*/
 
 
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
                 
                 display: inline-block;
                 margin: 0 0 0 span(0.1);
@@ -126,8 +126,16 @@ $imagedir:'../images/'; // definir ici le chemin vers le dossier image
                 transform: translate(0%, 5%);
                 max-height: 2.7vw;
             }
+            @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+
+                display: inline-block;
+                margin: 0 0 0 span(0.1);
+                top: 0;//120% 17vw mieux comme ça avec titre en haut et non en bas de la photo
+                transform: translate(0%, 5%);
+                max-height: 31vw;
+            }
             &:before {
-                content: '';
+                content: "";
                 display: inline-block;
                 height: 100%;
                 vertical-align: middle;
