@@ -76,10 +76,12 @@ Usage de Susy 3
 ------------------------
 Il n'existe plus de mixins dans Susy3, tout passe par span()
 Ainsi:
+<pre>
 .classe{ @include container;} devient .classe { width: span (3);}
 .classe{ @include span( 12 of $desktopcol);} devient .classe { width: span( 12 of $desktopcol);} 
 .classe{@include push (1); } devient .classe{ margin-left: span(1 wide); }
 .classe{@include pull (1); } devient .classe{ margin-left: 0 - span(3 wide); }
+</pre>
 
  Breakpoints pour SUSY
 ----------------------------------
@@ -89,17 +91,14 @@ Ainsi:
  @include breakpoint ($tablet){}
 </pre>
 
-Diaporama homepage surimpression
+Diaporama homepage surimpression - BXSlider
 ------------------------------------
-Changer le code HTML dans Views 
-<div id="transparency"></div>
-<div id="contenu-diapo">
-<h2>[teaser]</h2>
-</div>
-par 
-<div id="transparency">
-<h2>[teaser]</h2>
-</div>
+Réécriture du champs dans Views 
+<pre>
+[field_illus_administratif_fid][field_illus_entreprise_fid][field_diapo_lycee_fid] 
+<div class="bx-caption">[title]</div>
+</pre>
+
 
 JAVASCRIPT
 ------------------------
