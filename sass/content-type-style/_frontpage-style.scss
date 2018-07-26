@@ -373,13 +373,19 @@ body .conteneur {
                 //pas besoin de fixer un display en mobile, vertical automatique
                 max-width: span(11);
                 margin: span(0.5)  span(2);
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
+                @include breakpoint(($desktop,$desktopwide,
+                $tablet-hd,$tabletlandscape-hd,$tablet,$tabletlandscape
+                )){
                     display:inline-block;
                     column-count: 4;
                     column-fill: balance;
                     white-space: normal;
                 }
-                @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+                      @include breakpoint(($tablet,$tabletlandscape
+                )){
+                margin: span(0.5) span(0.2);    
+                }
+                @include breakpoint($mobilelandscape){
                      display:inline-block;
                     column-count: 2;
                     column-fill: balance;
@@ -387,6 +393,15 @@ body .conteneur {
                     //centrer le UL
                     margin: 0 30vw;
                     width: 30vw;
+                }
+                @include breakpoint(($mobile-galaxyShd,$mobile-iphonehd)){
+                     display:inline-block;
+                    column-count: 2;
+                    column-fill: balance;
+                    white-space: normal;
+                    //centrer le UL
+                    margin: 0 5vw;
+                    width: auto;
                 }
                 li{
                     list-style: none;
@@ -409,14 +424,20 @@ body .conteneur {
                         display: block;
                         text-align:center;
                                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,
-                    $tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
-
+                    $tablet-hd,$tabletlandscape-hd)){
                             min-height: 11vw;          
                             min-width: 11vw;
                             max-width: 11vw;
                             max-height: 11vw;
-
                             vertical-align: middle;
+                        }
+                                @include breakpoint(($tablet,$tabletlandscape
+                )){
+                    max-width: 20vw;
+                }
+                        @include breakpoint(($mobile-galaxyShd,$mobile-iphonehd)){
+                            max-width: 50vw;
+                            max-height: 50vw;
                         }
                         a{
                             display: block;
