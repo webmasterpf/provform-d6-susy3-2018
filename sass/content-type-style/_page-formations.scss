@@ -108,6 +108,10 @@ body .conteneur{
                 a{
                     //pour que motif utilise la taille du a
                     display: block;
+                    @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
+                        @include  txt-colonnes();
+                        @include  txt-cesure();
+                    }
                 }
             }
         }
