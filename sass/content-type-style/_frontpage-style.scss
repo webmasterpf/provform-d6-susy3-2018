@@ -132,17 +132,28 @@ body .conteneur {
             li{
                 list-style: none;
                 color: $gris-anthracite;
-                @include breakpoint ($mobile){
+                max-width: 95%;
+                margin: span(0.1) 0 span(0.2) span(0.2);
+                float: none;
+/*                @include breakpoint ($mobile){
                     width: 95%;
                     margin: span(0.1) 0 span(0.2) span(0.2);
                     float: none;
-                }
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                margin: span(0.1) 0 span(0.1) span(0.2);
+                }*/
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,
+                $tablet,$tabletlandscape
+                )){
+                        margin: span(0.1) 0 span(0.1) span(0.2);
                 float: left;
+                }
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
+            
                 max-width: 30%;
                 }
-                
+                @include breakpoint(($tablet,$tabletlandscape)){
+                max-width: 25%;    
+              
+                }
                
             }
             .breaking-news-element{
@@ -155,6 +166,9 @@ body .conteneur {
                 @include font-size(m);//utilisation de typey
                 text-transform: uppercase;
                 cursor:pointer;
+                @include breakpoint(($tablet,$tabletlandscape)){
+                    @include font-size(s);//utilisation de typey
+                }
                 &::before{
                     transform: scale(0)!important;
                 }
