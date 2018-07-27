@@ -175,10 +175,10 @@ ______________________________*/
             list-style: none;
         }
         h4{
-            @include font-size(s);//utilisation de typey
+            @include font-size(xs);//utilisation de typey
         }
         .ref-offre-autre{float: none;
-                         @include font-size(s);//utilisation de typey
+                         @include font-size(xs);//utilisation de typey
 
         }
         a{

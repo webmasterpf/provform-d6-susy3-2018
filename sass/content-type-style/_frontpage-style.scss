@@ -167,7 +167,7 @@ body .conteneur {
                 text-transform: uppercase;
                 cursor:pointer;
                 @include breakpoint(($tablet,$tabletlandscape)){
-                    @include font-size(s);//utilisation de typey
+                    @include font-size(xs);//utilisation de typey
                 }
                 &::before{
                     transform: scale(0)!important;
@@ -327,7 +327,7 @@ body .conteneur {
                     }
                 }
                 span.accroche-admin{
-                    @include font-size(s);//utilisation de typey
+                    @include font-size(xs);//utilisation de typey
                     padding: em(6px);
                     display: block;
                     word-break: break-word;
@@ -460,7 +460,7 @@ body .conteneur {
                             text-transform: uppercase;
                             font-weight: bold;
                             color: $blanc-casse;
-                            @include font-size(s);//utilisation de typey
+                            @include font-size(xs);//utilisation de typey
                             /*@include backgroundImage("SVG/bg_acces_contact.svg");*/
                             background-size: cover;
                             /*background-clip: padding-box;*/
@@ -483,7 +483,7 @@ body .conteneur {
                             }
                             @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
                                  @include arrondis(3em);  
-                                 @include font-size(s);//utilisation de typey
+                                 @include font-size(xs);//utilisation de typey
                             }
                             &:hover{
 

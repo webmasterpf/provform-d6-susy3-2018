@@ -102,7 +102,7 @@ body .conteneur{
         color: $orange-fonce;
     }
     h4{
-        @include font-size(s);//utilisation de typey
+        @include font-size(xs);//utilisation de typey
         color: $orange-fonce;
     }
     a{
@@ -226,7 +226,7 @@ ______________________________*/
             background: $gris-clair;
             margin: em(3px) 0;
 
-            @include font-size(s);//utilisation de typey
+            @include font-size(xs);//utilisation de typey
             color: $gris-anthracite;
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 max-width: 75%;

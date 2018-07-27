@@ -128,7 +128,7 @@ body .conteneur{
         color: $orange-fonce;
     }
     h4{
-        @include font-size(s);//utilisation de typey
+        @include font-size(xs);//utilisation de typey
         color: $orange-fonce;
     }
     a{
@@ -264,7 +264,7 @@ ______________________________*/
             max-width: fit-content;
         }
         h4{
-            @include font-size(s);//utilisation de typey
+            @include font-size(xs);//utilisation de typey
             color: $gris-anthracite;
         }
     }
@@ -300,7 +300,7 @@ ______________________________*/
             li{
                 list-style: square;
                 list-style-position: inside;
-                @include font-size(s);//utilisation de typey
+                @include font-size(xs);//utilisation de typey
             }
         }
     }

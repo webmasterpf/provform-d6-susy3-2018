@@ -181,7 +181,7 @@ ______________________________*/
       table#infos-pratiques-bts{
 
         border: em(2px) solid $gris-clair-moyen;
-        @include font-size(s);//utilisation de typey
+        @include font-size(xs);//utilisation de typey
         @include arrondis();
         border-collapse:separate;
 
@@ -321,7 +321,7 @@ ______________________________*/
             li{
                 list-style: square;
                 list-style-position: inside;
-                @include font-size(s);//utilisation de typey
+                @include font-size(xs);//utilisation de typey
             }
         }
     }

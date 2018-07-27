@@ -396,11 +396,11 @@ ______________________________*/
             ul.acces-contenu-lycees,ul.acces-contenu-international{
                 span{
                     @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
-                        @include font-size(s);//utilisation de typey
+                        @include font-size(xs);//utilisation de typey
                     }
                     
                     @include breakpoint($desktop){
-                        @include font-size(s);//utilisation de typey
+                        @include font-size(xs);//utilisation de typey
                     }
                     @include breakpoint($desktopwide){
                         font-size: 0.9em;
@@ -477,11 +477,11 @@ ______________________________*/
        ul.acces-contenu-international{
                 span{
                     @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
-                        @include font-size(s);//utilisation de typey
+                        @include font-size(xs);//utilisation de typey
                     }
                     
                     @include breakpoint($desktop){
-                        @include font-size(s);//utilisation de typey
+                        @include font-size(xs);//utilisation de typey
                     }
                     @include breakpoint($desktopwide){
                         font-size: 0.9em;

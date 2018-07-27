@@ -256,7 +256,7 @@ ______________________________*/
                         padding: em(3px);
                         border-style: solid;
                         font-weight: bold;
-                        @include font-size(s);//utilisation de typey
+                        @include font-size(xs);//utilisation de typey
                     }      
                 }
                 &.tid-153,&.tid-154{//Style pour Actu importée ER

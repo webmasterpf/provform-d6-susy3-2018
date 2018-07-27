@@ -597,7 +597,7 @@ $idslycees: 2,5,6,8,9,10,11;
                         color: $prune;
                         text-decoration: none;
 
-                        @include font-size(s);//utilisation de typey
+                        @include font-size(xs);//utilisation de typey
                         &:hover{
                             background: $rose-fushia;
                             @include arrondis(em(10px));

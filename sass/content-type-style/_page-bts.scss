@@ -140,13 +140,13 @@ body .conteneur{
             @include font-size(m);//utilisation de typey
         }
         .description p{
-            @include font-size(s);//utilisation de typey
+            @include font-size(xs);//utilisation de typey
         }
         p,label{
             color: white;
         }
         input[type="submit"]{
-            @include font-size(s);//utilisation de typey
+            @include font-size(xs);//utilisation de typey
         }
     }
 
@@ -255,7 +255,7 @@ ______________________________*/
                 max-width: 80%;
                 margin: em(5px) auto;
                 color: $blanc-casse;
-                @include font-size(s);//utilisation de typey
+                @include font-size(xs);//utilisation de typey
                 &.centre{
                     //classe ajoutée dans la vue - réécriture du champ
                     border: em(1px) dashed;//couleur héritée du LI parent
