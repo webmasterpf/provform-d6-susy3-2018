@@ -69,10 +69,13 @@ aside.DiapoHPFull{
                 }
                 img,object{
                     @include adaptable-img;
-                    max-height: 80vw;
-                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        max-height: 15vw;
+                    max-height: 50vw;
+                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
+                        max-height: 8vw;
                     }
+                    @include breakpoint(($tablet,$tabletlandscape)){
+                        max-height: 10vw;
+                }
                 }
                 a{
                     display: block;
@@ -395,20 +398,19 @@ body .conteneur {
                     column-fill: balance;
                     white-space: normal;
                 }
-                @include breakpoint(($tablet,$tabletlandscape
-                )){
+                @include breakpoint($tablet){
                     margin: span(0.5) span(0.2);    
                 }
-                @include breakpoint($mobilelandscape){
+                @include breakpoint(($mobilelandscape,$tabletlandscape)){
                      display:inline-block;
-                    column-count: 2;
+                    column-count: 4;
                     column-fill: balance;
                     white-space: normal;
                     //centrer le UL
-                    margin: 0 30vw;
-                    width: 30vw;
+                    margin: 0 10vw;
+                    max-width: 95%;
                 }
-                @include breakpoint(($mobile-galaxyShd,$mobile-iphonehd)){
+                @include breakpoint(($tablet,$mobile-galaxyShd,$mobile-iphonehd)){
                      display:inline-block;
                     column-count: 2;
                     column-fill: balance;
@@ -437,18 +439,24 @@ body .conteneur {
                     span.titre-admin{
                         display: block;
                         text-align:center;
-                               @include breakpoint(($desktop,$desktopwide,$mobilelandscape,
-                    $tablet-hd,$tabletlandscape-hd)){
+                        @include breakpoint(($desktop,$desktopwide,
+                        $tablet-hd,$tabletlandscape-hd)){
                             min-height: 11vw;          
                             min-width: 11vw;
                             max-width: 11vw;
                             max-height: 11vw;
                             vertical-align: middle;
                         }
-                                @include breakpoint(($tablet,$tabletlandscape
-                )){
-                    max-width: 20vw;
-                }
+                        @include breakpoint(($tablet,$tabletlandscape
+                        )){
+                            max-width: 20vw;
+                            min-height: 14vw;
+                        }
+                        @include breakpoint($mobilelandscape){
+                            max-width: 20vw;
+                            min-width: 12vw;
+                            min-height: 20vw;
+                        }
                         @include breakpoint(($mobile-galaxyShd,$mobile-iphonehd)){
                             max-width: 50vw;
                             max-height: 50vw;
@@ -474,12 +482,16 @@ body .conteneur {
                             @include arrondis(4em);  
                             background-color: $gris-anthracite;
 
-                            @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
+                            @include breakpoint(($desktop,$desktopwide)){
                                 max-width: 11vw;
                                 max-height: 11vw;
                                 @include font-size(m);//utilisation de typey
                                 word-spacing: em(3px);
 
+                            }
+                            @include breakpoint(($mobilelandscape,$mobilelandscape-galaxyShd)){
+                            @include arrondis(2em);      
+                            @include font-size(xxs);//utilisation de typey
                             }
                             @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
                                  @include arrondis(3em);  

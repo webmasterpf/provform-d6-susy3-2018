@@ -105,7 +105,7 @@ aside.contenu-rubrique{
                 display: flex;
             }
         }
-        @include breakpoint ($tablet){
+        @include breakpoint (($tablet,$mobilelandscape)){
             column-count: 1;
              li{
                 @include  txt-colonnes();
@@ -123,7 +123,7 @@ aside.contenu-rubrique{
                     }
              }
         }
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
             column-count: 2;
             column-fill: balance;
             white-space: normal;
@@ -132,7 +132,7 @@ aside.contenu-rubrique{
                 @include  txt-colonnes();
                     span{
                         text-decoration: none;
-                        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+                        @include breakpoint(($tablet,$tabletlandscape)){
                             /*max-width: span(1);*/
                             max-width: 30%;//correction
                             padding: 0 0 0 em(4px);
@@ -140,7 +140,7 @@ aside.contenu-rubrique{
                             max-width: 50%;//correction    
                             }
                         }
-                        @include breakpoint($desktop){
+                        @include breakpoint(($desktop,$mobilelandscape-galaxyShd)){
                             /*max-width: 7vw;*/
                             max-width: 29%;//correction
                             &.ville{
