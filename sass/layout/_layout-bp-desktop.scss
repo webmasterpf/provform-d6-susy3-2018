@@ -90,11 +90,15 @@ aside#block-service_links-service_links{
     @include arrondis (em(5px));
     @include clearfixsusy3;
     @include PIE;
-    
-    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+    @include breakpoint(($mobilelandscape,$tablet)){
         position: relative;
-    width: 6vw;   
-    max-width: 5vw;
+        min-width: 11vw;   
+        max-width: 15vw;
+    }
+    @include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
+        position: relative;
+        min-width: 6vw;   
+        max-width: 7vw;
 
     
 

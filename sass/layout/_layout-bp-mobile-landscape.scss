@@ -5,7 +5,7 @@ Layout pour les mobiles (paysage).Breakpoint définit par variable dans _variabl
 
 body .conteneur{
     /*    //Dimensions pour orientation paysage mobile / tablette */
-    @include susy-breakpoint($mobilelandscape) {
+    @include breakpoint($mobilelandscape) {
        max-width: container($mobilecol-landscape); 
        @debug susy-get(columns);
          #header{
