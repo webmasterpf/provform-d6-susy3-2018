@@ -184,8 +184,17 @@ aside.nav-espace-entreprise,aside.nav-espace-partenaire{
 .espace-accueillir-jeune,.espace-devenir-partenaire,.espace-taxe-apprentissage,.espace-vie-lycees{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             float: left;
+            min-width: 25%;
             max-width: 25%;
             padding: span(0.1);
+        }
+        ul{
+            li{
+                a{
+                    @include txt-cesure;
+                    @include txt-ellipse;
+                }
+            }
         }
     
 }
@@ -519,6 +528,9 @@ ______________________________*/
                     display:block;
                     padding: span(0.1);
                    // &:hover{color: inherit;}
+                    @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+                        @include font-size(xs);//utilisation de typey
+                    }
                 }
             }
         }
