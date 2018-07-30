@@ -93,7 +93,7 @@ body .conteneur{
         }
     }
     .zone2_layout_9_3{
-@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+@include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
 
             width: span(3 of $desktopcol);
             float:left;
