@@ -255,8 +255,11 @@ ______________________________*/
     }
     ul.actu-hasard-list-ul{
         padding:span(0.5);
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tabletlandscape)){
             display: flow-root;
+        }
+             @include breakpoint(($mobilelandscape,$tablet)){
+            column-count: 3;
         }
         li{
             list-style:none;
