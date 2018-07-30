@@ -523,56 +523,34 @@ ______________________________*/
             }
         }
     }
-    .espace-devenir-partenaire{
+    .espace-devenir-partenaire,.espace-taxe-apprentissage{
         ul{
 
             li{
 
                 a{
                     background:$gris-clair;
-                        &:hover{color: $orange-fonce;}
+                    color: $orange-fonce;
+                        &:hover{color: $gris-anthracite;}
                 }
             }
         }
     }
-    .espace-accueillir-jeune{
+    .espace-accueillir-jeune, .espace-vie-lycees{
         ul{
 
             li{
 
                 a{
                      color:$gris-clair;
+                     
                      background:$gris-clair-moyen;
                     &:hover{color: $orange-fonce;}
                 }
             }
         }
     }
-    .espace-taxe-apprentissage{
-        ul{
-
-            li{
-
-                a{
-                        background:$gris-clair;
-                        &:hover{color: $orange-fonce;}
-                }
-            }
-        }
-    }
-    .espace-vie-lycees{
-        ul{
-
-            li{
-
-                a{
-                     color:$gris-clair;
-                     background:$gris-clair-moyen;
-                    &:hover{color: $orange-fonce;}
-                }
-            }
-        }
-    }
+  
     
     //Style page Espace Partenaire
     aside.espace-partenaire{
