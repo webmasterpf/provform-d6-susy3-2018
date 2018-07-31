@@ -345,12 +345,17 @@ body .conteneur {
                 max-width: span(11);
                 margin:0 auto;
                 padding: span(0.02);
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                @include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
 /*                    column-count: 6;
                     column-fill: balance;
                     white-space: normal;*/
                     display: flex;
                     flex-flow: row;
+                }
+                @include breakpoint(($mobilelandscape,$tablet)){
+                     column-count: 3;
+                    column-fill: balance;
+                    white-space: normal;
                 }
                 li{
                     list-style: none;
@@ -377,6 +382,9 @@ body .conteneur {
                         transition-duration: 0.4s;
                         @include txt-ellipse;
                         @include txt-cesure(break-word);
+                        @include breakpoint(($mobilelandscape,$tablet)){
+                        @include font-size(s);//utilisation de typey    
+                        }
                         &:hover{
                             background: $gris-clair-moyen;
                             color: $orange-fonce;
