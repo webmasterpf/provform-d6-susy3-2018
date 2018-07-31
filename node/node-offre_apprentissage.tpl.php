@@ -57,14 +57,18 @@
                <td class="etat">  <?php  print $node->field_etat_poste[0]['view'] ?></td>
 
            </tr>
-            <tr class="line2">
+                   <tr class="">
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+           </tr>
+            <tr class="postuler">
                <td> Postuler à l'offre</td>
                <td>
                    <?php
 //                   drupal_set_message(print_r($node->field_etat_poste, TRUE));
                    $etats_possible = [76, 77];
                    if (in_array($node->field_etat_poste [0]['value'], $etats_possible)) {//si le tid est dans le tableau
-                       print '<a href=/node/739?destinataire=' . $node->field_centre_bts[0]['value'] . '&ref_offre=' . $node->field_reference_pbts[0]['value'] . '>ICI</a>';
+                       print '<a href=/node/739?destinataire=' . $node->field_centre_bts[0]['value'] . '&ref_offre=' . $node->field_reference_pbts[0]['value'] . '> >>> ICI <<< </a>';
                    } else {//sinon
                        print 'Vous ne pouvez plus postuler pour cette offre';
                    }

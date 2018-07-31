@@ -1,4 +1,4 @@
-<!--_________ NODE TEMPLATE POUR OFFRE de CONTRAT PRO BTS -->
+<!--_________ NODE TEMPLATE POUR OFFRE de CONTRAT PRO BTS node-poste_bts_alternance.tpl _______-->
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
   <div class="node-inner">
         <!--______________ ILLUSTRATION et TITRE ________________ -->
@@ -59,9 +59,17 @@
                <td class="etat">  <?php  print $node->field_etat_poste[0]['view'] ?></td>
 
            </tr>
-            <tr class="line2">
+           <tr class="">
+               <td>&nbsp;</td>
+               <td>&nbsp;</td>
+           </tr>
+            <tr class="postuler">
                <td> Postuler à l'offre</td>
-               <td> <?php print '<a href=/node/184?destinataire='.$node->field_centre_bts[0]['value'].'&ref_offre='.$node->field_reference_pbts[0]['value'].'>ICI</a>';?></td>
+               <td> 
+                   <?php print '<a href=/node/184?destinataire='.$node->field_centre_bts[0]['value'].'&ref_offre='.$node->field_reference_pbts[0]['value'].'>'
+                   . '>>> ICI <<<'
+                       . '</a>';
+                   ?></td>
 
            </tr>
           

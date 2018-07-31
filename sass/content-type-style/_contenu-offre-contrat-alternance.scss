@@ -146,13 +146,31 @@ ______________________________*/
             background: $gris-clair;
             color: $rose-fushia;
         }
+        tr.postuler{
+            background: $orange-fonce;
+            color: $gris-clair;
+            cursor:pointer;
+            text-align: center;
+            &:hover{
+            background: $gris-anthracite;
+            color: $gris-clair;    
+            }
+                 a{
+            color: $gris-clair;
+                 }
+            
+            }
         td.etat{
             font-weight: bold;
         }
+        
+        
         td{
             @include txt-cesure;
         }
-        a{color: $orange-fonce;text-decoration: none;font-weight: bold;
+        a{
+            color: $orange-fonce;
+            text-decoration: none;font-weight: bold;
           &:hover{text-decoration: underline;}
         }
 
