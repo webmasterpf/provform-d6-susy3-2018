@@ -7,62 +7,56 @@
  */
 
 ?>
-<!-- NODE-WEBFORM.TPL SPECIFIQUE : ENQUETE -->
+<!-- NODE-WEBFORM.TPL SPECIFIQUE : OFFRE DE CONTRAT -->
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
 <?php if ($sticky) { print " sticky"; } ?><?php if (!$status) { print " node-unpublished"; } ?>
    
-      <!--______________COLONNE 1________________ -->
-        <?php /* choix du layout selon nombre de colonne
-         * .col1_layout_200_590_200{} .col1_layout_330_all{} .col1_layout_18_56_25{}
-         * .col2_layout_200_590_200{} .col2_layout_330_all{} .col2_layout_18_56_25{}
-         * .col3_layout_200_590_200{} .col3_layout_330_all{} .col3_layout_18_56_25{}
-         * .col1_layout_215_535_235{} .col2_layout_215_535_235{} .col3_layout_215_535_235{}
-         * .col1_layout_490_all{}  .col2_layout_490_all{}
-         */?>
-  
-<div id="colonne-1" class="col1_layout_225_720">
-     <?php if ($title): /*insertion du titre de la page et style differencié*/?>
-     <h1 class="titre_pl"><?php print $title; ?></h1>
-
-    <?php endif; ?>
-      <br clear="all"/>
-       <?php
-              global $theme_path;
-              include ($theme_path.'/includes/inc_region_col_G1.php');
-              ?>
-</div>
-<!--______________COLONNE 2________________ -->
+        <!--______________ ILLUSTRATION et TITRE ________________ -->
+        <div id="zone-illustration" class="offre-contrat-alternance">
+                     <?php if ($title): /*copier le titre dans la zone desirée*/?>
          
-        <div id="colonne-2" class="col2_layout_225_720 webform">
+            <?php endif; ?>
+            
+                 <?php if ($node->field_illus_administratif[0]['view']
+                 OR
+                 $title
+                 ): ?>
+            <div id="illustration-pleinepage" class="illustration-offre">
+                   <h1 class="titre_overlay titre_page"><?php print $title; ?></h1>
+                 <?php  print $node->field_illus_administratif[0]['view'] ?>
+            </div>
+            <?php endif;?>
+                 
+            </div><!-- /zone-illustration -->
+       <!--______________ ZONE 1 ________________ -->
+        <div id="zone-1" class="zone_layout_max_centre webform">
+          <?php print $picture; ?>
 
-     <?php if ($submitted) { ?>
-    <span class="submitted"><?php print $submitted?></span>
-  <?php }; ?>
+<?php if ($submitted): ?>
+                <span class="submitted"><?php print $submitted; ?></span>
+<?php endif; ?>
+                
+                            <?php
+              global $theme_path;
+              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
+              ?>
 
- 
+      
+                
+                
+                        <div class="content">
+                            
+                            <a href="javascript:history.back();" class="retour-liste"> << Retour au détail de l'offre </a>
+                            
+                <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
+                            
+                            <?php print $node->content['webform']['#value']; ?>
+                </div>
 
-  <div class="content">
-    <table>
-    <tr>
-    <td><?php print $node->content['body']['#value']; ?></td>
-    </tr>
-    <tr>
-    <td><?php print $node->content['webform']['#value']; ?></td>
-    </tr>
-    </table>
-  </div>
+                
+         
+         
+        </div><!--  /zone-1-->
 
-    <?php if ($links): ?>
-    <div class="links">&raquo; <?php print $links; ?></div>
-  <?php endif; ?>
-
-     <?php if ($terms) { ?>
-    <span class="taxonomy"><?php print $terms?></span>
-  <?php }; ?>
-
-</div>
-
-
-<div class="clear-block clear"></div>
-
+</div> <!-- /node-inner -->
 </div><!-- /node -->
