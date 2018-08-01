@@ -157,32 +157,43 @@
             transform: translate(0%,-39%);
         }
     }
-    &.nid-354{//	BAC Pro Gestion Administration (GA)	
+    &.nid-354{//BAC Pro Gestion Administration (GA)	
  
     
     }
-    &.nid-393{//	Préparation au concours ATSEM 
+    &.nid-393{//Préparation au concours ATSEM 
         img{
             transform: translate(0%,-42%);
         }
     }
-    &.nid-486{//	BAC Pro Commercialisation et services en restauration - CSR	
+    &.nid-486{//BAC Pro Commercialisation et services en restauration - CSR	
                  img{
             transform: translate(0%,-21%);
         }
     }
-    &.nid-488{//	BAC Professionnel Cuisine	
+    &.nid-488{//BAC Professionnel Cuisine	
  
     }
-    &.nid-807{//	CAP Commercialisation et service Hôtel-Café-Restaurant	
+    &.nid-807{//CAP Commercialisation et service Hôtel-Café-Restaurant	
  
     }
-   //***** LES FICHES BTS *********
-   &.nid-113{//NDRC
-             img{
-                 transform: translate(0%,-39%);
-             }
-   }
+    //***** LES FICHES BTS *********
+    &.nid-113{//NDRC
+              img{
+                  transform: translate(0%,-39%);
+              }
+    }
+    
+    }
+}
+#zone-illustration.contenu-entreprise{
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        //***** CONTENU ENTREPRISE
+        &.nid-51{//Proposer un stage
+                 img{
+                     transform: translate(0%,-38%);
+                 }
+        }
     }
 }
 
