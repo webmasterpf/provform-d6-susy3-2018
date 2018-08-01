@@ -99,8 +99,11 @@ body .conteneur{
         ¤¤¤ STYLES PROPRES ¤¤¤
 ______________________________*/
 
-#zone-1.webform{
-    /*---- STYLE ELEMENTS FORMULAIRE ----*/
+#zone-1.webform,#zone-1.contenu-entreprise
+{
+    /*---- STYLE ELEMENTS FORMULAIRE 
+    ajout des classes utiles pour styler les formulaires inclus via un bloc dans une région
+    ----*/
     
            
 form.webform-client-form{
@@ -115,7 +118,8 @@ form.webform-client-form{
         margin: 0;
         padding: 0;
     }
-    input[type="text"],input[type="email"],input[type="submit"],select,textarea{
+     input[type="text"]:not([id='edit-submitted-duree-du-stage']):not([id="edit-submitted-remuneration"]),
+        input[type="email"],input[type="submit"],select,textarea{
     width: 95%;margin: 0 auto;  display: block;
     }
     input[type="submit"]{
