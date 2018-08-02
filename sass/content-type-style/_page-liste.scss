@@ -56,7 +56,7 @@ body .conteneur{
     >.content{
         column-count: 0;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            column-count: 2;
+            column-count: 1;
             column-fill: balance;
             white-space: normal;
             padding: span(0.1);
@@ -143,8 +143,17 @@ body .conteneur{
         color: $bleu-turquoise;
     }
     h2{
-        @include font-size(l);//utilisation de typey
+        @include font-size(xs);//utilisation de typey
         color: $orange-fonce;
+        @include breakpoint(($mobilelandscape-galaxyShd,$desktopwide)){
+            @include font-size(l);//utilisation de typey
+        }
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+            @include font-size(s);//utilisation de typey
+        }
+        @include breakpoint(($desktop,$tablet-hd,$tabletlandscape-hd)){
+            @include font-size(m);//utilisation de typey
+        }
     }
     h3{
         @include font-size(m);//utilisation de typey
@@ -177,12 +186,14 @@ ______________________________*/
                 cursor: pointer;
                 label{
                     cursor: pointer;
+                     @include txt-fontsize();//utilisation de typey + BP
                     &:after{
                         content: "Alternance";
                         color:$orange-fonce;
-                        @include font-size(l);//utilisation de typey
+                        @include txt-fontsize();//utilisation de typey + BP
                         font-family: $FontRaleway;
                     }
+                    
                 }
                 &:hover:not(#edit-term-node-tid-depth-limited-All-wrapper){
 
@@ -227,7 +238,8 @@ ______________________________*/
                     background: $orange-fonce;
                     border: em(1px) dashed $gris-anthracite;
                     color: $blanc-casse;
-                    @include font-size(l);//utilisation de typey
+                    @include txt-fontsize();//utilisation de typey + BP
+                    
                     font-family: $FontArvo;
                 }
             }
@@ -268,7 +280,8 @@ ______________________________*/
                         @include txt-ellipse;
                         color: $gris-clair;
                         &:hover{
-                            color: $gris-clair-moyen;
+                            color: $blanc-casse;
+                            @include transition-hover();
                         }
                     }
                 }

@@ -110,7 +110,8 @@ body .conteneur{
         color: $orange-fonce;
         &:hover{
             text-decoration: underline;
-            transition: all 0.5s ease;
+            @include transition-hover();
+            
         }
     }
     strong{
@@ -342,7 +343,7 @@ ______________________________*/
                 &:hover{
                       background: $gris-anthracite;
                       color: $blanc-casse;
-                      transition: all 0.5s ease;
+                      @include transition-hover();;
                       text-decoration: none;
                 }
             }

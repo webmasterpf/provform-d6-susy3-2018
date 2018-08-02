@@ -71,6 +71,20 @@ $font-size: (
 
 $typey-debug: false;
 $typey-debug-color: red;
+@mixin txt-fontsize{
+    //Pour fixer la gradation de la taille de typo selon BP
+    @include font-size(xs);//utilisation de typey
+    @include breakpoint(($mobilelandscape-galaxyShd,$desktopwide)){
+        @include font-size(l);//utilisation de typey
+    }
+    @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+        @include font-size(s);//utilisation de typey
+    }
+    @include breakpoint(($desktop,$tablet-hd,$tabletlandscape-hd)){
+        @include font-size(m);//utilisation de typey
+    }
+}
+
 
 /*====================================|
 ==             VALEURS PAR DEFAUT             ==|

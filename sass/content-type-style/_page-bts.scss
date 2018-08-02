@@ -127,7 +127,7 @@ body .conteneur{
         color: $orange-fonce;
         &:hover{
             text-decoration: underline;
-            transition: all 0.5s ease;
+            @include transition-hover();;
         }
     }
 

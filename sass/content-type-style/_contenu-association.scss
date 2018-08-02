@@ -93,7 +93,7 @@ body .conteneur{
         text-decoration:none;
         &:hover{
             text-decoration: underline;
-            transition: all 0.5s ease;
+            @include transition-hover();;
         }
     }
 }

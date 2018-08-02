@@ -227,6 +227,9 @@ https://www.creativejuiz.fr/blog/css-css3/controles-fin-des-cesures-css4-text
     transition: all 100ms ease-in;
 
 }
+@mixin transition-hover($duree: 0.5s,$type: ease){
+    transition: all $duree $type;
+}
 @mixin image-overlay($filename,$position:0 0,$repeat: repeat){
     content: "";
     top: 0;
