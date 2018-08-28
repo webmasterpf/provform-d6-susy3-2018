@@ -160,7 +160,7 @@ body .conteneur {
                
             }
             .breaking-news-element{
-                padding: span(0.005);
+                
                 border: em(3px) transparent solid;
                 background: $orange-fonce;
                 transition-property: background !important;
@@ -188,6 +188,7 @@ body .conteneur {
             }
             a{
                 display: block;
+                padding: span(0.005);
                 text-decoration:none;
                 text-align: center;
                 color: $blanc-casse;
