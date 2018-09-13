@@ -48,7 +48,7 @@ body .conteneur {
         padding: 0.3em;
         top: 0;//vertical 4em
         left: 4%; //vertical -4em- position onglet sur mobile
-        @include font-size(s);//utilisation de typey
+        @include font-size(xs);//utilisation de typey
         /* quelques styles CSS3 270deg pour vertical gauche ; 0deg */
 /*        -ms-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -96,5 +96,11 @@ body .conteneur {
         .transformer.is-open > .menu-toggle{
             top: em(-37px);//position de l'onglet ouvert
         }
+    }
+      @include breakpoint(($mobile-iphonehd,$mobile-galaxyS6)){
+          .menu-toggle,.transformer.is-open > .menu-toggle{
+            @include font-size(xs);//utilisation de typey  
+            //marche pas avec emulateur
+          }
     }
 }
