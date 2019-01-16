@@ -391,6 +391,14 @@ body .conteneur {
                             color: $orange-fonce;
                         }
                     }
+                    //Ciblage du lien concernant les JPO pour style différent
+                    a[href*="portes-ouvertes"]{
+                        
+                        @include clignote(1.8s);
+                        &:hover{
+                        
+                        }
+                    }
                 }
             }
         }
