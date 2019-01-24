@@ -504,6 +504,8 @@ ______________________________*/
             }
         }
         //**** liste contenu alternance ***//
+       
+        
         ul.acces-contenus-alternance{
             //classes dynamique attribuées dans la vue
             li.page-offre-contrat-pro{
@@ -545,6 +547,15 @@ ______________________________*/
                     color: $orange-fonce;
                         &:hover{color: $gris-anthracite;}
                 }
+                         //Ciblage du lien concernant les UAI pour mise en avant
+                    a[href*="uai"]{
+                        background:$orange-fonce;
+                        color: $gris-clair;
+                        @include clignote(1.8s);
+                        &:hover{
+                        
+                        }
+                    }
             }
         }
     }
@@ -581,6 +592,43 @@ ______________________________*/
             }
         }
     }
+}
+/*-- Mise en avant du lien vers les numéros UAI sous l'illustration pour résoudre problème des écrans trop petits'*/
+#zone-1.page-espace{
+     .content{
+            h2:first-child{
+                /*&:not(.offre-titre){*/
+                /*position:relative;*/
+
+                a[href*="node"]{
+                    display: block;
+                    position: relative;
+                    transform: rotate(-4deg);
+                    color: $jaune;
+                    background: $gris-anthracite;
+                    padding: span(0.01);
+                    margin: em(5px) 10vw;
+                    /*max-width: fit-content;*/
+                    max-width: 20%;
+                    text-decoration: none;
+                    @include clignote(3s);
+
+                    //Effet coin retourné
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        border-width: 0 em(10px) em(10px) 0;
+                        border-style: solid;
+                        border-color: $orange-fonce ;
+                    }
+
+                }
+
+                /*}*/
+            }
+        }
 }
 #zone-2.page-espace{}
 #zone-3.page-espace{}
