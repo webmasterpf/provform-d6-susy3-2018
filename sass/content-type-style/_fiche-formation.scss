@@ -99,6 +99,14 @@ body .conteneur{
         }    
 
     }
+    aside.liste-formations-possibles{
+         margin: span(0.01) auto;
+        padding: span(0.01);
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            width: span(5);
+            margin: span(0.02) auto;   
+        }
+    }
 }
 
 /*######-------- ||| STYLE ||| --------######*/
@@ -308,7 +316,7 @@ ______________________________*/
         }
     }
     aside.lycees-possibles{
-        @include backgroundImage("PNG/lieux@3x.png", bottom right);
+        @include backgroundImage(("PNG/lieux@3x.png"), bottom right);
         background-size: contain;
         ul{
             @include backgroundImage(("PNG/motif_img_overlay.png"),transparent,top left,repeat);
@@ -327,6 +335,26 @@ ______________________________*/
             }
         }
 
+    }
+    aside.liste-formations-possibles{
+              @include backgroundImage(("PNG/lieux@3x.png"), bottom right);
+        background-size: contain;
+        ul{
+            @include backgroundImage(("PNG/motif_img_overlay.png"),transparent,top left,repeat);
+
+            li{
+                list-style: none;
+                a{
+
+                    &:hover{
+                        background: $orange-fonce;
+                        color: $gris-anthracite;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+        }
     }
 }
 #zone-4.fiche-formation{}
