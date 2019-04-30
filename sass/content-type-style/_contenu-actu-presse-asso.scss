@@ -38,7 +38,7 @@ body .conteneur{
     /*position: relative;*/
     /*display: inline-block;*/
     @include backgroundImage('SVG/image_defaut_actu_2500.svg');
-    @include background-size(cover);                  
+    @include background-size(cover);
     img{
         transform: translate(0%,0%);
     }
@@ -67,7 +67,7 @@ body .conteneur{
     }
     //Galerie d'image
     aside.galerie{
-        background: $orange-fonce;   
+        background: $orange-fonce;
         display: flex;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.05);
@@ -78,7 +78,14 @@ body .conteneur{
             padding: span(0.05);
             width: span(6);
             margin: 0 auto;
-        }    
+        }
+    }
+    aside.video {
+      iframe{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+          min-height: 30vw;
+        }
+      }
     }
 }
 #zone-2.actu-presse{
@@ -127,7 +134,7 @@ body .conteneur{
     h1.titre_overlay{
         //transform: translate(0%, -45%) !important;
         @include titre_overlay();
-        
+
     }
 }
 #zone-1.actu-presse,
@@ -234,7 +241,7 @@ ______________________________*/
         tbody, tr{background: transparent;border-bottom: 1px dashed $gris-anthracite;}
         thead{}
     }
- 
+
 }
 
 #zone-2.actu-presse{

@@ -78,9 +78,9 @@
     <div id="zone-3" class="zone_layout_max_centre fiche-formation">
         
                <?php if ($node->field_vue_content_vr[0]['view']): ?>
-            <div id="liste-formations-possibles">
+            <aside class="liste-formations-possibles">
                     <?php  print $node->field_vue_content_vr[0]['view']  /* Affichage liste des formations possible après cette seconde, réforme 2019 - Champs ViewRef */ ?>
-            </div>
+            </aside>
             <?php endif;?>
         
              <?php if ($node->field_section_specifique[0]['view']): ?>
