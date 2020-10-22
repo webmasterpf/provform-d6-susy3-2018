@@ -27,6 +27,7 @@ breakpoint-sass
 
 Vérifier versions des npm:
 npm-check
+npm list | grep sass pour filtrer la liste
 
 Vérifier maj pour NPM:
  sudo npm update check
@@ -50,7 +51,8 @@ Vérifier maj pour NPM:
 
 BROWSER SYNC
 -----------------
-:/var/www/drupal-6/sites/all/themes/dossier_projet$ npm install browser-sync --save-dev
+:/var/www/drupal-6/sites/all/themes/dossier_projet$
+npm install browser-sync --save-dev
 
 GIT
 -----------------
