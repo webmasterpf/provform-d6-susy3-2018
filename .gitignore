@@ -1,0 +1,24 @@
+## Fichiers suivis dans tous les cas
+!package.json
+package-lock.json
+
+## Fichiers ignorés
+/Import_Taxo_Termes.csv
+**.scssc
+**.sassc
+**.sass-cache
+**.db
+**.ftp*
+**Thumbs.db
+**.sqlite
+**.suo
+**/Thumbs.db
+**.cson
+## Dossiers ignorés - évite conflits
+symfony-2.8
+private
+node_modules
+config
+## Exclusion des css compilées pour éviter conflits - inutile si compilation sur LAMP
+!css/*
+!**css/*
