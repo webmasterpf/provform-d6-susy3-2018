@@ -15,7 +15,7 @@
                print $node->content['field_NAME']['field']['#title'] ?>
       <ul class="<?php print strip_tags($node->content['field_lien_utile_bts']['field']['#title']);
       // Classe dynamique utilisant nom du champ
-      ?>">
+      ?> liste-liens-bts">
                <?php
                //Parcourir le tableau field_NAME de l'objet $node pour lister le contenu clé/valeur
               foreach ($node->field_lien_utile_bts as $key => $liens) {
