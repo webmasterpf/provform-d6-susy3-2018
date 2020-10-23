@@ -50,19 +50,19 @@ var assetsPath = {
   gems: [
 //    basePaths.gems + 'susy-2.2.2/sass',
 //    basePaths.gems + 'breakpoint-2.7.1/stylesheets'
-    
-    
+
+
   ],
    node_modules: [
-       //Ajoutés avec les gems pour simplifier     
-    basePaths.node_modules +  'node-normalize-scss',       
+       //Ajoutés avec les gems pour simplifier
+    basePaths.node_modules +  'node-normalize-scss',
     basePaths.node_modules + 'breakpoint-sass/stylesheets',
     basePaths.node_modules +  'susy/sass',
     basePaths.node_modules +  'typey/stylesheets/_typey.scss'
   ],
   javascript: [
-    
-       
+
+
   ]
 };
 // Requis
@@ -82,33 +82,22 @@ var autoprefixer = require('autoprefixer');
 
 
 // Autoprefixer : Navigateurs à cibler pour le préfixage CSS
-var AUTOPREFIXER_BROWSERS = [
+// Liste fourni depuis 06/19 par .browserslistrc - Editer pour modifier.
 
-'> 1%',
-'ie >= 8',
-'edge >= 15',
-'ie_mob >= 10',
-'ff >= 45',
-'chrome >= 45',
-'safari >= 7',
-'opera >= 23',
-'ios >= 7',
-'android >= 4',
-'bb >= 10'
-];
 
 //Tableau pour utiliser les plugins de PostCSS
 //https://webdesign.tutsplus.com/tutorials/postcss-quickstart-guide-gulp-setup--cms-24543
 var processors = [
-  autoprefixer(  {
-                                browsers: AUTOPREFIXER_BROWSERS,
-                                cascade: false,
-                                //activation du prefixage pour grid
-                                grid: true 
-                            })
-                            
-//  cssnext,
-//  precss
+    autoprefixer({
+        //browsers: AUTOPREFIXER,
+        // browserslist fourni la liste des navigateurs
+        cascade: false,
+        //activation du prefixage pour grid
+        grid: true
+    })
+
+    //  cssnext,n'existe plus - 06/19
+    //  precss
 ];
 // A display error function, to format and make custom errors more uniform
 // Could be combined with gulp-util or npm colors for nicer output
@@ -132,8 +121,8 @@ var aliasDrush = ['@vmdevd6pf'];
 // #############################
 // Tâches à accomplir - Tasks
 // #############################
-// 
-// 
+//
+//
 gulp.task('sasscompil', function () {
     return gulp.src(basePaths.src)
 //    return gulp.src('./sass/**/*.scss')
@@ -172,10 +161,10 @@ gulp.task('drush', function() {
   return gulp.src(basePaths.drushscript, {
       read: false
     })
-    
+
     .pipe(plugins.shell([
       'drush @vmdevd6pf cron && drush @vmdevd6pf cc all'
-      
+
     ]))
     .pipe(plugins.notify({
       title: "Vidage de Cache",
