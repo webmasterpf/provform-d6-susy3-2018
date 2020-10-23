@@ -19,6 +19,7 @@ symfony-2.8
 private
 node_modules
 config
+nbproject
 ## Exclusion des css compilées pour éviter conflits - inutile si compilation sur LAMP
 !css/*
 !**css/*
