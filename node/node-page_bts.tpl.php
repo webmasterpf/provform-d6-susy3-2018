@@ -53,7 +53,11 @@
                 <?php  print $node->field_centres_bts[0]['view'] ?>
         </div>
    <?php endif; ?>
-
+   <?php
+   // Insertion liste des liens utiles
+    global $theme_path;
+    include ($theme_path.'/includes/dedicates_inc/inc_page_bts_liste_liens.php');
+    ?>
    <?php if ($node->field_vue_content_vr[0]['view']): ?>
    <div id="centres-bts">
           <?php  print $node->field_vue_content_vr[0]['view']
@@ -74,7 +78,7 @@
   ?>
 
 
-</div> // Fin content
+</div> <?php  // Fin content ?>
 
     <?php if ($terms): ?>
 
