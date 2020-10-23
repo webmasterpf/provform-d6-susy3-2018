@@ -13,7 +13,7 @@
 
                <?php  //récupération du nom du champ si besoin
                print $node->content['field_NAME']['field']['#title'] ?>
-      <ul class="<?php print $node->field_lien_utile_bts[0]['view'];
+      <ul class="<?php print strip_tags($node->content['field_lien_utile_bts']['field']['#title']);
       // Classe dynamique utilisant nom du champ
       ?>">
                <?php
