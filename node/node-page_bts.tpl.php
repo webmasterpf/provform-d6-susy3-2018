@@ -4,9 +4,9 @@
            <!--______________ ILLUSTRATION et TITRE ________________ -->
         <div id="zone-illustration" class="page-bts">
                      <?php if ($title): /*copier le titre dans la zone desirée*/?>
-         
+
             <?php endif; ?>
-            
+
              <?php if ($node->field_illus_administratif[0]['view']
                  OR
                  $title
@@ -16,13 +16,13 @@
                  <?php  print $node->field_illus_administratif[0]['view'] ?>
             </div>
             <?php endif;?>
-     
-            
+
+
             </div><!-- /zone-illustration -->
 <!--_______________________ ZONE 1 __________________ -->
 <div id="zone-1" class="zone_layout_max_centre page-bts">
 
- 
+
 
     <?php print $picture; ?>
 
@@ -47,30 +47,34 @@
 </span>
                   </div>
    <?php endif; ?>
-        
+
          <?php if ($node->field_centres_bts[0]['view']): ?>
         <div id="centres-bts">
                 <?php  print $node->field_centres_bts[0]['view'] ?>
         </div>
-   <?php endif; ?>    
-            
-       <?php
- global $theme_path;
- include ($theme_path.'/includes/dedicates_inc/inc_liste_bts.php');
- ?> 
+   <?php endif; ?>
+
+   <?php if ($node->field_vue_content_vr[0]['view']): ?>
+   <div id="centres-bts">
+          <?php  print $node->field_vue_content_vr[0]['view']
+          /* Affiche contenu de la vue insérée via ViewReference*/
+          ?>
+   </div>
+   <?php endif; ?>
+
  <?php if ($node->field_corps2_page_bts[0]['view']): ?>
         <div id="content2-bts">
                 <?php  print $node->field_corps2_page_bts[0]['view'] ?>
         </div>
-   <?php endif; ?>        
+   <?php endif; ?>
 
-           <?php
-              global $theme_path;
-              include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
-              ?>
-      
-      
-    </div>
+ <?php
+  global $theme_path;
+  include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
+  ?>
+
+
+</div> // Fin content
 
     <?php if ($terms): ?>
 
@@ -79,10 +83,10 @@
       </div>
     <?php endif;?>
 
-    <?php if ($links): ?> 
+    <?php if ($links): ?>
       <div class="links"> <?php print $links; ?></div>
     <?php endif; ?>
-      
+
 </div>
 
   </div> <!-- /node-inner -->
