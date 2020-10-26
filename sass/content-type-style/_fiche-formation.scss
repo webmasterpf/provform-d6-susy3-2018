@@ -36,11 +36,11 @@ body .conteneur{
     .complement-titre-fiche{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
             width: span(4);
-            margin: span(0.02) auto;   
+            margin: span(0.02) auto;
         }
         @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
             width: span(10);
-            margin: span(0.02) auto;   
+            margin: span(0.02) auto;
         }
     }
     .content{
@@ -56,14 +56,14 @@ body .conteneur{
     }
     aside.ficheform-savoirplus{
         border: em(3px) dashed  $gris-anthracite;
-        margin: span(0.02) auto;   
+        margin: span(0.02) auto;
         div.content{
             column-count: 0;
             padding: span(0.02);
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 column-count: 0 !important;
-                margin: span(0.02) auto;   
-                
+                margin: span(0.02) auto;
+
             }
         }
     }
@@ -75,7 +75,7 @@ body .conteneur{
         @include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
             column-count: 2;
             column-fill: balance;
-            white-space: nowrap;   
+            white-space: nowrap;
             column-rule: em(1px) dashed $gris-anthracite;
             h3{
                 @include txt-colonnes;
@@ -87,7 +87,7 @@ body .conteneur{
         padding: span(0.01);
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(5);
-            margin: span(0.02) auto;   
+            margin: span(0.02) auto;
         }
     }
     aside.lycees-possibles{
@@ -96,7 +96,7 @@ body .conteneur{
                 column-count: 2;
                 column-fill: balance;
             }
-        }    
+        }
 
     }
     aside.liste-formations-possibles{
@@ -104,10 +104,10 @@ body .conteneur{
         padding: span(0.01);
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(5);
-            margin: span(0.02) auto;   
+            margin: span(0.02) auto;
         }
     }
-}
+} // Fin zone-3.fiche-formation
 
 /*######-------- ||| STYLE ||| --------######*/
 
@@ -186,7 +186,7 @@ ______________________________*/
             background: $gris-anthracite;
             color: $jaune;
             font-weight: bold;
-            padding: span(0.02);    
+            padding: span(0.02);
             margin: span(0.01) 0;
             @include font-size(m);//utilisation de typey
         }
@@ -270,7 +270,7 @@ ______________________________*/
             @include txt-cesure;
             @include font-size(m);//utilisation de typey
             margin: em(10px) em(20px);
-            
+
             max-width: 100%;
             max-width: fit-content;
         }
