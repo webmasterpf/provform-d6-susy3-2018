@@ -237,12 +237,12 @@ body .conteneur{
 ______________________________*/
 
 #zone-1.page-bts{
-    aside.liste-bts-visuelle{
+    aside.liste-bts-visuelle, aside.insertion-liste{
         background: transparent;
         i{//texte d'en-tête de la vue
             color: $orange-fonce;
         }
-        ul.liste-bts-mur{
+        ul.liste-bts-mur, ul.liste-apprentissage-mur{
             li{
                 list-style: none;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
