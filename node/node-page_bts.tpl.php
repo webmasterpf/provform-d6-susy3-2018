@@ -58,14 +58,14 @@
     global $theme_path;
     include ($theme_path.'/includes/dedicates_inc/inc_page_bts_liste_liens.php');
     ?>
+    <?php
+    if ($node->field_vue_content_vr[0]['view']):
+    print '<aside class="insertion-liste">'.$node->field_vue_content_vr[0]['view'].'</aside>';
+    /* Affiche contenu de la vue insérée via ViewReference*/
+    endif;
+    ?>
 
-   <?php if ($node->field_vue_content_vr[0]['view']): ?>
-   <div id="insertion-liste">
-          <?php  print $node->field_vue_content_vr[0]['view']
-          /* Affiche contenu de la vue insérée via ViewReference*/
-          ?>
-   </div>
-   <?php endif; ?>
+
 
  <?php if ($node->field_corps2_page_bts[0]['view']): ?>
         <div id="content2-bts">
