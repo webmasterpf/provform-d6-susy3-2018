@@ -4,7 +4,7 @@
 
 // Importer les fichiers scss partiels (avec _) afin de compiler le
 // fichier css final utile pour le thème
-// Utiliser Gulp 
+// Utiliser Gulp
 // webmaster@vm-server1:~$ cd /var/www/drupal6/sites/all/themes/THEMENAMEFOLDER/
 // webmaster@vm-server1:/var/www/drupal6/sites/all/themes/THEMENAMEFOLDER/ $ gulp
 
@@ -19,26 +19,38 @@ susy-3.0.0
 breakpoint-2.7.1-
 - voir le Gemfile pour les versions utilisées
 ---------------------*/
-
 //Reset des propriétés : via node-normalize-scss (npm))
-@import "normalize";
+//Compilation locale poste W10
+//@import "../node_modules/node-normalize-scss/normalize";
+
+//Si compilation sur LAMP alors utiliser ce chemin:
+
+//@import "../node_modules/normalize.css/normalize";
+
+//Pour  node-normalize-scss@8.1.2 alors le chemin pour LAMP est le suivant:
+// Utiliser scss-resets pour avoir normalize. Ajouter chemin dans tache sasscompil
+//@import 'normalize';
+
+//Pour node-normalize-scss@8.0.1, utiliser ce chemin pour LAMP:
+//@import "normalize";
 
 // Import de Compass (framework abandonné en 2016)
 //voir mixins_custom pour les remplacements des mixins Compass
 
 /// !!! EDITER LE FICHIER GULPFILE.JS POUR DEFINIR LES CHEMINS DES GEMS et NPM !!!
 
-//Import des plugins de Sass (sans compass) via des Gems
-// utiliser par défaut Susy 3 - import OK - chemin définit dans Gulpfile
-
-/*@import '../node_modules/susy/sass/susy';*/ 
-@import "susy";
+//Import des plugins de Sass (sans compass) via des NPM
+@import '../node_modules/susy/sass/susy'; // utiliser par défaut Susy 3 - import OK
 
 //Debug de la grille Susy3
-/*@import '../node_modules/susy/sass/plugins/svg-grid';*/
+//@import '../node_modules/susy/sass/plugins/svg-grid';
 
 //@import "sassy-buttons";
-@import "breakpoint";
+//Compilation LAMP
+//@import "breakpoint";
+
+//Compilation locale poste W10
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 //Remplacement de Vertical Rhythm par Typey (Composant de node-sass) Gestion de la typographie
 @import '../node_modules/typey/stylesheets/_typey.scss';
@@ -67,7 +79,7 @@ breakpoint-2.7.1-
 @import "./layout/_layout-off-canvas-susy.scss";
 
 // Les BREAKPOINTS
-        
+
 /*@import "./layout/_layout-bp-tablet.scss";*/
 @import "./layout/_layout-bp-desktop.scss";
 //@import "./layout/layout-bp-mobile-landscape.scss";
