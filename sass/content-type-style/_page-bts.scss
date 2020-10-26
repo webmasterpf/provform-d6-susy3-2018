@@ -84,9 +84,9 @@ body .conteneur{
             }
         }
     }
-    aside.liste-bts-visuelle{
+    aside.liste-bts-visuelle, aside.insertion-liste{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
-        ul.liste-bts-mur{
+        ul.liste-bts-mur, ul.liste-apprentissage-mur{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 column-count: 4;
                 /*column-fill: auto;*/ //Pas supporté par FF60
@@ -293,7 +293,7 @@ ______________________________*/
         }
     }
     }
-    
+
 }
 #zone-2.page-bts{}
 #zone-3.page-bts{}
