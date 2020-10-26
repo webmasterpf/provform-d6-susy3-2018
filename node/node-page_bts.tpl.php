@@ -60,7 +60,7 @@
     ?>
 
    <?php if ($node->field_vue_content_vr[0]['view']): ?>
-   <div id="centres-bts">
+   <div id="insertion-liste">
           <?php  print $node->field_vue_content_vr[0]['view']
           /* Affiche contenu de la vue insérée via ViewReference*/
           ?>
