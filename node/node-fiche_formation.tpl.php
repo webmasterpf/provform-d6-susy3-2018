@@ -7,7 +7,7 @@
     <div class="node-inner">
             <!--______________ ILLUSTRATION et TITRE ________________ -->
         <div id="zone-illustration" class="fiche-formation fiche-bts nid-<?php print $node->nid; ?>">
-   
+
 
             <?php
             if ($node->field_illus_fiche_bts[0]['view']
@@ -22,7 +22,7 @@
 <?php endif; ?>
 
 
-        </div><!-- /zone-illustration -->   
+        </div><!-- /zone-illustration -->
              <!--______________ ZONE 1 ________________ -->
         <div id="zone-1" class="zone_layout_max_centre fiche-formation nid-<?php print $node->nid; ?>">
           <?php print $picture; ?>
@@ -30,28 +30,28 @@
 <?php if ($submitted): ?>
                 <span class="submitted"><?php print $submitted; ?></span>
 <?php endif; ?>
-                
-                       
+
+
 
                <?php if ($node->field_complement_info_formation[0]['view']): ?>
                     <div class="complement-titre-fiche">
                         <?php (print $node->field_complement_info_formation[0]['view']); /* Info complementaire sur formation */ ?>
                     </div>
                 <?php endif; ?>
-                
+
                      <?php
                      //Inclus le bloc Intro Fiche Formation issue d'une vue (Dev d'origine)
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
               ?>
-                
+
                    <?php if ($node->field_intro_fiche_formation[0]['view']): ?>
                     <div class="intro-fiche">
                         <?php (print $node->field_intro_fiche_formation[0]['view']); /* Inutile */?>
                     </div>
                 <?php endif; ?>
-                
-                
+
+
                         <div class="content">
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
                 </div>
@@ -61,60 +61,60 @@
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
               ?>
-         
-         
+
+
         </div><!--  /zone-1-->
 
   <?php if ($node->field_diapo_lycee_type[0]['view']): ?>
         <!--______________ ZONE 2 ________________ -->
-        <div id="zone-2" class="zone_layout_max fiche-formation">         
+        <div id="zone-2" class="zone_layout_max fiche-formation nid-<?php print $node->nid; ?>">
         <aside class="galerie">
                     <?php  print $node->field_diapo_lycee_type[0]['view'];?>
             </aside>
     </div> <!-- /zone-2 -->
   <?php endif;?>
-                
+
 <!--______________ ZONE 3 ________________ -->
-    <div id="zone-3" class="zone_layout_max_centre fiche-formation">
-        
+    <div id="zone-3" class="zone_layout_max_centre fiche-formation nid-<?php print $node->nid; ?>">
+
                <?php if ($node->field_vue_content_vr[0]['view']): ?>
             <aside class="liste-formations-possibles">
                     <?php  print $node->field_vue_content_vr[0]['view']  /* Affichage liste des formations possible après cette seconde, réforme 2019 - Champs ViewRef */ ?>
             </aside>
             <?php endif;?>
-        
+
              <?php if ($node->field_section_specifique[0]['view']): ?>
                     <h2 class="lien-section-europe">
                         <?php (print $node->field_section_specifique[0]['view']); /* Terme de Taxo pour lien avec Rubrique Europe */ ?>
                     </h2>
-                <?php endif; ?>        
-        
+                <?php endif; ?>
+
         <?php if ($node->field_texte_section_europe[0]['view']): ?>
         <article class="paragraphe-section-europe">
                         <?php (print $node->field_texte_section_europe[0]['view']); /* Textfield pour § Section Europe */ ?>
         </article>
-                <?php endif; ?>             
-        
+                <?php endif; ?>
+
         <?php if ($node->field_lycee_possible[0]['view']): ?>
         <aside class="lycees-possibles">
-                        <?php 
+                        <?php
                         global $theme_path;
               include ($theme_path.'/includes/dedicates_inc/inc_liste_lycees_CCKTaxo.php');
                         ?>
         </aside>
-                <?php endif; ?>             
-        
-        
+                <?php endif; ?>
+
+
            <?php if ($node->field_savoir_plus_fiche_formatio[0]['view']     ): ?>
                     <div class="savoir-plus-fiche">
-                    
+
                         <?php (print $node->field_savoir_plus_fiche_formatio[0]['view']); /* Vue Liens et docs utiles */ ?>
-                  
-                        
+
+
                     </div>
-                <?php endif; ?>             
-        
-        
+                <?php endif; ?>
+
+
                <?php if ($terms): ?>
         <div class="taxonomy"><?php //print $terms; ?></div>
         <?php endif;?>
@@ -122,8 +122,8 @@
         <?php if ($links): ?>
         <div class="links"> <?php //print $links; ?></div>
         <?php endif; ?>
-                
-                
+
+
         </div> <!--/zone-3-->
 
 
