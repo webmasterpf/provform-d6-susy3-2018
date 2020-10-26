@@ -189,7 +189,7 @@ body .conteneur{
                 }
             }
         }
-    }
+    }// Fin vue-liste-bts
     table.table-bts-coord{
         width: 97%;
         border: 0;
@@ -229,8 +229,8 @@ body .conteneur{
            }
         }
 
-    }
-}
+    }// Fin table-bts-coord
+} // Fin toutes zones
 
 /*------------------------------------
         ¤¤¤ STYLES PROPRES ¤¤¤
@@ -294,11 +294,15 @@ ______________________________*/
                 background: $bleu-turquoise;
             }
         }
-    }
-    }
+    } // Fin liste formations
+  } // Fin aside liste formations
+  .content > table{
+    //largeur fournie par code en amont
+    margin: em(20px) auto;
 
-}
-#zone-2.page-bts{}
-#zone-3.page-bts{}
-#zone-4.page-bts{}
-#zone-5.page-bts{}
+  } // Fin table dans content
+} // Fin zone-1
+#zone-2.page-bts{} // Fin zone-2
+#zone-3.page-bts{} // Fin zone-3
+#zone-4.page-bts{} // Fin zone-4
+#zone-5.page-bts{} // Fin zone-5
