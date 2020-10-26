@@ -56,11 +56,11 @@
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
                 </div>
 
-                        <?php
-                        //Inclus le bloc Savoir+ Fiche Formation issue d'une vue (Dev d'origine)
+            <?php
+          //Inclus le bloc Savoir+ Fiche Formation issue d'une vue (Dev d'origine)
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
-              ?>
+            ?>
 
 
         </div><!--  /zone-1-->
@@ -77,43 +77,37 @@
 <!--______________ ZONE 3 ________________ -->
     <div id="zone-3" class="zone_layout_max_centre fiche-formation nid-<?php print $node->nid; ?>">
 
-               <?php if ($node->field_vue_content_vr[0]['view']): ?>
-            <aside class="liste-formations-possibles">
-                    <?php  print $node->field_vue_content_vr[0]['view']  /* Affichage liste des formations possible après cette seconde, réforme 2019 - Champs ViewRef */ ?>
-            </aside>
-            <?php endif;?>
+        <?php if ($node->field_vue_content_vr[0]['view']): ?>
+          <aside class="liste-formations-possibles">
+          <?php  print $node->field_vue_content_vr[0]['view']  /* Affichage liste des formations possible après cette seconde, réforme 2019 - Champs ViewRef */ ?>
+          </aside>
+        <?php endif;?>
 
-             <?php if ($node->field_section_specifique[0]['view']): ?>
-                    <h2 class="lien-section-europe">
-                        <?php (print $node->field_section_specifique[0]['view']); /* Terme de Taxo pour lien avec Rubrique Europe */ ?>
-                    </h2>
-                <?php endif; ?>
+        <?php if ($node->field_section_specifique[0]['view']): ?>
+            <h2 class="lien-section-europe">
+        <?php (print $node->field_section_specifique[0]['view']); /* Terme de Taxo pour lien avec Rubrique Europe */ ?>
+            </h2>
+        <?php endif; ?>
 
         <?php if ($node->field_texte_section_europe[0]['view']): ?>
         <article class="paragraphe-section-europe">
-                        <?php (print $node->field_texte_section_europe[0]['view']); /* Textfield pour § Section Europe */ ?>
+        <?php (print $node->field_texte_section_europe[0]['view']); /* Textfield pour § Section Europe */ ?>
         </article>
-                <?php endif; ?>
+        <?php endif; ?>
 
         <?php if ($node->field_lycee_possible[0]['view']): ?>
         <aside class="lycees-possibles">
-                        <?php
-                        global $theme_path;
-              include ($theme_path.'/includes/dedicates_inc/inc_liste_lycees_CCKTaxo.php');
-                        ?>
+        <?php global $theme_path;
+        include ($theme_path.'/includes/dedicates_inc/inc_liste_lycees_CCKTaxo.php');
+        ?>
         </aside>
-                <?php endif; ?>
+        <?php endif; ?>
 
-
-           <?php if ($node->field_savoir_plus_fiche_formatio[0]['view']     ): ?>
-                    <div class="savoir-plus-fiche">
-
-                        <?php (print $node->field_savoir_plus_fiche_formatio[0]['view']); /* Vue Liens et docs utiles */ ?>
-
-
-                    </div>
-                <?php endif; ?>
-
+       <?php if ($node->field_savoir_plus_fiche_formatio[0]['view']): ?>
+        <div class="savoir-plus-fiche">
+       <?php (print $node->field_savoir_plus_fiche_formatio[0]['view']); /* Vue Liens et docs utiles */ ?>
+              </div>
+        <?php endif; ?>
 
                <?php if ($terms): ?>
         <div class="taxonomy"><?php //print $terms; ?></div>
