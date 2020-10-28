@@ -150,17 +150,17 @@ body .conteneur {
                 float: left;
                 }
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape)){
-            
+
                 max-width: 30%;
                 }
                 @include breakpoint(($tablet,$tabletlandscape)){
-                max-width: 25%;    
-              
+                max-width: 25%;
+
                 }
-               
+
             }
             .breaking-news-element{
-                
+
                 border: em(3px) transparent solid;
                 background: $orange-fonce;
                 transition-property: background !important;
@@ -211,7 +211,7 @@ body .conteneur {
 
                 }
                 list-style: none;
-                
+
 
             }
             .breaking-news{
@@ -238,7 +238,7 @@ body .conteneur {
         a{
             color: white;
             font-family: $FontRaleway;
-            
+
             text-decoration: none;
         }
         img{
@@ -258,7 +258,7 @@ body .conteneur {
                 }
             }
         }
-        
+
     }
     .acces_rubriques{
 
@@ -282,7 +282,7 @@ body .conteneur {
                     width: 100%;
                     max-height: 85vw;
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    max-height: 14.5vw;    
+                    max-height: 14.5vw;
                     }
                     &:hover{
                         filter: grayscale(100%);
@@ -360,10 +360,10 @@ body .conteneur {
                 }
                 li{
                     list-style: none;
-                    
+
                     margin: 0 0 span(0.2) span(0.2);
                     float: none;
-                    
+
                     @include txt-cesure;
                     @include txt-colonnes;
 
@@ -384,7 +384,7 @@ body .conteneur {
                         @include txt-ellipse;
                         @include txt-cesure(break-word);
                         @include breakpoint(($mobilelandscape,$tablet)){
-                        @include font-size(s);//utilisation de typey    
+                        @include font-size(s);//utilisation de typey
                         }
                         &:hover{
                             background: $gris-clair-moyen;
@@ -393,13 +393,14 @@ body .conteneur {
                     }
                     //Ciblage du lien concernant les JPO pour style différent
                     a[href*="portes-ouvertes"]{
-                        
+
                         @include clignote(1.8s);
                         &:hover{
-                        
+
                         }
                     }
                 }
+
             }
         }
         aside.acces-contact{
@@ -416,7 +417,7 @@ body .conteneur {
                     white-space: normal;
                 }
                 @include breakpoint($tablet){
-                    margin: span(0.5) span(0.2);    
+                    margin: span(0.5) span(0.2);
                 }
                 @include breakpoint(($mobilelandscape,$tabletlandscape)){
                      display:inline-block;
@@ -440,7 +441,8 @@ body .conteneur {
                     list-style: none;
                     width: 95%;
                     margin: 0 0 span(0.2) span(0.2);
-
+                    // Pas de param display:flex pour mobile sinon bug affichage
+                    display: block;
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,
                     $tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
                         @include txt-cesure;
@@ -449,16 +451,18 @@ body .conteneur {
                         @include hack-IE;
                         margin: 0;
                         padding: 0 span(0.9);
+                        display: flex;//Résoud bug FF
                     }
                     @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
-                          padding: span(0.9);
+                        padding: span(0.9);
+                        display: flex;//Résoud bug FF  
                     }
                     span.titre-admin{
                         display: block;
                         text-align:center;
                         @include breakpoint(($desktop,$desktopwide,
                         $tablet-hd,$tabletlandscape-hd)){
-                            min-height: 11vw;          
+                            min-height: 11vw;
                             min-width: 11vw;
                             max-width: 11vw;
                             max-height: 11vw;
@@ -490,13 +494,13 @@ body .conteneur {
                             background-size: cover;
                             /*background-clip: padding-box;*/
                             min-width: inherit;
-                            min-height:  inherit; 
+                            min-height:  inherit;
                             transition-duration: 0.0s;//Permet de jouer sur un effet de slide
                             text-align: center;
                             @include txt-cesure(break-word);
                             /*                        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
                                                     clip-path: circle(50% at 50% 50%);*/
-                            @include arrondis(4em);  
+                            @include arrondis(4em);
                             background-color: $gris-anthracite;
 
                             @include breakpoint(($desktop,$desktopwide)){
@@ -507,11 +511,11 @@ body .conteneur {
 
                             }
                             @include breakpoint(($mobilelandscape,$mobilelandscape-galaxyShd)){
-                            @include arrondis(2em);      
+                            @include arrondis(2em);
                             @include font-size(xxs);//utilisation de typey
                             }
                             @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
-                                 @include arrondis(3em);  
+                                 @include arrondis(3em);
                                  @include font-size(xs);//utilisation de typey
                             }
                             &:hover{
@@ -539,23 +543,23 @@ body .conteneur {
                     &.nid-46{//actus
                                           a:hover{
                                          @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 100% top, no-repeat);
-                                              
+
                                               background-size: cover;
                                           }
                     }
                     &.nid-337{//liens utiles
                                           a:hover{
-                                         @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 51% top, no-repeat);     
+                                         @include backgroundImage(("PNG/bg_acces_contact@4x.png"), $orange-fonce, 51% top, no-repeat);
                                               /*@include backgroundImage("SVG/bg_acces_contact.svg",$orange-fonce,  51%  top);*/
                                               background-size: cover;
                                           }
-                    }  
+                    }
 
-                }
+                } // Fin li
 
 
-            }
-        }
+            } // Fin ul
+        } // Fin aside.acces-contact
         aside.AccesLycees{
 
             ul.acces-lycees{
@@ -637,7 +641,7 @@ body .conteneur {
 
             }
 
-            img { 
+            img {
                 @include adaptable-img();
                 contain:content;
 
@@ -665,7 +669,7 @@ body .conteneur {
 
 
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){/*    //Dimensions pour les pc
-        //Taille du conteneur du groupe    
+        //Taille du conteneur du groupe
         .annonce_1{}
         .annonce_2{}
         .HPDiapo{}
@@ -681,4 +685,4 @@ body .conteneur {
         .acces_rubriques{}
         .logo_partenaires{}
     }
-}    
+}
