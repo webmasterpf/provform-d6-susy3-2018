@@ -352,6 +352,7 @@ body .conteneur {
                     white-space: normal;*/
                     display: flex;
                     flex-flow: row;
+                    flex-wrap: wrap;
                 }
                 @include breakpoint(($mobilelandscape,$tablet)){
                      column-count: 3;
@@ -455,7 +456,7 @@ body .conteneur {
                     }
                     @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
                         padding: span(0.9);
-                        display: flex;//Résoud bug FF  
+                        display: flex;//Résoud bug FF
                     }
                     span.titre-admin{
                         display: block;
