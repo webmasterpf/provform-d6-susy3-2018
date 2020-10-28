@@ -370,11 +370,13 @@ body .conteneur {
                         @include hack-Edge;
                         @include hack-IE;
                         flex-basis: 22%;// MAxi 4 éléments par ligne sur FF-Chrome
+                        flex-grow: 1; // Dernier élément sur toute la largeur
                     }
                     @include breakpoint(($desktopwide,$tabletlandscape)){
                         @include hack-Edge;
                         @include hack-IE;
                         flex-basis: 30%;// MAxi 3 éléments par ligne sur FF-Chrome
+                        flex-grow: 1; // Dernier élément sur toute la largeur
                     }
                     a{
                         background: $orange-fonce;
