@@ -18,8 +18,8 @@ body .conteneur .conteneur-flex{
     #zone-1.page-formations{order:1;}
     #zone-2.page-formations{order:2;}
     #zone-3.page-formations{order:3;}
-    #zone-4.page-formations{}
-    #zone-5.page-formations{}
+    #zone-4.page-formations{order:4;}
+    #zone-5.page-formations{order:5;}
     @include breakpoint ($desktop){}
 }
 
@@ -69,7 +69,7 @@ body .conteneur{
                 padding: span(0.02);
             }
             div.form-item{
-                margin: 0 0 span(0.01) 0;   
+                margin: 0 0 span(0.01) 0;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     @include  txt-colonnes();
                     min-height: 3.8em;
@@ -90,7 +90,7 @@ body .conteneur{
                  display: flex;
                 flex-wrap:wrap;
                 padding: 0 span(2);
-               
+
             }
             li{
                 padding: 0;
@@ -147,7 +147,7 @@ body .conteneur{
             @include clearfixsusy3;
         }
         }
-        
+
         table{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 @include txt-cesure;
@@ -175,7 +175,9 @@ body .conteneur{
 #zone-3.page-formations,
 #zone-4.page-formations,
 #zone-5.page-formations
-{}
+{
+  background: inherit;
+}
 
 /*------------------------------------
         ¤¤¤ STYLES PROPRES ¤¤¤
@@ -197,7 +199,7 @@ ______________________________*/
                 color: $blanc-casse;
                 text-align: center;
                 cursor: pointer;
-                
+
 
             }
             //Hover différent pour le label selon le filtre utilisé,en fonction de l'ID du bouton
@@ -208,7 +210,7 @@ ______________________________*/
                 div#edit-term-node-tid-depth-limited-#{$i}-wrapper{
                     label{
                         cursor: pointer;
-        
+
                     }
                     &:hover:not(#edit-term-node-tid-depth-limited-All-wrapper){
                                             @include backgroundImage(('bg_filtre_pole.png'),transparent,center,no-repeat);
@@ -238,7 +240,7 @@ ______________________________*/
                         // center 5% pour autre visuel possible
                                             background-size:80%;
                                             background-color: $orange-fonce;
-                                            
+
                         &::after{
 /*                            content: "Spécificité";
                             color:$orange-fonce;
@@ -411,7 +413,8 @@ ______________________________*/
         }
     }
 }
-#zone-2.page-formations{}
+/* #zone-2.page-formations{}
 #zone-3.page-formations{}
 #zone-4.page-formations{}
 #zone-5.page-formations{}
+*/
