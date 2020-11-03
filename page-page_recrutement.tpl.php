@@ -1,7 +1,7 @@
 <?php
 global $theme_path;
 include ($theme_path . '/includes/inc_header.php');
-?>  
+?>
  <!-- ______________________ LAYOUT PAGE RECRUTEMENT _______________________ -->
   <!-- ______________________ CONTENU _______________________ -->
 
@@ -16,11 +16,11 @@ include ($theme_path . '/includes/inc_header.php');
             </div> <!-- /#content-top -->
 
 
-   
+
  <!-- ______________________ CONTENU CENTRAL INNER _______________________ -->
         <div id="content-inner-recrutement" class="inner column center">
 
-		 
+
 
 
           <?php if ($mission || $messages || $help || $tabs): ?>
@@ -42,15 +42,17 @@ include ($theme_path . '/includes/inc_header.php');
           <?php endif; ?>
 		  <!-- ______________________ CONTENU CENTRAL _______________________ -->
           <div id="middle-content-recrutement">
-              <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
-              <?php endif; ?>
+            <?php
+             /* if ($title):
+              print '<h1 class="title-formation">'.$title.'</h1>';
+              endif;*/
+              ?>
 
             <?php print $content; ?>
               <?php if ($centralBloc): ?>
                 <div class="recrutement"><?php print $centralBloc; ?></div>
               <?php endif; ?>
-           
+
 
               <?php print $feed_icons; ?>
           </div> <!-- /#content-area -->

@@ -1,7 +1,7 @@
 <?php
 global $theme_path;
 include ($theme_path . '/includes/inc_header.php');
-?>  
+?>
  <!-- ______________________ LAYOUT PAGE CONTACT _______________________ -->
   <!-- ______________________ CONTENU _______________________ -->
 
@@ -18,12 +18,14 @@ include ($theme_path . '/includes/inc_header.php');
 
        <!-- ______________________ COLONNE GAUCHE _______________________ -->
 
-           
+
          <div id="left-content-partenaire">
 
-             <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
-              <?php endif; ?>
+           <?php
+            /* if ($title):
+             print '<h1 class="title-formation">'.$title.'</h1>';
+             endif;*/
+             ?>
 
             <?php print $left; ?>
           </div>
@@ -33,7 +35,7 @@ include ($theme_path . '/includes/inc_header.php');
 
         <div id="content-inner-partenaire" class="inner column center">
 
-		 
+
 
 
           <?php if ($mission || $messages || $help || $tabs): ?>
