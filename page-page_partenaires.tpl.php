@@ -1,4 +1,7 @@
-<?php $theme_path = drupal_get_path('theme', 'cyrano_pf'); include ($theme_path.'/includes/inc_header.php'); ?>
+<?php
+global $theme_path;
+include ($theme_path . '/includes/inc_header.php');
+?>  
  <!-- ______________________ LAYOUT PAGE PARTENAIRE _______________________ -->
   <!-- ______________________ CONTENU _______________________ -->
   
