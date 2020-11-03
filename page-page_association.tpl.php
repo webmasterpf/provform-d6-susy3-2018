@@ -107,5 +107,6 @@ include ($theme_path . '/includes/inc_header.php');
 
 	 </div> <!-- /contentPage -->
 
-	  <?php $theme_path = drupal_get_path('theme', 'cyrano_pf'); include ($theme_path.'/includes/inc_footer.php'); ?>
+	  <?php global $theme_path;
+include ($theme_path.'/includes/inc_footer.php'); ?>
          <?php endif; ?>
