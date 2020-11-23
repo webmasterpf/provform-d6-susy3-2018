@@ -53,6 +53,13 @@ body .conteneur{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         padding: span(0.2);
     }
+    .content > p{
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+      column-count: 2;
+      column-fill: balance;
+      column-rule: em(2px) dashed $gris-anthracite;
+    }
+  }
     aside.node_col_1{
         padding: 0;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
@@ -301,6 +308,8 @@ ______________________________*/
     margin: em(20px) auto;
 
   } // Fin table dans content
+
+
 } // Fin zone-1
 #zone-2.page-bts{} // Fin zone-2
 #zone-3.page-bts{} // Fin zone-3
