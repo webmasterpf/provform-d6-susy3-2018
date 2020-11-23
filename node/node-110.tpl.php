@@ -22,8 +22,6 @@
 <!--_______________________ ZONE 1 __________________ -->
 <div id="zone-1" class="zone_layout_max_centre page-bts">
 
-
-
     <?php print $picture; ?>
 
     <?php if ($submitted): ?>
@@ -34,10 +32,9 @@
 
     <div class="content">
       <?php  print $node->content['body']['#value']; ?>
-
            <?php if ($node->field_txt_dossier[0]['view']): ?>
-        <div id="txt-dossier-bts">
-                <?php  print $node->field_txt_dossier[0]['view'] ?>
+      <div id="txt-dossier-bts">
+            <?php  print $node->field_txt_dossier[0]['view'] ?>
         </div>
    <?php endif; ?>
        <?php
