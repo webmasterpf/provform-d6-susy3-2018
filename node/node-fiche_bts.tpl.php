@@ -22,7 +22,7 @@
             <?php endif; ?>
 
 
-        </div><!-- /zone-illustration -->   
+        </div><!-- /zone-illustration -->
         <!--______________ ZONE 1 ________________ -->
         <div id="zone-1" class="zone_layout_max_centre fiche-bts nid-<?php print $node->nid; ?>">
             <?php print $picture; ?>
@@ -53,7 +53,7 @@
                             global $theme_path;
                             include ($theme_path . '/includes/dedicates_inc/inc_fiche_bts_liste_fiches_details.php');
                             ?>
-                     
+
                         </td>
                         <td class="col3">
                             <h4>Utile...</h4>
@@ -69,7 +69,7 @@
                 </tbody>
 
             </table>
-                
+
             <?php
             if ($node->field_intro_fiche_bts[0]['view']):
                 print '<div class="intro-fiche-bts">' . $node->field_intro_fiche_bts[0]['view'] . '</div>';
@@ -89,7 +89,7 @@
 
         <?php if ($node->field_diapo_lycee_type[0]['view']): ?>
             <!--______________ ZONE 2 ________________ -->
-            <div id="zone-2" class="zone_layout_max fiche-bts">         
+            <div id="zone-2" class="zone_layout_max fiche-bts">
                 <aside class="galerie">
                     <?php print $node->field_diapo_lycee_type[0]['view']; ?>
                 </aside>
@@ -104,15 +104,15 @@
                 <?php print $node->content['body']['#value']; /* déplacer le contenu dans la colonne désirée */ ?>
             </div>
 
-          
-            <?php if ($node->field_info_plus_bts[0]['view']): ?>
+
+            <?php if (!empty($node->field_info_plus_bts[0]['view'])): ?>
                 <div id="info-plus-fiche-bts">
                     <h3>En savoir plus...</h3>
                     <?php print $node->field_info_plus_bts[0]['view'] ?>
                 </div>
             <?php endif; ?> 
 
-            <?php if ($links): ?> 
+            <?php if ($links): ?>
                 <div class="links"> <?php print $links; ?></div>
             <?php endif; ?>
 
