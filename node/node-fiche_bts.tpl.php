@@ -47,6 +47,7 @@
                             include ($theme_path . '/includes/dedicates_inc/inc_fiche_bts_liste_liens.php');
                             ?>
                         </td>
+                        <?php if (!empty($node->field_detail_fiche_bts[0]['view'])): ?>
                         <td class="col2">
                             <h4>En détail...</h4>
                             <?php
@@ -55,6 +56,7 @@
                             ?>
 
                         </td>
+                            <?php endif; ?>
                         <td class="col3">
                             <h4>Utile...</h4>
                             <?php if ($terms): ?>
@@ -110,7 +112,7 @@
                     <h3>En savoir plus...</h3>
                     <?php print $node->field_info_plus_bts[0]['view'] ?>
                 </div>
-            <?php endif; ?> 
+            <?php endif; ?>
 
             <?php if ($links): ?>
                 <div class="links"> <?php print $links; ?></div>
