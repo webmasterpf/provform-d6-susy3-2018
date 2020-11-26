@@ -140,7 +140,7 @@ body .conteneur{
     }
     a{
         text-decoration: none;
-        color: $orange-fonc;
+        color: $orange-fonce;
         &:hover{
             text-decoration: underline;
             @include transition-hover();;
