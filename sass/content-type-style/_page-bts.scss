@@ -118,7 +118,7 @@ body .conteneur{
 {
     p,ul,li{
         @include font-size(m);//utilisation de typey
-        padding: em(5px);
+        padding: em(3px);
         line-height: 1.5em;
     }
     h2{
@@ -127,11 +127,11 @@ body .conteneur{
     }
     h3{
         @include font-size(m);//utilisation de typey
-        color: $orange-fonce;
+        color: $gris-anthracite;
     }
     a{
         text-decoration: none;
-        color: $orange-fonce;
+        color: $jaune;
         &:hover{
             text-decoration: underline;
             @include transition-hover();;
