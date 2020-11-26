@@ -128,10 +128,19 @@ body .conteneur{
     h3{
         @include font-size(m);//utilisation de typey
         color: $gris-anthracite;
+        a{
+          text-decoration: none;
+          color: $jaune;
+          background: $gris-anthracite;
+          &:hover{
+              text-decoration: underline;
+              @include transition-hover();;
+          }
+        }
     }
     a{
         text-decoration: none;
-        color: $jaune;
+        color: $orange-fonc;
         &:hover{
             text-decoration: underline;
             @include transition-hover();;
