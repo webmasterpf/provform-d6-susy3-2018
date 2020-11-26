@@ -132,9 +132,10 @@ body .conteneur{
           text-decoration: none;
           color: $jaune;
           background: $gris-anthracite;
+          margin: 0 em(2px);
           &:hover{
               text-decoration: underline;
-              @include transition-hover();;
+              @include transition-hover();
           }
         }
     }
@@ -143,7 +144,7 @@ body .conteneur{
         color: $orange-fonce;
         &:hover{
             text-decoration: underline;
-            @include transition-hover();;
+            @include transition-hover();
         }
     }
 
