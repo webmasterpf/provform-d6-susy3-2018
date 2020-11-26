@@ -318,7 +318,13 @@ ______________________________*/
     margin: em(20px) auto;
 
   } // Fin table dans content
-
+  .content {
+    a[href*="619"]{
+        background:$orange-fonce;
+        color: $gris-clair;
+        @include clignote(1.8s);
+        }
+  }
 
 } // Fin zone-1
 #zone-2.page-bts{} // Fin zone-2
