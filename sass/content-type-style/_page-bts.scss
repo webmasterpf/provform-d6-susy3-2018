@@ -53,7 +53,7 @@ body .conteneur{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         padding: span(0.2);
     }
-    .content > p{
+    .content > p.colonnes{
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
       column-count: 2;
       column-fill: balance;
