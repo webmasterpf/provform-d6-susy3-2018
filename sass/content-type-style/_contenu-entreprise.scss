@@ -37,7 +37,7 @@ body .conteneur{
     max-height: 90vw;
     overflow: hidden;
     @include backgroundImage('defaut_image_illustration_entreprise.jpg');
-    @include background-size(cover);           
+    @include background-size(cover);
     img{
         transform: translate(0%,0%);
 
@@ -83,7 +83,7 @@ body .conteneur{
 #zone-3.contenu-entreprise,
 #zone-4.contenu-entreprise,
 #zone-5.contenu-entreprise
-{   
+{
     p,ul,li{
         @include font-size(m);//utilisation de typey
         padding: em(5px);
@@ -111,7 +111,7 @@ body .conteneur{
         &:hover{
             text-decoration: underline;
             @include transition-hover();
-            
+
         }
     }
     strong{
@@ -181,7 +181,8 @@ body .conteneur{
         ¤¤¤ STYLES PROPRES ¤¤¤
 ______________________________*/
 
-#zone-1.contenu-entreprise{
+#zone-1.contenu-entreprise,
+#zone-2.contenu-entreprise{
     //Pour node/111 Tableau objectifs BTS
     table#doc-joints{
         width: 80%;
@@ -201,7 +202,7 @@ ______________________________*/
             margin:span(0.1) auto;
         }
         a[href*=".pdf"]{
-            
+
                 &::before{
                         @include backgroundImage("PNG/Fichiers@3x.png");
                         background-size: contain;
@@ -211,7 +212,7 @@ ______________________________*/
                         padding: em(10px);
                         margin:em(3px);
                         transition:0.5s all;
-                  
+
                     }
                 }
         }
@@ -244,7 +245,7 @@ ______________________________*/
         }
     }
     ul.liste-bts-coord{
-          
+
           li{
               border-top: em(2px) dashed $orange-fonce;
               list-style: none;

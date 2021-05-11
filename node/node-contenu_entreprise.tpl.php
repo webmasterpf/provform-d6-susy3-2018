@@ -9,9 +9,9 @@
                  <!--______________ ILLUSTRATION et TITRE ________________ -->
         <div id="zone-illustration" class="contenu-entreprise nid-<?php print $node->nid; ?>">
                      <?php if ($title): /*copier le titre dans la zone desirée*/?>
-         
+
             <?php endif; ?>
-            
+
              <?php if ($node->field_illus_entreprise[0]['view']
                  OR
                  $title
@@ -21,14 +21,14 @@
                  <?php  print $node->field_illus_entreprise[0]['view'] ?>
             </div>
             <?php endif;?>
-     
-            
+
+
             </div><!-- /zone-illustration -->
         <!--______________ ZONE 1 ________________ -->
-      
-        <div id="zone-1" class="zone_layout_max_centre contenu-entreprise nid-<?php print $node->nid; ?>">
-        
-            
+
+        <div id="zone-1" class="zone1_layout_9_3 contenu-entreprise nid-<?php print $node->nid; ?>">
+
+
             <?php print $picture; ?>
 
             <?php if ($submitted): ?>
@@ -37,9 +37,9 @@
 
             <div class="content">
 
-                
+
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
-                
+
                     <?php if ($formulaire): ?>
                     <div id="formulaire_partenaire">
                         <?php print $formulaire; ?>
@@ -51,42 +51,50 @@
                         <?php print $centre_partenaire; ?>
                     </div>
                 <?php endif; ?>
-                    
+
                      <?php if ($node->field_video_externe[0]['view']): ?>
             <div class="video-rubentreprise">
                     <?php  print $node->field_video_externe[0]['view']  ?>
             </div>
             <?php endif;?>
-                    
-                               
-          <?php
-              global $theme_path;
-              include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
-              ?>
-                    
+
+
+
+
                                <?php if ($node->field_vue_content_vr[0]['view']):
      print '<aside class="liste-contenus">'.$node->field_vue_content_vr[0]['view'].'</aside>';
  endif;
                             ?>
-                    
+
             </div>
 
-            
-        
-            <?php
-            if ($node->field_fichier_joint_partenaires[0]['view']):
 
-              global $theme_path;
-                include($theme_path . '/includes/dedicates_inc/inc_docs_entreprise.php');
-            endif;
-            //il ne s'agit pas d'une vue mais de code PHP !!
-            ?>
-            
+
+
           <?php
               global $theme_path;
               include ($theme_path.'/includes/regions_inc/inc_region_zone_1.php');
               ?>
-            
+</div><!-- /zone-1 -->
+<!--______________ ZONE 2 ________________ -->
+<div id="zone-2" class="zone1_layout_9_3 contenu-entreprise nid-<?php print $node->nid; ?>">
+
+            <?php
+            if ($node->field_fichier_joint_partenaires[0]['view']):
+              global $theme_path;
+          include($theme_path . '/includes/dedicates_inc/inc_docs_entreprise.php');
+              endif;
+          //il ne s'agit pas d'une vue mais de code PHP !!
+          ?>
+
+            <?php
+            global $theme_path;
+            include ($theme_path.'/includes/regions_inc/inc_region_zone_2.php');
+            ?>
+
+            </div>
+            <!-- /zone-2 -->
+
             <?php if ($terms): ?>
         <div class="taxonomy"><?php //print $terms; ?></div>
         <?php endif;?>
@@ -94,8 +102,8 @@
         <?php if ($links): ?>
         <div class="links"> <?php //print $links; ?></div>
         <?php endif; ?>
-        </div>
-           
+
+
 
 
     </div> <!-- /node-inner -->
