@@ -2,7 +2,7 @@
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
-?>  
+?>
 
        <!-- ______________________ CONTENT INNER GLOBAL _______________________ -->
 
@@ -50,12 +50,16 @@ include ($theme_path.'/includes/inc_header.php');
       </div> <!-- /content-inner /content -->
 
 
-        <?php if (!empty($primary_links) or !empty($secondary_links)): ?>
-          <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "with-main-menu"; } if (!empty($secondary_links)) { print " with-sub-menu"; } ?>">
-            <?php if (!empty($primary_links)){ print theme('links', $primary_links, array('id' => 'primary', 'class' => 'links main-menu')); } ?>
-            <?php if (!empty($secondary_links)){ print theme('links', $secondary_links, array('id' => 'secondary', 'class' => 'links sub-menu')); } ?>
-          </div> <!-- /navigation -->
-        <?php endif; ?>
+      <!-- ______________________  ACCES RUBRIQUES 3 - CONTACT  _______________________ -->
+  <?php if ($RubriquesHP3): ?>
+      <div class="acces_rubriques"><?php print $RubriquesHP3; ?></div>
+  <?php endif; ?>
+
+  <!-- ______________________ ACCES LOGOS PARTENAIRES _______________________ -->
+  <?php if ($LogoPart): ?>
+      <div class="logo_partenaires"><?php print $LogoPart; ?></div>
+  <?php endif; ?>
+
 
          <!-- ______________________ CONTENU BAS _______________________ -->
 <?php if ($content_bottom): ?>
@@ -63,8 +67,8 @@ include ($theme_path.'/includes/inc_header.php');
               <?php print $content_bottom; ?>
             </div><!-- /#content-bottom -->
           <?php endif; ?>
-	
+
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_footer.php');
-?>     
+?>
