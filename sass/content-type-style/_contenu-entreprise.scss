@@ -187,7 +187,7 @@ ______________________________*/
     table#doc-joints{
         width: 80%;
         border: em(3px) dotted $orange-fonce;
-        margin: 0 auto;
+        margin: em(60px) auto;
         tr{
             @include backgroundImage(('zebra-gros-clair.gif'),transparent,top left,repeat);
 

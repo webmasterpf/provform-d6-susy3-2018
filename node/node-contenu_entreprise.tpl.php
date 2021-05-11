@@ -77,7 +77,7 @@
               ?>
 </div><!-- /zone-1 -->
 <!--______________ ZONE 2 ________________ -->
-<div id="zone-2" class="zone1_layout_9_3 contenu-entreprise nid-<?php print $node->nid; ?>">
+<div id="zone-2" class="zone2_layout_9_3 contenu-entreprise nid-<?php print $node->nid; ?>">
 
             <?php
             if ($node->field_fichier_joint_partenaires[0]['view']):
